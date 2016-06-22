@@ -1,0 +1,5 @@
+body{margin:0;padding:0;}
+input{border:none;padding:0;}
+input:focus{outline:none;}
+#main{width:500px;margin:10px auto 0;}
+.calendar-inner{border:solid 1px #DFDFDF;height:22px;line-height:22px;}

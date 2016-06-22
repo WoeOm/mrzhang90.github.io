@@ -1,0 +1,3 @@
+#calendar_box{border:solid 1px #ccc;}
+#calendar_box{box-shadow:2px 2px 5px rgba(0,0,0,.1);}
+#calendar_box{width:240px;height:214px;position:absolute;top:28px;}
