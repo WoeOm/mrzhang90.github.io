@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1" />
+    <title>九宫格小游戏</title>
+<style type="text/css">
+    *{margin:0;padding:0;font-size:12px;}
+    ul{list-style:none;}
+    input{border:none;background:none;outline:none;}
+    .body{width:306px;margin:20px auto;}
+    .body h2{text-indent:8px;font-size:14px;padding-bottom:4px;}
+    .body h2 span{font-size:14px;}
+    #main{height:300px;border:solid 3px red;padding-bottom:37px;background:red;}
+    #lattice{height:300px;background:#fff;position:relative;}
+    #lattice li{width:100px;height:100px;position:absolute;}
+    #lattice li span{border:solid 1px #ccc;background:#fff;color:#000;display:inline-block;width:20px;line-height:20px;text-align:center;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        border-radius:50%;}
+    .main_btn{line-height:40px;text-align:center;}
+    .main_btn input{border:solid 1px #ccc;padding:4px 6px;margin-left:2px;cursor:pointer;
+        -webkit-border-radius:2px;
+        -moz-border-radius:2px;
+        border-radius:2px;
+        background: -webkit-linear-gradient(#ccc 10%,#fff);
+        background: -ms-radial-gradient(#ccc 10%,#fff);
+        background: -moz-radial-gradient(#ccc 10%,#fff);
+    }
+    .main_btn input:active{background:#ccc;}
+    #success{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:999;color:#fff;text-align:center;display:none;}
+    #success h2{padding-top:70px;font-size:26px;}
+    #success p{padding-top:25px;font-size:16px;}
+    #success input{margin-top:10px;padding:4px 6px;margin-left:2px;cursor:pointer;background:rgba(255,255,255,.4);}
+    #answerEle{width:200px;height:200px;position:absolute;top:10px;right:10px;background:url("img/j1.jpg");background-size:100%;display:none;}
+    #footer{width:306px;margin:10px auto;font-size:12px;}
+    #footer p{line-height:22px;font-size:16px;}
+    #footer span{line-height:16px;}
+</style>
+</head>
+<body>
+<div class="body">
+    <h2 class="h2_step">步数:<span class="step">0</span></h2>
+    <div id="main">
+        <ul id="lattice"></ul>
+        <div class="main_btn">
+            <input type="button" value="换一个" class="next">
+            <input type="button" value="重置" id="reset">
+            <input type="button" value="显示序号" id="showSerial">
+            <input type="button" value="显示答案" id="answer">
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <p>使用说明:</p>
+    <span>1.支持按键,请使用方向键'上','下','左','右';</span><br/>
+    <span>2.支持鼠标上下左右拖动;</span><br/>
+    <span>3.支持手机触摸屏上下左右拖动;</span>
+</div>
+<div id="success">
+    <h2>恭喜!!!</h2>
+    <p>步数:<span class="step">0</span></p>
+    <input type="button" value="下一关" class="next">
+</div>
+<div id="answerEle"></div>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/touch-0.2.14.min_.js"></script>
+<script src="js/js.js"></script>
+</body>
+</html>

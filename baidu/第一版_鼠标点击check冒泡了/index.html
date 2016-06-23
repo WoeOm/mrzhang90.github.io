@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="百度云">
+<meta name="description" content="百度云">
+<meta name="author" content="sp6688@vip.qq.com">
+<!--用来防止别人在框架里调用你的页面。-->
+<META HTTP-EQUIV="Window-target" CONTENT="_top">
+<!--网页搜索机器人向导。用来告诉搜索机器人哪些页面需要索引,哪些页面不需要索引。content参数:all,none,index,noindex,follow,nofollow-->
+<META NAME="robots" CONTENT="none">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/header.css" type="text/css">
+<link rel="stylesheet" href="css/sidebar.css" type="text/css">
+<title>Title</title>
+</head>
+<!--为了保证浏览器兼容,必须设置页面背景-->
+<body style="background:#fff;">
+<section class="frame-allframe-all">
+    <!--上-头部导航条-->
+    <section id="main_head">
+        <a href="/" class="head-log"></a>
+        <div class="head-nav">
+            <a href="#" class="default_nav">主页</a>
+            <span class="separate"></span>
+            <div class="default_nav current" id="skyDrive">
+                <a href="#" class="current_a"><em class="f-icon"></em>网盘</a>
+                <div style="display:none;" class="content">
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="text">网盘</span>
+                    </a>
+                    <a href="#" class="tongxunlu">
+                        <span class="icon"></span>
+                        <span class="text">通讯录</span>
+                    </a>
+                    <a href="#" class="tonghuajilu">
+                        <span class="icon"></span>
+                        <span class="text">通讯记录</span>
+                    </a>
+                    <a href="#" class="duanxin">
+                        <span class="icon"></span>
+                        <span class="text">短信</span>
+                    </a>
+                    <a href="#" class="wenzhang">
+                        <span class="icon"></span>
+                        <span class="text">短信</span>
+                    </a>
+                    <a href="#" class="note">
+                        <span class="icon"></span>
+                        <span class="text">短信</span>
+                    </a>
+                    <a href="#" class="zhaohui">
+                        <span class="icon"></span>
+                        <span class="text">短信</span>
+                    </a>
+                    <a href="#" class="xiaodu">
+                        <span class="icon"></span>
+                        <span class="text">短信</span>
+                    </a>
+                    <a href="#" class="eyun">
+                        <span class="icon"></span>
+                        <span class="text">短信</span>
+                    </a>
+                </div>
+            </div>
+            <span class="separate"></span>
+            <a href="#" class="default_nav">分享</a>
+            <span class="separate"></span>
+            <a href="#" class="default_nav">应用</a>
+        </div>
+        <ul class="head-info">
+            <li class="search" id="search">
+                <form action="javascript:void(0)" method="get" id="form_search">
+                    <input type="text" name="q" class="search-query">
+                    <span class="input-clear"></span>
+                    <input type="submit" value class="search-button">
+                    <span class="input-placeholder">搜索你的文件</span>
+                </form>
+            </li>
+            <li class="menu-name" id="menu-name">
+                <em class="f-icon"></em>
+                <a href="#" class="is-svip" title="已开通超级会员"></a>
+                <span class="top-username">张广森</span>
+                <div class="user-info">
+                    <em class="arrow"></em>
+                    <div class="content">
+                        <a href="#">个人资料</a>
+                        <a href="#">购买容量</a>
+                        <a href="#">云冲印</a>
+                        <span class="separate-li"></span>
+                        <a href="#">退出</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="vip-button">会员中心</a>
+            </li>
+            <li class="info-i">
+                <a href="#" class="vip-center">客户端下载</a>
+            </li>
+            <li class="info-i">
+                <a href="#" class="vip-center">通知</a>
+            </li>
+            <li class="info-i info-more" id="info-more">
+                <em class="f-icon"></em>
+                <a href="#" class="vip-center">更多</a>
+                <div class="user-info">
+                    <em class="arrow"></em>
+                    <div class="content">
+                        <a href="#">开启https模式</a>
+                        <span class="separate-li"></span>
+                        <a href="#">移动开放平台</a>
+                        <span class="separate-li"></span>
+                        <a href="#">收藏工具</a>
+                        <a href="#">版本更新</a>
+                        <a href="#">帮助中心</a>
+                        <a href="#">问题反馈</a>
+                        <a href="#">服务协议</a>
+                        <a href="#">权利声明</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--下 竖导航条和内容区域-->
+    <section id="main_body">
+        <div id="sidebar_position">
+            <div class="body-sidebar">
+                <ul class="menu-list sidebarUlJs">
+                    <li class="list-all">
+                        <a href="#" class="active">
+                        <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">全部文件</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-pic">
+                        <a href="#">
+                        <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">图片</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-doc">
+                        <a href="#">
+                        <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">文档</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-video">
+                        <a href="#">
+                        <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">视频</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-mbt">
+                        <a href="#">
+                        <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">种子</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-music">
+                        <a href="#">
+                       <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">音乐</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-other">
+                        <a href="#">
+                        <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">其他</span>
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="item-separator"></div>
+                <ul class="menu-list sidebarUlJs">
+                    <li class="aside share">
+                        <a href="#">
+                        <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">我的分享</span>
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="item-separator"></div>
+                <ul class="menu-list sidebarUlJs">
+                    <li class="aside recyclebin">
+                        <a href="#">
+                        <span class="text">
+                            <span class="img-ico"></span>
+                            <span class="item-title">回收站</span>
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="side-options">
+                    <span class="side-lalldownload">
+                        <a href="#" class="side-lalldownload"><span></span>同步盘</a>
+                        <a href="#" class="side-landroid"><span></span>Android</a>
+                        <a href="#" class="side-lophone"><span></span>iPhone</a>
+                        <a href="#" class="side-lmore" id="side-lmore"><span></span>更多</a>
+                    </span>
+                    <div id="side-option-panel">
+                        <dl class="cl-dl-container clearfix">
+                            <dt class="g-clearfix">
+                                <a href="#" class="img-ico side-lwp7 detail-item-block">
+                                    <span></span>
+                                    WP
+                                </a>
+                                <a href="#" class="img-ico side-lipad detail-item-block">
+                                    <span></span>
+                                    iPad
+                                </a>
+                                <a href="#" class="img-ico side-lyunguanjia">
+                                    <span></span>
+                                    云管家
+                                </a>
+                            </dt>
+                            <dd class="side-lqrcode">
+                                <img src="images/baidu_app_link_small_4cf721e.png" alt="">
+                                扫描二维码下载
+                            </dd>
+                        </dl>
+                        <em class="side-arrow"></em>
+                    </div>
+                </div>
+                <div class="aside-absolute-container" id="absolute-container">
+                    <div class="position_container">
+                        <div class="remaining-quota">
+                            <div class="remainingSpaceUi">
+                                <span></span>
+                            </div>
+                            <div class="remainingSpace bold">
+                                <span>4.66G</span>/<span>5126G</span>
+                            </div>
+                            <div class="add">
+                                <a href="#">扩容</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="module-toolbar g-clearfix">
+                <div class="default-dom">
+                    <div class="list-grid-switch list-switched-on" id="list_grid_js">
+                        <a href="javascript:void(0)" class="list-switch"></a>
+                        <a href="javascript:void(0)" class="grid-switch"></a>
+                    </div>
+                    <div class="bar">
+                        <div class="position-bar">
+                            <span class="g-dropdown-button">
+                                <a href="javascript:void(0)" class="g-button g-button-blue upload-wrapper">
+                                    <span class="g-button-right">
+                                        <em title="上传" class="icon icon-upload"></em>
+                                        <span class="text" style="width:40px;">上传</span>
+                                    </span>
+                                </a>
+                                <span class="menu" style="width:104px;">
+                                    <a href="javascript:void(0)" class="g-button-menu  upload-wrapper">
+                                        上传文件
+                                        <form action="javascript:void(0)" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer;">
+                                            <input type="file" title="点击选择文件" multiple style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer;">
+                                        </form>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button-menu  upload-wrapper">
+                                        上传文件夹
+                                        <form action="javascript:void(0)" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer;">
+                                            <input type="file" title="点击选择文件夹" multiple style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer;">
+                                        </form>
+                                    </a>
+                                </span>
+                            </span>
+                            <a href="javascript:void(0)" class="g-button">
+                                <span class="g-button-right">
+                                    <em class="icon icon-newdir" title="新建文件夹"></em>
+                                    <span class="text" style="width:auto;">新建文件夹</span>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="g-button">
+                                <span class="g-button-right">
+                                    <em class="icon icon-offline-download" title="离线下载"></em>
+                                    <span class="text" style="width:auto;">离线下载</span>
+                                </span>
+                            </a>
+                            <span class="g-dropdown-button">
+                                <a href="javascript:void(0)" class="g-button">
+                                    <span class="g-button-right">
+                                        <em class="icon icon-device-tool" title="我的设备"></em>
+                                        <span class="text" style="width:auto;">我的设备</span>
+                                    </span>
+                                </a>
+                                <span class="menu" style="width:112px;">
+                                    <a href="javascript:void(0);" class="g-button-menu">推送任务列表</a>
+                                    <a href="javascript:void(0);" class="g-button-menu">添加设变</a>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module-list" style="height:396px;">
+                <div class="module-history-list">
+                    <span class="history-list-dir">全部文件</span>
+                    <span class="history-list-tips">已全部加载,共22个</span>
+                    <ul class="historylistmanager-history" style="display:block;">
+                        <li>
+                            <a href="javascript:void(0)" data-deep="-1">返回上一级</a>
+                            <span class="historylistmanager-separator">|</span>
+                            <a href="javascript:void(0)" data-deep="0">全部文件</a>
+                            <span class="historylistmanager-separator-gt">></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" title="软件" data-deep="1">软件</a>
+                            <span class="historylistmanager-separator-gt">></span>
+                            <span title="winscp553">winscp553</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-view-header">
+                    <div class="list-header">
+                        <ul class="list-cols" style="display:block;">
+                            <li class="col first-col descend" style="width:60%;">
+                                <div class="col-item check">
+                                    <span class="check-icon"></span>
+                                </div>
+                                <span class="text">文件名</span>
+                                <span class="order-icon"></span>
+                            </li>
+                            <li class="col" style="width:16%;">
+                                <span class="text">大小</span>
+                                <span class="order-icon"></span>
+                            </li>
+                            <li class="col last-col" style="width:23%;">
+                                <span class="text">修改日期</span>
+                                <span class="order-icon"></span>
+                            </li>
+                        </ul>
+                        <ul class="grid-cols" style="display:none;">
+                            <li class="col first-col">
+                                <div class="col-item check">
+                                    <span class="check-icon"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-view-container" style="display:block;">
+                    <div class="module-list-view" style="height:314px;">
+                        <div class="list-view" style="margin:0;">
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon dir-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="我的资源">我的资源</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span data-id="1" class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">-</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon dir-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="我的资源">我的资源</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span data-id="2"  class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">-</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon dir-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="我的资源">我的资源</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">-</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon dir-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="我的资源">我的资源</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">-</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon dir-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="我的资源">我的资源</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">-</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon dir-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="我的资源">我的资源</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">-</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon dir-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="网站">网站</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">-</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon dir-apps-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="我的应用数组">我的应用数组</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">-</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon fileicon-small-txt"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="问题.txt">问题.txt</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">224B</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item">
+                                <span class="checkbox"></span>
+                                <div class="fileicon default-small"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="php pdo链接数据库.php">php pdo链接数据库.php</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">429B</div>
+                                <div class="ctime" style="width:23%;">2016-04-21 23:28</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item open-enable">
+                                <span class="checkbox"></span>
+                                <div class="fileicon fileicon-small-zip"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="linux环境配置.rar">linux环境配置.rar</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">47.2M</div>
+                                <div class="ctime" style="width:23%;">2014-08-20 23:17</div>
+                            </dd>
+                            <dd class="g-clearfix list-view-item">
+                                <span class="checkbox"></span>
+                                <div class="fileicon fileicon-sys-s-exe"></div>
+                                <div class="file-name" style="width:60%;">
+                                    <div class="text">
+                                        <a href="javascript:void(0)" class="filename" title="Fuel_for_MS_Word_1.2.dmg">Fuel_for_MS_Word_1.2.dmg</a>
+                                    </div>
+                                    <div class="operate">
+                                        <div class="button-box-mark" style="display:inline-block;*display:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div>
+                                        <div style="position: absolute; top: 0px; line-height: normal;">
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-share-blue" title="分享"></em>
+                                                    <span class="text" style="width:auto;">分享</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button">
+                                                <span class="g-button-right">
+                                                    <em class="icon icon-download-blue" title="下载"></em>
+                                                    <span class="text" style="width:auto;">下载</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">编辑</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">移动到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">复制到</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">重命名</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                                <span class="g-button-right">
+                                                    <span class="text" style="width:auto;">删除</span>
+                                                </span>
+                                            </a>
+                                            <span class="g-dropdown-button" data-target="click">
+                                                <a href="javascript:void(0)" class="g-button">
+                                                    <span class="g-button-right">
+                                                        <span class="text" style="width:auto;">更多</span>
+                                                    </span>
+                                                </a>
+                                                <span class="menu" style="width:64px;">
+                                                    <a href="javascript:void(0);" class="g-button-menu move">移动</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu ">复制到</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu rename">重命名</a>
+                                                    <a href="javascript:void(0);" class="g-button-menu delete">删除</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-size" style="width:16%;">634.2M</div>
+                                <div class="ctime" style="width:23%;">2014-08-20 23:17</div>
+                            </dd>
+                        </div>
+                        <div class="scrollbar" style="display:block;">
+                            <div id="scrollbarArrowUp" class="scrollbar-arrow scrollbar-arrow-up sprite"></div>
+                            <div class="scrollbar-tracker" style="height: 91px;">
+                                <div class="scrollbar-thumb" style="height: 18px; top: 0px;"></div>
+                            </div>
+                            <div id="scrollbarArrowDown" class="scrollbar-arrow scrollbar-arrow-down sprite"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<script src="js/js.js"></script>
+<script src="js/main.js"></script>
+<script>
+    window.onload=function(){
+        header();
+    }
+</script>
+</body>
+</html>

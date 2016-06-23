@@ -1,0 +1,8 @@
+.header{}
+.header a{display:inline-block;width:30px;line-height:23px;border:solid 1px red;border-radius:3px;text-align:center;text-decoration:none;margin-right:5px;}
+.header a:hover{background:red;color:#fff;}
+.header .active,.header .active:hover{background:green;border-color:green;color:#fff;}
+.content{}
+.content p{display:none;}
+.content .active{display:block;}
+.color1 a{background:yellow;color:#000;}
