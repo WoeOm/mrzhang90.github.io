@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<title>洁鲜锋社区生鲜便利</title>
+<meta name="title" content="洁鲜锋社区生鲜店" />
+<meta name="keywords" content="洁鲜锋；社区生鲜；O2O" />
+<meta name="description" content="洁鲜锋社区生鲜O2O" />
+<link type="text/css" rel="stylesheet" href="css/comman.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/jquery_dialog.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/css.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery_dialog.js"></script>
+<script type="text/javascript" src="js/common.js?v=12"></script>
+<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="js/goods.js?v=17"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+<style type="text/css">
+body{background:-moz-linear-gradient(top,#b5c3ff,#5365b0);background:linear-gradient(top,#b5c3ff,#5365b0);background:-webkit-linear-gradient(top, #b5c3ff,#5365b0);}
+.qdDiv1{ width:100%; text-align:right; height:2.34375em; padding-top:.78125em;}
+.qdDiv1 a{ font-size:.875em; color:#fff; margin-right:4%;}
+.qdDiv2{ height:5.9375em; text-align:center; width:29.6875%; color:#5365b0; background:#eff247; border:9px solid #dee2cb; border-radius:50%; margin:0 auto;}
+.qdDiv2_1{ font-size:1.78125em; font-weight:bold; padding-top:.7em; padding-bottom:.2em;}
+.qdDiv2_2{ font-size:.625em;}
+.qdDiv3{ font-size:.75em; color:#fff; text-align:center; margin:.9375em 0 .46875em 0;}
+.qdDiv4{ width:73.4375%; height:1.9em; margin:0 auto; margin:0 auto; background:url(images/qdimg4.png) no-repeat center bottom; background-size:100% auto; position:relative;}
+.qdDiv4_1{ font-size:.625em; width:8%; line-height:2.3; color:#fff; background:url(images/qdimg1.jpg) no-repeat; background-size:100% auto; text-align:center; position:absolute; left:13.5%; top:0;}
+.qdDiv4_2{ font-size:.625em; width:8%; line-height:2.3; color:#fff; background:url(images/qdimg2.jpg) no-repeat; background-size:100% auto; text-align:center; position:absolute; left:46%; top:0;}
+.qdDiv4_3{ font-size:.625em; width:8%; line-height:2.3; color:#fff; background:url(images/qdimg3.jpg) no-repeat; background-size:100% auto; text-align:center; position:absolute; left:94.5%; top:0;}
+.qdDiv5{width:73.4375%; height:1.9em; margin:0 auto; margin:.625em auto 0; position:relative;}
+.qdDiv5 span{ font-size:.6875em; color:#fff; position:absolute;}
+.qdDiv5 span:nth-child(1){ left:-4%; top:0;}
+.qdDiv5 span:nth-child(2){ left:12%; top:0;}
+.qdDiv5 span:nth-child(3){ left:28%; top:0;}
+.qdDiv5 span:nth-child(4){ left:44%; top:0;}
+.qdDiv5 span:nth-child(5){ left:60%; top:0;}
+.qdDiv5 span:nth-child(6){ left:76%; top:0;}
+.qdDiv5 span:nth-child(7){ left:92%; top:0;}
+.qdDiv6{ width:82.5%; height:16.875em; overflow:hidden; margin:0 auto; background:url(images/qdbg.png) no-repeat; background-size:100% auto;}
+.qdDiv6_1{ width:104%; height:100%; overflow-y:auto;}
+.list{ color:#333;}
+.list li{ line-height:2.5; width:100%; height:1.5em;}
+.list li label{ font-size:.6875em; width:50%; margin-left:8%; float:left;}
+.list li span{ font-size:.6875em; float:left;}
+</style>
+<div class="qdDiv1"><a href="#">签到规则</a></div>
+<div class="qdDiv2">
+  <div class="qdDiv2_1" onClick="toSign()">签到</div>
+  <div class="qdDiv2_2">已连续签到0天</div>
+</div>
+<div class="qdDiv3">连续签到送好礼，最高可达15元</div>
+<div class="qdDiv4">
+  <div class="qdDiv4_1">5</div>
+  <div class="qdDiv4_2">10</div>
+  <div class="qdDiv4_3">15</div>
+</div>
+<div class="qdDiv5"> <span>0/1</span><span>0/5</span><span>0/7</span><span>0/10</span><span>0/13</span><span>0/14</span><span>0/15</span> </div>
+<div class="qdDiv6">
+  <div class="qdDiv6_1">
+    <ul class="list">
+      <li>
+        <label>恭喜用户凝霜依曦</label>
+        <span>获得0.50元优惠卷</span></li>
+      <li>
+        <label>恭喜用户徐小军</label>
+        <span>获得0.50元优惠卷</span></li>
+      <li>
+        <label>恭喜用户悦悦</label>
+        <span>获得0.50元优惠卷</span></li>
+      <li>
+        <label>恭喜用户   Angela</label>
+        <span>获得0.50元优惠卷</span></li>
+      <li>
+        <label>恭喜用户哑哑11</label>
+        <span>获得15.00元优惠卷</span></li>
+      <li>
+        <label>恭喜用户哑哑11</label>
+        <span>获得10.00元优惠卷</span></li>
+      <li>
+        <label>恭喜用户张春侠</label>
+        <span>获得15.00元优惠卷</span></li>
+      <li>
+        <label>恭喜用户张春侠</label>
+        <span>获得10.00元优惠卷</span></li>
+      <li>
+        <label>恭喜用户张春侠</label>
+        <span>获得0.50元优惠卷</span></li>
+      <li>
+        <label>恭喜用户哑哑11</label>
+        <span>获得0.50元优惠卷</span></li>
+    </ul>
+  </div>
+</div>
+<script>
+    function toSign(){
+        $.post(SITE_URL+'index.php?act=ajax_sign',{},function(data){
+            alert(data);
+            window.location.href=window.location.href;
+        })
+    }
+</script>
+<div class="bottom">
+  <ul>
+    <li class="dIn"><a href="#"><i class="bot1"></i>
+      <label>首页</label>
+      </a></li>
+    <li><a href="#"><i class="bot2"></i>
+      <label>超市</label>
+      </a></li>
+    <li><a href="#"><i class="bot3"><span class="mycarts">0</span></i>
+      <label>购物车</label>
+      </a></li>
+    <li><a href="#"><i class="bot4"></i>
+      <label>我</label>
+      </a></li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<title>洁鲜锋社区生鲜便利</title>
+<meta name="title" content="洁鲜锋社区生鲜店" />
+<meta name="keywords" content="洁鲜锋；社区生鲜；O2O" />
+<meta name="description" content="洁鲜锋社区生鲜O2O" />
+<link type="text/css" rel="stylesheet" href="css/comman.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/jquery_dialog.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/css.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery_dialog.js"></script>
+<script type="text/javascript" src="js/common.js?v=12"></script>
+<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="js/goods.js?v=17"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+<style type="text/css">
+body{ background:#fff;}
+.xqDiv1 img{ width:20em;height:15em;}
+.xqDiv2{ padding:.5em 4%;}
+.xqDiv2 label{ font-size:1em; margin-bottom:.5em; color:#333; display:block;}
+.xqDiv2 span{ font-size:.75em; color:#adadad; text-indent:2em; line-height:1.8;}
+
+.xqDiv3{ padding:.5em 4%;}
+.xqDiv3 label{ font-size:.875em; color:#ff245a; display:block; line-height:2;}
+.xqDiv3 label:before{ font-size:.75em;}
+.xqDiv3 span{ font-size:.75em; color:#adadad; display:block; line-height:2;}
+.lbyDiv4_14 label{ font-size:.6875em; display:inline-block; padding:.2em .5em; border:1px solid #d6d6d6; color:#333; margin-right:4%; border-radius:5px;}
+.lbyDiv4_14 label.lins{border:1px solid #5466b3; color:#5466b3;}
+.contentW img{ max-width: 100%; height: auto; width: 94%;padding: .4em 3%;}
+</style>
+<div class="xqDiv1"><img src="images/20151224gsrhjt1450940195.JPG"></div>
+<div class="xqDiv2">
+  <label>舒兰大米稻花香</label>
+</div>
+<div class="xqDiv3">
+  <label>￥40.00</label>
+  <span class="lbyDiv4_14">属性：</span> <span>规格：2.5kg/盒</span> <span>库存：10</span>
+  <p style="height:32px; line-height:32px; padding-top:5px;">
+    <input type="button" class="pushf" value="加入购物车" style="cursor:pointer;background:#AA1A3B" onclick="toSubmit('2762')">
+  </p>
+</div>
+<div class="contentW"> <img align="absMiddle" src="https://img.alicdn.com/imgextra/i2/2495053305/TB2J5ObfXXXXXa5XXXXXXXXXXXX_!!2495053305.jpg" /><img align="absMiddle" src="https://img.alicdn.com/imgextra/i2/2495053305/TB2Azd3fXXXXXXeXpXXXXXXXXXX_!!2495053305.jpg" /><img align="absMiddle" src="https://img.alicdn.com/imgextra/i1/2495053305/TB2zCyefXXXXXakXXXXXXXXXXXX_!!2495053305.jpg" /><img align="absMiddle" src="https://img.alicdn.com/imgextra/i4/2495053305/TB2weF3fXXXXXcpXXXXXXXXXXXX_!!2495053305.jpg" /><img align="absMiddle" src="https://img.alicdn.com/imgextra/i3/2495053305/TB24XagfXXXXXX_XXXXXXXXXXXX_!!2495053305.jpg" /> </div>
+<div style="height:4em"></div>
+<script type="text/javascript">
+	function toattr(obj){
+        $(obj).addClass("lins").siblings().removeClass("lins");   
+    }
+    function toSubmit(id){
+        var attr=$('.lins').html();
+        addToCart(id,'',attr);    
+    }
+</script>
+<div class="bottom">
+  <ul>
+    <li class="dIn"><a href="#"><i class="bot1"></i>
+      <label>首页</label>
+      </a></li>
+    <li><a href="#"><i class="bot2"></i>
+      <label>超市</label>
+      </a></li>
+    <li><a href="#"><i class="bot3"><span class="mycarts">0</span></i>
+      <label>购物车</label>
+      </a></li>
+    <li><a href="#"><i class="bot4"></i>
+      <label>我</label>
+      </a></li>
+  </ul>
+</div>
+</body>
+</html>

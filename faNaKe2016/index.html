@@ -1,0 +1,444 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>Swiper demo</title>
+
+<link rel="stylesheet" href="css/swiper.min.css">
+<script>
+	var oHtml=document.getElementsByTagName("html")[0];
+	var iWidth=document.documentElement.clientWidth;
+	iWidth=iWidth>540?540:iWidth;
+	oHtml.style.fontSize=iWidth/16+"px";
+</script>
+<script src="js/jquery.min.js"></script>
+<!-- Demo styles -->
+<style>
+*{margin: 0;padding: 0;}
+img{ display:block;}
+html,body{ height:100%;}
+.swiper-container {width: 100%;height: 100%;}
+
+.loadDiv{ width:100%; height:100%; background:url(images/loadBg.jpg) no-repeat #fff; background-size:100% 100%; position:fixed; left:0; top:0; z-index:777; transition:all 1s; -webkit-transition:all 1s;}
+.loadDiv1{ width:12rem; position:absolute; left:2rem; top:3rem;}
+.loadDiv1 img{ width:100%; height:auto;}
+.loadDiv2{ width:1.5rem; height:.5rem; position:absolute; left:7.25rem; top:12.45rem; z-index:8888}
+.loadDiv2 i{ width:.3rem; height:.3rem; display:block; margin-right:.3rem; float:left; background:red; border-radius:50%;}
+.loadDiv2 i:nth-child(1){ animation:loadOp1 1s linear 0s infinite backwards;-webkit-animation:loadOp1 1s linear 0s infinite backwards;}
+.loadDiv2 i:nth-child(2){ animation:loadOp2 1s linear 0s infinite backwards;-webkit-animation:loadOp2 1s linear 0s infinite backwards;}
+.loadDiv2 i:nth-child(3){ animation:loadOp3 1s linear 0s infinite backwards;-webkit-animation:loadOp3 1s linear 0s infinite backwards;}
+.loadDiv2 i:last-child{ margin:0;}
+.loadDiv3{ width:16rem; position:absolute; left:0; bottom:0;}
+.loadDiv3 img{ width:100%; height:auto;}
+.swiper-slide{ width:100%; height:100%; position:relative;}
+.swiper-slide img{ width:100%; height:auto;}
+.slide1_0{ width:100%; height:100%;}
+.slide1_0 img{ width:100%; height:100%;}
+.slide1_1{ width:7.375rem; position:absolute; left:0.975rem; top:1.65rem;}
+.slide1_2{ width:4.8rem; position:absolute; left:0.875rem; top:3.075rem;}
+.slide1_3{ width:3.8rem; position:absolute; left:6.15rem; top:2.775rem;}
+.slide1_4{ width:0.975rem; position:absolute; left:11.575rem; top:0rem;}
+.slide1_5{ width:0.725rem; position:absolute; left:12.725rem; top:0rem;}
+.slide1_6{ width:1.725rem; position:absolute; left:13.925rem; top:0rem;}
+.slide1_7{ width:13.325rem; position:absolute; left:1.3rem; top:5.1rem; z-index:3}
+.slide1_8{ width:16rem; position:absolute; left:0rem; bottom:0rem; z-index:4}
+
+.swiper-slide-active .slide1_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .slide1_2{animation:left 1s linear .5s backwards;-webkit-animation:left 1s linear .5s backwards;}
+.swiper-slide-active .slide1_3{animation:scaleD 1s linear 1s backwards;-webkit-animation:scaleD 1s linear 1s backwards;}
+.swiper-slide-active .slide1_4{animation:top 1s linear 0s backwards;-webkit-animation:top 1s linear 0s backwards;}
+.swiper-slide-active .slide1_5{animation:top 1s linear .5s backwards;-webkit-animation:top 1s linear .5s backwards;}
+.swiper-slide-active .slide1_6{animation:top 1s linear 1s backwards;-webkit-animation:top 1s linear 1s backwards;}
+
+.slide2_0{ width:16rem; position:absolute; left:0; bottom:0;}
+.slide2_1{ width:16rem; position:absolute; left:0; top:3.15rem;}
+.slide2_2{ width:14.125rem; position:absolute; left:0.975rem; top:12.125rem;}
+.slide2_3{ width:16rem; position:absolute; left:0; bottom:0;}
+.swiper-slide-active .slide2_1{animation:scaleD 1s linear 0s backwards;-webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .slide2_2{animation:left 1s linear .5s backwards;-webkit-animation:left 1s linear .5s backwards;}
+
+.slide3_0{ width:16rem; position:absolute; left:0; top:0; z-index:-1}
+.slide3_0 img{ width:100%; height:auto;}
+.slide3_1{ width:16rem; height:100%; overflow-y:scroll; position:absolute; left:0; top:0;}
+.slide3_11{ width:16rem; height:20rem;}
+.slide3_12{}
+.slide3_13{ width:16rem; height:1.075rem; padding-bottom:2rem; background:rgba(255,255,255,0.9)}
+.slide3_13 img{ width:auto; height:100%; margin:0 auto;}
+.slide3_121{ width:16rem; height:1.075rem;}
+.slide3_121 img{ width:auto; height:100%; margin:0 auto;}
+.slide3_122{ width:16rem; background:rgba(255,255,255,0.9)}
+.slideList1{ text-align:center; font-size:0.8rem; color:#000; font-weight:bold; padding:.7rem 0 .3rem 0;}
+.slideList2{ width:14.15rem; margin:0.45rem auto 0;}
+.slideList2_1{ background:#f1f1f1; height:1.125rem; padding-left:4%; border-radius:.3rem .3rem 0 0; line-height:1.125rem; font-size:0.65rem; color:#000; font-weight:bold;}
+.slideList2_2{ width:100%; display:inline-block; padding:.5rem 0; background:#fff; border-radius:0 0 .3rem .3rem;}
+.slideList2_2 p{ padding:.1rem 3%; font-size:0.65rem; color:#555;}
+.slideList2_2 p i{ width:.25rem; height:.25rem; background:#515151; float:left; margin-top:.35rem; margin-right:.3rem;}
+.slideList2_2 img{ width:94%; margin:0 auto;}
+
+
+.slide4_0{ width:100%; height:100%; position:absolute; left:0; top:0;}
+.slide4_0 img{ width:100%; height:100%; }
+.slide4_1{ width:7.1rem; position:absolute; left:4.4rem; top:2.875rem;}
+.slide4_2{ width:7.1rem; position:absolute; left:4.4rem; top:10.3rem;}
+.slide4_3{ width:7.1rem; position:absolute; left:4.4rem; top:12.45rem;}
+.swiper-slide-active .slide4_1{animation:scaleD 1s linear 0s backwards;-webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .slide4_2{animation:scaleD 1s linear .5s backwards;-webkit-animation:scaleD 1s linear .5s backwards;}
+.swiper-slide-active .slide4_3{animation:scaleD 1s linear 1s backwards;-webkit-animation:scaleD 1s linear 1s backwards;}
+
+@keyframes left{
+	0%{transform:translateX(-100%); opacity:0;}
+	100%{transform:translateX(0); opacity:1;}
+}
+@-webkit-keyframes left{
+	0%{-webkit-transform:translateX(-100%); opacity:0;}
+	100%{-webkit-transform:translateX(0); opacity:1;}
+}
+
+@keyframes right{
+	0%{transform:translateX(100%); opacity:0;}
+	100%{transform:translateX(0); opacity:1;}
+}
+@-webkit-keyframes right{
+	0%{-webkit-transform:translateX(100%); opacity:0;}
+	100%{-webkit-transform:translateX(0); opacity:1;}
+}
+@keyframes top{
+	0%{transform:translateY(-100%); opacity:0;}
+	100%{transform:translateY(0); opacity:1;}
+}
+@-webkit-keyframes top{
+	0%{-webkit-transform:translateY(-100%); opacity:0;}
+	100%{-webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes bot{
+	0%{transform:translateY(100%); opacity:0;}
+	100%{transform:translateY(0); opacity:1;}
+}
+@-webkit-keyframes bot{
+	0%{-webkit-transform:translateY(100%); opacity:0;}
+	100%{-webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes opacD{
+	0%{ opacity:0}
+	100%{ opacity:1}	
+}
+@-webkit-keyframes opacD{
+	0%{ opacity:0}
+	100%{ opacity:1}	
+}
+@keyframes scaleD{
+	0%{transform:scale(0)}
+	100%{transform:scale(1)}
+}
+@-webkit-keyframes scaleD{
+	0%{-webkit-transform:scale(0)}
+	100%{-webkit-transform:scale(1)}
+}
+
+@keyframes loadOp1{
+	0%{ opacity:0}
+	25%{ opacity:1}
+	50%{ opacity:1}
+	75%{ opacity:1}
+	100%{ opacity:0}	
+}
+@-webkit-keyframes loadOp1{
+	0%{ opacity:0}
+	25%{ opacity:0}
+	50%{ opacity:1}
+	75%{ opacity:1}
+	100%{ opacity:0}	
+}
+@keyframes loadOp2{
+	0%{ opacity:0}
+	25%{ opacity:0}
+	50%{ opacity:1}
+	75%{ opacity:1}
+	100%{ opacity:0}	
+}
+@-webkit-keyframes loadOp2{
+	0%{ opacity:0}
+	25%{ opacity:0}
+	50%{ opacity:0}
+	75%{ opacity:1}
+	100%{ opacity:0}	
+}
+@keyframes loadOp3{
+	0%{ opacity:0}
+	25%{ opacity:0}
+	50%{ opacity:0}
+	75%{ opacity:1}
+	100%{ opacity:0}	
+}
+@-webkit-keyframes loadOp3{
+	0%{ opacity:0}
+	25%{ opacity:1}
+	50%{ opacity:1}
+	75%{ opacity:1}
+	100%{ opacity:0}	
+}
+.music{position:fixed;right: 10px; top: 5px;z-index: 300;width: 11%;}
+.music img{ width:100%; height:auto;}
+</style>
+</head>
+<body>
+<div class="music" style="overflow:hidden;">
+    <audio id="video" autoplay="autoplay" loop style="display:none;width:1px;height:1px;">
+        <source src="hhyy1.mp3" id="video_url_mp3" type="audio/mpeg">
+    </audio>
+    <img src="images/music_play.png" id="btnImg">
+</div>
+<div class="loadDiv">
+	<div class="loadDiv1"><img src="images/loadimg1.png"></div>
+    <div class="loadDiv2"><i></i><i></i><i></i></div>
+    <div class="loadDiv3"><img src="images/loadimg2.png"></div>
+</div>
+<!-- Swiper -->
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+        <div class="swiper-slide slide1">
+        	<div class="slide1_0"><img src="images/slide1_0.jpg"></div>
+        	<div class="slide1_1"><img src="images/slide1_1.png"></div>
+            <div class="slide1_2"><img src="images/slide1_2.png"></div>
+            <div class="slide1_3"><img src="images/slide1_3.png"></div>
+            <div class="slide1_4"><img src="images/slide1_4.png"></div>
+            <div class="slide1_5"><img src="images/slide1_5.png"></div>
+            <div class="slide1_6"><img src="images/slide1_6.png"></div>
+            <div class="slide1_7"><img src="images/slide1_7.png"></div>
+            <div class="slide1_8"><img src="images/slide1_8.png"></div>
+        </div>
+        <div class="swiper-slide slide2">
+        	<div class="slide2_0"><img src="images/slide2_0.jpg"></div>
+            <div class="slide2_1"><img src="images/slide2_1.png"></div>
+            <div class="slide2_2"><img src="images/slide2_2.png"></div>
+            <div class="slide2_3"><img src="images/slide2_3.png"></div>
+        </div>
+        
+        <div class="swiper-slide slide3">
+        	<div class="slide3_0"><img src="images/slide3_0.jpg"></div>
+        	<div class="slide3_1">
+            	<div class="slide3_11"></div>
+                <div class="slide3_12 stop-swiping">
+                	<div class="slide3_121"><img src="images/slide3_1.png"></div>
+                    <div class="slide3_122">
+                    	<div class="slideList1">总经理战略演讲</div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1">致辞提要</div>
+                            <div class="slideList2_2"><p><i></i>我们的世界面临前所未有的动荡、不可预测、复杂和不确定。</p><p><i></i>整合、积累、创新。</p><p><i></i>三年磨一剑，锋从磨砺出。</p><p><i></i>再造业务模式，重塑业务价值。</p><p><i></i>“富二代”逆袭成“奋斗者”。</p><p><i></i>差异化才是真正的公平。</p><p><i></i>成功源于你的选择，更源于你的坚持 。</p><p><i></i>因为自信 所以相信。</p></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1">总经理战略演讲</div>
+                            <div class="slideList2_2"><img src="images/img1_1.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img1_2.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img1_3.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img1_4.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img1_5.jpg"></div>
+                        </div>
+                        
+                        <div class="slideList2">
+                        	<div class="slideList2_1">2015优选颁奖</div>
+                            <div class="slideList2_2"><img src="images/img2_1.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img2_2.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img2_3.jpg"></div>
+                        </div>
+                       	
+                        <div class="slideList2">
+                        	<div class="slideList2_1">全员拓展</div>
+                            <div class="slideList2_2"><img src="images/img4_1.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img4_2.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img4_3.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img4_4.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img4_5.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img4_6.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img4_7.jpg"></div>
+                        </div>
+                        
+                        <div class="slideList2">
+                        	<div class="slideList2_1">部门节目大PK</div>
+                            <div class="slideList2_2"><img src="images/img3_1.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_2.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_3.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_4.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_5.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_6.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_7.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_8.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_9.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_10.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_11.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_12.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_13.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_14.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_15.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_16.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_17.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_18.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img3_19.jpg"></div>
+                        </div>
+                        
+                        
+                        
+                        <div class="slideList2">
+                        	<div class="slideList2_1">花絮</div>
+                            <div class="slideList2_2"><img src="images/img5_1.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img5_2.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img5_3.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img5_4.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img5_5.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img5_6.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img5_7.jpg"></div>
+                        </div>
+                        <div class="slideList2">
+                        	<div class="slideList2_1"></div>
+                            <div class="slideList2_2"><img src="images/img5_8.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide3_13"><img src="images/slide3_2.png"></div>
+            </div>
+        	
+        </div>
+        <div class="swiper-slide slide4">
+        	<div class="slide4_0"><img src="images/slide4_0.jpg"></div>
+            <div class="slide4_1"><img src="images/slide4_1.png"></div>
+            <div class="slide4_2"><img src="images/slide4_2.png"></div>
+            <div class="slide4_3"><img src="images/slide4_3.png"></div>
+        </div>
+	</div>
+</div>
+
+<script src="js/swiper.min.js"></script>
+<script>
+
+window.onload = function(){
+	$(".loadDiv").css("top","-100%");
+		var mySwiper = new Swiper('.swiper-container',{
+		direction : 'vertical',
+		noSwipingClass : 'stop-swiping',
+	})
+}
+document.getElementById('btnImg').onclick = function(){
+	var videoV = document.getElementById('video');
+	if(this.getAttribute('src') == 'images/music_play.png'){
+		this.setAttribute('src','images/music_stop.png');
+		videoV.pause();
+	}else{
+		this.setAttribute('src','images/music_play.png');
+		videoV.play();
+	}
+}
+</script>
+</body>
+</html>

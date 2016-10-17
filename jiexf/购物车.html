@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<title>洁鲜锋社区生鲜便利</title>
+<meta name="title" content="洁鲜锋社区生鲜店" />
+<meta name="keywords" content="洁鲜锋；社区生鲜；O2O" />
+<meta name="description" content="洁鲜锋社区生鲜O2O" />
+<link type="text/css" rel="stylesheet" href="css/comman.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/jquery_dialog.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/css.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery_dialog.js"></script>
+<script type="text/javascript" src="js/common.js?v=12"></script>
+<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="js/goods.js?v=17"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+<style type="text/css">
+.comTop span{ position:absolute; right:4%; top:0; font-size:.75em; color:#fff;}
+.gwDiv{ width:92.1875%; padding:.5em 3.90625%; background:#fff; display:inline-block;}
+.gwDiv1{ width:100%; padding:.15625em 0 .8125em 0; line-height:.875em; float:left;}
+.gwDiv1 label{ font-size:.75em; float:left; color:#5365b0; padding-left:10%; display:block; background:url(images/gwimg1.jpg) no-repeat left center; background-size:auto 100%; margin-right:12%;}
+.gwDiv1 span{ font-size:.725em; float:left; color:#ff2a2a; display:block; padding-left:10%; background:url(images/gwimg2.jpg) no-repeat left center; background-size:auto 100%;}
+.gwDiv2{ font-size:.75em; color:#333; margin-bottom:.8em;}
+.gwDiv3{ width:100%; display:inline-block; background:url(images/ctimg5.jpg) no-repeat left center; background-size:4% auto;}
+.gwDiv30{background:url(images/ctimg4.jpg) no-repeat left center; background-size:4% auto; border-top:1px solid #d6d6d6;}
+.gwDiv3_0{ width:12%; float:left; height:8.6em;}
+.gwDiv3_1{ width:88%; display:inline-block; padding:1.125em 0; position:relative;}
+.gwDiv3_1 img{ width:37.7%; float:left; margin-right:5.4%;}
+.gwDiv3_11{ line-height:2.2; width:50%; float:left; overflow:hidden;}
+.gwDiv3_11 h3{ font-size:.75em; font-weight:100; margin-top:.8em;}
+.gwDiv3_11 span{ font-size:.725em; display:block;}
+.gwDiv3_11 label{ font-size:.75em; display:block; color:#ff245a}
+.gwDiv3_11 label:before{ content:"￥"; font-size:.725em;}
+.gwDiv3_12{ width:30%; height:1.25em; border:1px solid #d6d6d6; border-radius:5px; float:right; position:absolute; bottom:1.2em; right:1%;}
+.gwDiv3_12 span{ display:block; height:100%; float:left;}
+.gwDiv3_12 span img{ width:auto; height:100%; border-radius:5px;}
+.gwDiv3_12 input{ display:block; float:left; width:34%; height:100%; color:#333; display:block; border:0; text-align:center;}
+</style>
+<div class="comTop"> <a href="javascript:;" onclick="history.go(-1)"class="dpTop1">返回</a>
+  <label>购物车</label>
+  <span>编辑</span> </div>
+<form action="http://wx.jxf7717.com/m/mycart.php?type=checkout"  method="post" id="toCart">
+  <div class="gwDiv">
+    <div class="gwDiv1">
+      <label>洁鲜锋直营店（华滋奔腾大厦)</label>
+      <span></span> </div>
+    <div class="gwDiv2">所购商品：</div>
+    <div class="gwDiv3 gwDiv30">
+      <input type="checkbox" style="display:none" checked name="shops_goods[]" value="2590" />
+      <div class="gwDiv3_0"></div>
+      <div class="gwDiv3_1"> <a href="javascript:;"><img src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202gobphd1449023698.JPG"></a>
+        <div class="gwDiv3_11">
+          <h3>有机黑木耳</h3>
+          <span></span> <span>属性：&nbsp;规格：125g/袋</span>
+          <label class="price gzprice2590" >15.80</label>
+        </div>
+        <div class="gwDiv3_12"><span onClick="suan('jian',$(this))"><img src="images/jian1.jpg"></span>
+          <input id="2590" name="goods_number[]" value="1" class="num" type="text">
+          <span onClick="suan('jia',$(this))"><img src="images/jia1.jpg"></span></div>
+      </div>
+    </div>
+    <div class="gwDiv3 gwDiv30">
+      <input type="checkbox" style="display:none" checked name="shops_goods[]" value="2762" />
+      <div class="gwDiv3_0"></div>
+      <div class="gwDiv3_1"> <a href="javascript:;"><img src="http://wx.jxf7717.com/photos/goods/201512/thumb_s/20151224gsrhjt1450940195.JPG"></a>
+        <div class="gwDiv3_11">
+          <h3>舒兰大米稻花香</h3>
+          <span></span> <span>属性：&nbsp;规格：2.5kg/盒</span>
+          <label class="price gzprice2762" >120.00</label>
+        </div>
+        <div class="gwDiv3_12"><span onClick="suan('jian',$(this))"><img src="images/jian1.jpg"></span>
+          <input id="2762" name="goods_number[]" value="3" class="num" type="text">
+          <span onClick="suan('jia',$(this))"><img src="images/jia1.jpg"></span></div>
+      </div>
+    </div>
+    <div class="gwDiv3 gwDiv30">
+      <input type="checkbox" style="display:none" checked name="shops_goods[]" value="1910" />
+      <div class="gwDiv3_0"></div>
+      <div class="gwDiv3_1"> <a href="javascript:;"><img src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151205tqajbv1449280856.JPG"></a>
+        <div class="gwDiv3_11">
+          <h3>秦邮牌咸鸭蛋</h3>
+          <span></span> <span>属性：&nbsp;规格：26个/盒</span>
+          <label class="price gzprice1910" >64.00</label>
+        </div>
+        <div class="gwDiv3_12"><span onClick="suan('jian',$(this))"><img src="images/jian1.jpg"></span>
+          <input id="1910" name="goods_number[]" value="1" class="num" type="text">
+          <span onClick="suan('jia',$(this))"><img src="images/jia1.jpg"></span></div>
+      </div>
+    </div>
+    <style type="text/css">
+.gwDiv4{ color:#5365b0; display:none;}
+.gwDiv4 label{ font-size:.75em; padding-left:6%; margin-right:4%; background:url(images/ctimg5.jpg) no-repeat left center; background-size:4% auto; background-size:auto 100%;}
+.gwDiv40 label{background:url(images/ctimg4.jpg) no-repeat left center; background-size:auto 100%;}
+.gwDiv4 span{ font-size:.75em;}
+.gwDiv5_bg{ width:100%; height:3.0625em;}
+.gwDiv5{ width:100%; height:3.0625em; background:#ddd; position:fixed; left:0;bottom:3.0625em;}
+.gwDiv5_1{ width:43.75%; float:left; margin-left:4%; padding-top:.4em;}
+.gwDiv5_1 label{ font-size:.75em; display:block; color:#333;}
+.gwDiv5_1 span{ font-size:.75em; display:block; color:#333;}
+.gwDiv5_2{ color:#5466b3; font-size:.875em; display:block; float:left; margin-top:1em;}
+.gwDiv5_3{ background:#5365b0; line-height:3.5; width:24.375%; text-align:center; margin-right:4%; font-size:.875em; color:#FFF; display:block; float:right;}
+</style>
+    <div class="gwDiv4">
+      <label>全选</label>
+      <span>删除</span> </div>
+  </div>
+</form>
+<div class="gwDiv5_bg"></div>
+<div class="gwDiv5">
+  <div class="gwDiv5_1">
+    <label>合计：￥199.80</label>
+    <span>免运费</span></div>
+  <a class="gwDiv5_2" style="color:#5466b3" href="http://wx.jxf7717.com/m/catalog.php">再选购</a> <a class="gwDiv5_3" href="javascript:;" onClick="toCheck()">去结算</a> </div>
+<div class="btn_bg"></div>
+<script type="text/javascript">
+function toDecimal(x) {  
+	var f = parseFloat(x);  
+	if (isNaN(f)) {  
+		return;  
+	}
+	f = Math.round(x*100)/100;  
+	return f;  
+} 
+$(".gwDiv3_0").click(function(){
+	if($(this).parent().hasClass("gwDiv30")){
+		$(this).parent().removeClass("gwDiv30");
+		$(this).siblings('input').attr("checked",false);
+	}else{
+		$(this).parent().addClass("gwDiv30");
+		$(this).siblings('input').attr("checked",true);
+	}
+
+	total();
+})
+$(".gwDiv4 label").click(function(){
+	if($(this).parent().hasClass("gwDiv40")){
+		$(this).parent().removeClass("gwDiv40");
+		$(".gwDiv3").removeClass("gwDiv30");
+		$(".gwDiv3_0").siblings('input').attr("checked",false);
+	}else{
+		$(this).parent().addClass("gwDiv40");
+		$(".gwDiv3").addClass("gwDiv30");
+		$(".gwDiv3_0").siblings('input').attr("checked",true);
+	}
+	total();
+})
+$(".gwDiv4 span").click(function(){
+	if(confirm("确定删除所选")){
+		var arr = [];
+		$('input[name="shops_goods[]"]:checked').each(function(){
+			arr.push($(this).val());
+		});
+		gid = str=arr.join(',');
+		$.post('http://wx.jxf7717.com/m/mycart.php',{action:'ajax_remove_cargoods',gid:gid},function(prices){
+			window.location.href=window.location.href;
+		});
+	}
+	return false;
+})
+
+function suan(method,obj){
+	var num = parseInt(obj.siblings("input").val());
+	var numobj = obj.siblings('input[name="goods_number[]"]');
+	if(method == "jia"){
+		num++;
+	}
+	if(method == "jian"){	
+		if(num>1){
+			num--;
+		}
+	}
+	obj.siblings("input").val(num);
+	$('.mycarts').html(num);
+	total();
+	change_number(numobj);	
+}
+total();
+
+function change_number(obj){
+	id = $(obj).attr('id');
+	numbers = $(obj).val();
+	if(!(numbers>0)){
+	 	numbers = 1;
+	 	$(obj).val('1');
+	}
+	createwindow();
+	$.post(SITE_URL+'mycart.php',{action:'ajax_change_price',id:id,number:numbers},function(data){ 
+		removewindow();
+		if(data.error=='0'){
+			$(".gwDiv5_1 label").html("合计：￥" + data.prices);
+			$('.gprice'+id).html('￥'+data.thisprice);
+			$('.gzprice'+id).html(toDecimal(data.thisprice * numbers).toFixed(2));
+		}else{
+			alert(data.message);
+		}
+	}, "json");
+	return true;
+}
+function total(){
+	var priceN = 0;
+	$(".gwDiv3").each(function(index) {
+        var price = parseFloat($(this).find(".price").html());
+		var num = parseInt($(this).find(".num").val());
+		var pNum = parseFloat((price * num).toFixed(2));
+		priceN += pNum
+    });
+}
+$(".comTop span").click(function(){
+	if($(this).html() == "编辑"){
+		$(this).html("完成");
+		$(".gwDiv4").show();
+		$(".gwDiv3").removeClass("gwDiv30");
+		$(".gwDiv3_0").siblings('input').attr("checked",false);
+	}else{
+		$(this).html("编辑");
+		$(".gwDiv4").hide();
+	}	
+})
+
+function toCheck(){
+	var arr = [];
+	$('input[name="shops_goods[]"]:checked').each(function(){
+		arr.push($(this).val());
+	});
+	gid = str=arr.join(',');
+
+	if(gid == ''){
+		return false;
+	}else{
+		$('#toCart').submit();
+	}
+}
+</script>
+<div class="bottom">
+  <ul>
+    <li class="dIn"><a href="#"><i class="bot1"></i>
+      <label>首页</label>
+      </a></li>
+    <li><a href="#"><i class="bot2"></i>
+      <label>超市</label>
+      </a></li>
+    <li><a href="#"><i class="bot3"><span class="mycarts">0</span></i>
+      <label>购物车</label>
+      </a></li>
+    <li><a href="#"><i class="bot4"></i>
+      <label>我</label>
+      </a></li>
+  </ul>
+</div>
+</body>
+</html>

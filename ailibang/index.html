@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Swiper demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="css/swiper.min.css">
+<!-- Demo styles -->
+<style>
+@media only screen and (max-width:540px){
+  body{ font-size:168.5%;}
+}
+@media only screen and (max-width:480px){
+  body{ font-size:150%;}
+}
+@media only screen and (max-width:400px){
+  body{ font-size:125%;}
+}
+@media only screen and (max-width:360px){
+  body{ font-size:112.5%;}
+}
+@media only screen and (max-width:320px){
+  body{ font-size:100%;}
+}
+*{margin: 0;padding: 0;}
+html, body {
+	position: relative;
+	height: 100%;
+}
+body {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #000;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	background: #fff;
+	position:relative;
+	top:0;
+	left:0;
+}
+@keyframes boxshow1-1{
+	from{ transform:translate(0,-100%)}
+	to{ transform:translate(0,0)}
+}
+@-webkit-keyframes boxshow1-1{
+	from{ -webkit-transform:translate(0,-100%)}
+	to{ -webkit-transform:translate(0,0)}
+}
+@keyframes boxshow4-1{
+	from{ transform:translate(0,100%)}
+	to{ transform:translate(0,0)}
+}
+@-webkit-keyframes boxshow4-1{
+	from{ -webkit-transform:translate(0,100%)}
+	to{ -webkit-transform:translate(0,0)}
+}
+@keyframes show{
+	from{opacity:0;}
+	to{ opacity:1;}
+}
+@-webkit-keyframes show{
+	from{ opacity:0;}
+	to{ opacity:1;}
+}
+
+@keyframes boxshow15-1{
+	from{ transform:translate(-150%,0)}
+	to{ transform:translate(0,0)}
+}
+@-webkit-keyframes boxshow15-1{
+	from{ -webkit-transform:translate(-150%,0)}
+	to{ -webkit-transform:translate(0,0)}
+}
+@keyframes boxshow15-2{
+	from{ transform:translate(150%,0)}
+	to{ transform:translate(0,0)}
+}
+@-webkit-keyframes boxshow15-2{
+	from{ -webkit-transform:translate(150%,0)}
+	to{ -webkit-transform:translate(0,0)}
+}
+.slide1_1{height:5.03125em; margin-top:1.625em;}
+.slide1_1 img{ width:68.4375%; margin-left:21.5625%; height:auto;}
+.swiper-slide-active .slide1_1{animation:boxshow1-1 2s linear 0s both;-webkit-animation:boxshow1-1 2s linear 0s both;}
+.swiper-slide-active .slide1_2{animation:boxshow15-1 2s linear 0s both;-webkit-animation:boxshow15-1 2s linear 0s both;}
+/*.swiper-slide-active .slide1_3{animation:show 3s linear 1s both;-webkit-animation:show 3s linear 1s both;}*/
+.swiper-slide-active .slide1_4{animation:boxshow15-2 1s linear 0s both;-webkit-animation:boxshow15-2 1s linear 0s both;}
+.slide1_2{ position:absolute; left:14.0625%; top:6.725em; width:54.53125%;}
+.slide1_2 img{ width:100%; height:auto;}
+.slide1_3{ width:100%;}
+.slide1_3 img{ width:100%; height:auto;}
+.slide1_4{ width:51.09375%; position:absolute; right:0; bottom:0; height:8.84375em;}
+.slide1_4 img{ width:100%; height:auto;}
+
+.slide2_1{ width:100%; height:100%; background:url(images/slide2_1.jpg) no-repeat top center; background-size:100% 100%;}
+.slide2_2{ width:75.625%; position:absolute; left:12.1875%; top:4.78125em;}
+.slide2_2 img{ width:100%; height:auto}
+.swiper-slide-active .slide2_1{animation:show 2s linear 0s both;-webkit-animation:show 2s linear 0s both;}
+.swiper-slide-active .slide2_2{animation:boxshow15-1 2s linear 1.5s both;-webkit-animation:boxshow15-1 2s linear 1.5s both;}
+
+.slide3_1{ position:absolute; height:14.9375em; top:0; left:0; z-index:2}
+.slide3_1 img{ width:100%; height:auto;}
+.slide3_2{ position:relative; width:100%; height:100%; z-index:1; background:url(images/slide3_2.jpg) no-repeat; background-size:100% 100%;}
+.swiper-slide-active .slide3_1{animation:boxshow1-1 2s linear 0s both;-webkit-animation:boxshow1-1 2s linear 0s both;}
+.swiper-slide-active .slide3_2{animation:show 2s linear 1s both;-webkit-animation:show 2s linear 1s both;}
+
+
+.slide4_1{ position:absolute; height:14.15625em; bottom:0; left:0; z-index:2}
+.slide4_1 img{ width:100%; height:auto;}
+.slide4_2{ width:100%; height:100%; position:relative; z-index:1; background:url(images/slide4_2.jpg) no-repeat; background-size:100% 100%;}
+
+.swiper-slide-active .slide4_1{animation:boxshow4-1 2s linear 0s both;-webkit-animation:boxshow4-1 2s linear 0s both;}
+.swiper-slide-active .slide4_2{animation:show 2s linear 1s both;-webkit-animation:show 2s linear 1s both;}
+
+.slide5_1{ position:absolute; top:0; left:0; z-index:2}
+.slide5_1 img{ width:100%; height:auto;}
+.slide5_2{ position:absolute; height:24.65625em; bottom:0; left:0; z-index:1}
+.slide5_2 img{ width:100%; height:auto;}
+.swiper-slide-active .slide5_1{animation:boxshow1-1 2s linear 0s both;-webkit-animation:boxshow1-1 2s linear 0s both;}
+.swiper-slide-active .slide5_2{animation:show 2s linear 1.5s both;-webkit-animation:show 2s linear 1.5s both;}
+
+
+.slide6_1{ position:absolute; height:13.8125em; bottom:0; left:0; z-index:2}
+.slide6_1 img{ width:100%; height:auto;}
+.slide6_2{ position:absolute; top:0; left:0; z-index:1}
+.slide6_2 img{ width:100%; height:auto;}
+.swiper-slide-active .slide6_1{animation:boxshow4-1 2s linear 1.5s both;-webkit-animation:boxshow4-1 2s linear 1.5s both;}
+.swiper-slide-active .slide6_2{animation:show 2s linear 0s both;-webkit-animation:show 2s linear 0s both;}
+
+.slide7_1{ position:absolute; height:13.9375em; bottom:0; left:0; z-index:2}
+.slide7_1 img{ width:100%; height:auto;}
+.slide7_2{ position:absolute; top:0; left:0; z-index:1}
+.slide7_2 img{ width:100%; height:auto;}
+.swiper-slide-active .slide7_1{animation:boxshow4-1 2s linear 0s both;-webkit-animation:boxshow4-1 2s linear 0s both;}
+.swiper-slide-active .slide7_2{animation:show 2s linear 1s both;-webkit-animation:show 2s linear 1s both;}
+
+
+.slide8_1{ width:100%; height:100%; background:url(images/slide8_1.jpg) no-repeat; background-size:100% auto;}
+.slide8_2{ width:75.625%; position:absolute; left:12.1875%; top:4.78125em;}
+.slide8_2 img{ width:100%; height:auto}
+.swiper-slide-active .slide8_1{animation:show 2s linear 0s both;-webkit-animation:show 2s linear 0s both;}
+.swiper-slide-active .slide8_2{animation:boxshow15-1 2s linear 1.5s both;-webkit-animation:boxshow15-1 2s linear 1.5s both;}
+.slide9_1{ width:100%; height:100%; background:url(images/slide9_1.jpg) no-repeat; background-size:100% auto;}
+.slide10_1{ width:100%; height:100%; background:url(images/slide10_1.jpg) no-repeat; background-size:100% auto;}
+.slide11_1{ width:100%; height:100%; background:url(images/slide11_1.jpg) no-repeat; background-size:100% auto;}
+.slide12_1{ width:100%; height:100%; background:url(images/slide12_1.jpg) no-repeat; background-size:100% auto;}
+.slide13_1{ width:100%; height:100%; background:url(images/slide13_1.jpg) no-repeat; background-size:100% auto;}
+.slide14_1{ width:100%; height:100%; background:url(images/slide14_1.jpg) no-repeat; background-size:100% auto;}
+.swiper-slide-active .slide9_1,.swiper-slide-active .slide10_1,.swiper-slide-active .slide11_1,.swiper-slide-active .slide12_1,.swiper-slide-active .slide13_1,.swiper-slide-active .slide14_1{animation:show 2s linear 0.2s both;-webkit-animation:show 2s linear 0.2s both;}
+.slide15_1{ width:100%; height:100%; background:url(images/slide15_1.jpg) no-repeat; background-size:100% auto;}
+.slide15_2{ width:58.59375%; position:absolute; left:4.53125%; top:6.125em;}
+.slide15_2 img{ width:100%; height:auto;}
+.slide15_3{ width:87.5%; position:absolute; left:6.25%; top:11.625em;}
+.slide15_3 img{ width:100%; height:auto;}
+.swiper-slide-active .slide15_2{animation:boxshow15-1 2s linear 0s both;-webkit-animation:boxshow15-1 2s linear 0s both;}
+.swiper-slide-active .slide15_3{animation:boxshow15-2 2s linear 0s both;-webkit-animation:boxshow15-2 2s linear 0s both;}
+
+
+
+</style>
+</head>
+<body>
+<audio src="/i/horse.ogg" controls="controls" style="display:none;">
+Your browser does not support the audio element.
+</audio>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	<div class="slide1_1"><img src="images/slide1_1.png" /></div>
+            <div class="slide1_2"><img src="images/slide1_2.png" /></div>
+            <div class="slide1_3"><img src="images/slide1_3.png" /></div>
+            <div class="slide1_4"><img src="images/slide1_4.png" /></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide2_1"></div>
+            <div class="slide2_2"><img src="images/slide2_2.png"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide3_1"><img src="images/slide3_1.png"></div>
+            <div class="slide3_2"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide4_1"><img src="images/slide4_1.png"></div>
+            <div class="slide4_2"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide5_1"><img src="images/slide5_1.png"></div>
+            <div class="slide5_2"><img src="images/slide5_2.jpg"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide6_1"><img src="images/slide6_1.png"></div>
+            <div class="slide6_2"><img src="images/slide6_2.jpg"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide7_1"><img src="images/slide7_1.png"></div>
+            <div class="slide7_2"><img src="images/slide7_2.jpg"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide8_1"></div>
+            <div class="slide8_2"><img src="images/slide8_2.png"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide9_1"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide10_1"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide11_1"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide12_1"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide13_1"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide14_1"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="slide15_1"></div>
+            <div class="slide15_2"><img src="images/slide15_2.png"></div>
+            <div class="slide15_3"><img src="images/slide15_3.jpg"></div>
+        </div>
+	</div> 
+</div>
+
+<!-- Swiper JS --> 
+<script src="js/swiper.min.js"></script> 
+<!-- Initialize Swiper --> 
+<script>
+var swiper = new Swiper('.swiper-container', {
+	paginationClickable: true,
+	direction:'vertical',
+	onTransitionStart: function(swiper){
+    	
+    },
+	onTransitionEnd: function(swiper){
+    	
+    }
+});
+</script>
+</body>
+</html>

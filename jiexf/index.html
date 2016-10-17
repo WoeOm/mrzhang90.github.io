@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<title>洁鲜锋社区生鲜便利</title>
+<meta name="title" content="洁鲜锋社区生鲜店" />
+<meta name="keywords" content="洁鲜锋；社区生鲜；O2O" />
+<meta name="description" content="洁鲜锋社区生鲜O2O" />
+<link type="text/css" rel="stylesheet" href="css/comman.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/jquery_dialog.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/css.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery_dialog.js"></script>
+<script type="text/javascript" src="js/common.js?v=12"></script>
+<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="js/goods.js?v=17"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<style type="text/css">
+.iCen3{ width:100%; display:inline-block; background:#FFF; margin-bottom:.425em;}
+.iCen3_1{ width:100%; display:block;height:1.25em; line-height:1.25em;}
+.iCen3_1 img{ width:3.125%; float:left; margin:.35em 3.75% 0 4%;}
+.iCen3_1 label{ font-size:.725em; font-weight:bold; color:#ff245a; float:left;}
+.iCen3_1 a{ float:right; font-size:.6875em; color:#949494;}
+.iCen3 ul{}
+.iCen3 ul li{ width:33%; float:left;}
+.iCen3 ul li img{ width:100%; box-shadow:0 0 0 1px #d6d6d6;}
+.iCen4{ width:100%; display:inline-block; background:#FFF; border-bottom:1px solid #d6d6d6; margin-bottom:.425em;}
+.iCen4_1{ width:100%; display:block;height:1.25em; line-height:1.25em; border-bottom:1px solid #d6d6d6;}
+.iCen4_1 img{ width:3.125%; float:left; margin:.35em 3.75% 0 4%;}
+.iCen4_1 label{ font-size:.725em; font-weight:bold; color:#ff245a; float:left;}
+.iCen4_1 a{ float:right; font-size:.6875em; color:#949494;}
+
+.iCen4_2 li{ display:inline-block; width: 100%; position:relative;}
+.iCen4_21{ width:77.5%; height:4.8125em; float:left; margin-left:3.6%; border-bottom:1px dashed #d6d6d6; padding:.8125em 0 .75em 0;}
+.iCen4_2 li:last-child .iCen4_21{ border-bottom:none;}
+.iCen4_21 img{ width:37.5%; float:left; margin-right:4.5%;}
+.iCen4_21 .iCen4_211{ float:left; width:58%;margin-top:.2em;}
+.iCen4_211 p{ float:left; font-size:.825em;text-overflow:clip; overflow:hidden; white-space:nowrap;  width:65%; line-height:2; }
+.iCen4_211 img{ float:left; width:26.3%; margin-left:2%;}
+.iCen4_21 label{ float:left; width:58%; font-size:.725em; margin:.1em 0 .8em 0;}
+.iCen4_21 span{ float:left; width:58%; font-size:.825em; font-weight:bold; color:#ff245a;}
+.iCen4_21 span:before{ content:"￥"; font-size:.725em;}
+.iCen4_22{ width:28%; float:left; position:absolute; top:3.8em; right:0px;}
+.iCen4_22 img{ width:25%; float:left;}
+.iCen4_22 a:last-child img{ float: right; margin-right: 10%;}
+.iCen4_22 span{ width:30%; font-size:1.125em; margin:.1em 5% 0; font display:block; color:#5466b3; border-radius:4px; line-height:1.3; text-align:center; float:left;}
+
+.iCen5{ width:100%; display:inline-block; background:#FFF; border-bottom:1px solid #d6d6d6; margin-bottom:.425em;}
+.iCen5_1{ width:100%; display:block;height:1.25em; line-height:1.25em; border-bottom:1px solid #d6d6d6;}
+.iCen5_1 img{ width:3.125%; float:left; margin:.35em 3.75% 0 4%;}
+.iCen5_1 label{ font-size:.725em; font-weight:bold; color:#ff245a; float:left;}
+.iCen5_1 a{ float:right; font-size:.6875em; color:#949494;}
+.iCen5_2 li{ display:inline-block; width: 100%; position:relative;}
+.iCen5_21{ width:77.5%; height:4.8125em; float:left; margin-left:3.6%; border-bottom:1px dashed #d6d6d6; padding:.8125em 0 .75em 0;}
+.iCen5_2 li:last-child .iCen5_21{ border-bottom:none;}
+.iCen5_21 img{ width:37.5%; float:left; margin-right:4.5%;}
+.iCen5_21 .iCen5_211{ float:left; width:58%;margin-top:.2em;}
+.iCen5_211 p{ float:left; font-size:.825em;text-overflow:clip; overflow:hidden; white-space:nowrap;  width:65%; line-height:2; }
+.iCen5_211 img{ float:left; width:26.3%; margin-left:2%;}
+.iCen5_21 label{ float:left; width:58%; font-size:.725em; margin:.1em 0 .8em 0;}
+.iCen5_21 span{ float:left; width:58%; font-size:.825em; font-weight:bold; color:#ff245a;}
+.iCen5_21 span:before{ content:"￥"; font-size:.725em;}
+.iCen5_22{ width:28%; float:left; position:absolute; top:3.8em; right:0px;}
+.iCen5_22 img{ width:25%; float:left;}
+.iCen5_22 a:last-child img{ float: right; margin-right: 10%;}
+.iCen5_22 span{ width:30%; font-size:1.125em; margin:.1em 5% 0; font display:block; color:#5466b3; border-radius:4px; line-height:1.3; text-align:center; float:left;}
+
+</style>
+<!--顶栏焦点图-->
+<div class="top">
+  <div class="top1"><a href="#">
+    <label>洁鲜锋直营店（华滋奔腾大厦)</label>
+    </a></div>
+  <div class="top2"><a href="#"><img src="images/appimg2.jpg"></a></div>
+  <div class="top3"><a href="#"><img src="images/appimg3.jpg"></a></div>
+</div>
+<div class="swiper-container swiper1">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"> <a href="#"> <img src="images/14503402981450340298.jpg" alt="首页轮播"> </a> </div>
+    <div class="swiper-slide"> <a href="#"> <img src="images/14503404441450340444.jpg" alt="首页轮播"> </a> </div>
+    <div class="swiper-slide"> <a href="#"> <img src="images/14500894241450089424.jpg" alt="首页轮播"> </a> </div>
+    <div class="swiper-slide"> <a href="#"> <img src="images/14506758311450675831.jpg" alt="首页轮播"> </a> </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+<div class="iCen1"><img src="images/appimg5.jpg">
+  <label>欢迎光临本店</label>
+</div>
+<ul class="iCen2">
+  <li><a href="#"><img src="images/20151204144643513.jpg">
+    <label>便利超市</label>
+    </a></li>
+  <li><a href="#"><img src="images/20151207141310794.jpg">
+    <label>特色直供</label>
+    </a></li>
+  <li><a href="#"><img src="images/20151210115700477.jpg">
+    <label>家政服务</label>
+    </a></li>
+  <li><a href="#"><img src="images/20151204144648260.jpg">
+    <label>特价抢购</label>
+    </a></li>
+  <li><a href="#"><img src="images/20151204144652520.jpg">
+    <label>签到有礼</label>
+    </a></li>
+  <li><a href="#"><img src="images/20151210134420439.jpg">
+    <label>优惠券</label>
+    </a></li>
+  <li><a href="#"><img src="images/20151210134749819.jpg">
+    <label>我常买</label>
+    </a></li>
+  <li><a href="#"><img src="images/20151204144655923.jpg">
+    <label>社区论坛</label>
+    </a></li>
+</ul>
+<div class="iCen3">
+  <div class="iCen3_1"><img src="images/appimg14.png">
+    <label>购你喜欢</label>
+    <a href="catalog.php">查看更多>></a></div>
+  <ul>
+    <li><a href="#"><img src="images/14492149411449214941.jpg"></a></li>
+    <li><a href="#"><img src="images/14492121251449212125.jpg"></a></li>
+    <li><a href="#"><img src="images/14492122581449212258.jpg"></a></li>
+  </ul>
+</div>
+<div class="iCen4">
+  <div class="iCen4_1"><img src="images/appimg14.png">
+    <label>劲爆热卖</label>
+    <a href="catalog.php">查看更多>></a></div>
+  <ul class="iCen4_2">
+    <li>
+      <div class="iCen4_21" onClick="chakan(1910)"> <a href="javascript:;"><img src="images/20151205tqajbv1449280856.JPG"></a>
+        <div class="iCen4_211">
+          <p>秦邮牌咸鸭蛋</p>
+          <img src="images/appimg27.jpg"></div>
+        <label>26个/盒</label>
+        <span>64.00</span> </div>
+      <div class="iCen4_22" id="jisuan1910"> <a style='display:none' onClick="posiS($(this))" id="1910"><img src="images/appimg26_1.png"></a> <span style='display:none' class="pNum">0</span> <a href="javascript:;" id="1910" onClick="posiT($(this),'')"><img src="images/appimg26.png"></a> </div>
+    </li>
+    <li>
+      <div class="iCen4_21" onClick="chakan(1922)"> <a href="javascript:;"><img src="images/20151202qbkuzr1449047148.JPG"></a>
+        <div class="iCen4_211">
+          <p>舒兰大米稻花香</p>
+          <img src="images/appimg27.jpg"></div>
+        <label>10kg/箱</label>
+        <span>160.00</span> </div>
+      <div class="iCen4_22" id="jisuan1922"> <a style='display:none' onClick="posiS($(this))" id="1922"><img src="images/appimg26_1.png"></a> <span style='display:none' class="pNum">0</span> <a href="javascript:;" id="1922" onClick="posiT($(this),'')"><img src="images/appimg26.png"></a> </div>
+    </li>
+    <li>
+      <div class="iCen4_21" onClick="chakan(1924)"> <a href="javascript:;"><img src="images/14494668481449466848.jpg"></a>
+        <div class="iCen4_211">
+          <p>赣南脐橙</p>
+          <img src="images/appimg27.jpg"></div>
+        <label>10kg</label>
+        <span>108.00</span> </div>
+      <div class="iCen4_22" id="jisuan1924"> <a style='display:none' onClick="posiS($(this))" id="1924"><img src="images/appimg26_1.png"></a> <span style='display:none' class="pNum">0</span> <a href="javascript:;" id="1924" onClick="posiT($(this),'')"><img src="images/appimg26.png"></a> </div>
+    </li>
+    <li>
+      <div class="iCen4_21" onClick="chakan(1898)"> <a href="javascript:;"><img src="images/20151202vbknif1449020091.jpg"></a>
+        <div class="iCen4_211">
+          <p>五常有机稻花香大米</p>
+          <img src="images/appimg27.jpg"></div>
+        <label>1kg/盒</label>
+        <span>32.00</span> </div>
+      <div class="iCen4_22" id="jisuan1898"> <a style='display:none' onClick="posiS($(this))" id="1898"><img src="images/appimg26_1.png"></a> <span style='display:none' class="pNum">0</span> <a href="javascript:;" id="1898" onClick="posiT($(this),'')"><img src="images/appimg26.png"></a> </div>
+    </li>
+    <li>
+      <div class="iCen4_21" onClick="chakan(2121)"> <a href="javascript:;"><img src="images/14496306971449630697.jpg"></a>
+        <div class="iCen4_211">
+          <p>香甜糯玉米</p>
+          <img src="images/appimg27.jpg"></div>
+        <label>12枝/箱</label>
+        <span>60.00</span> </div>
+      <div class="iCen4_22" id="jisuan2121"> <a style='display:none' onClick="posiS($(this))" id="2121"><img src="images/appimg26_1.png"></a> <span style='display:none' class="pNum">0</span> <a href="javascript:;" id="2121" onClick="posiT($(this),'')"><img src="images/appimg26.png"></a> </div>
+    </li>
+  </ul>
+</div>
+<div class="iCen5">
+  <div class="iCen5_1"><img src="images/appimg14.png">
+    <label>直供特色商品</label>
+    <a href="#">查看更多>></a></div>
+  <ul class="iCen5_2">
+    <li>
+      <div class="iCen5_21"> <a href="javascript:;"><img src="images/20151210wjjeto1449730056.jpg"></a>
+        <div class="iCen5_211">
+          <p>新疆瑞枣（彩级）</p>
+          <img src="images/appimg25.jpg"></div>
+        <label>500g/袋</label>
+        <span>33.00</span> </div>
+      <div class="iCen5_22"> <a style='display:none' onClick="posiS($(this))" id="2645"><img src="images/appimg26_1.png"></a> <span style='display:none' class="pNum">0</span> <a href="javascript:;" id="2645" onClick="posiT($(this),'')"><img src="images/appimg26.png"></a> </div>
+    </li>
+    <li>
+      <div class="iCen5_21" > <a href="javascript:;"><img src="images/14498386441449838644.JPG"></a>
+        <div class="iCen5_211">
+          <p>黑蜂椴树雪蜜</p>
+          <img src="images/appimg25.jpg"></div>
+        <label>500g/瓶</label>
+        <span>98.00</span> </div>
+      <div class="iCen5_22"> <a style='display:none' onClick="posiS($(this))" id="2646"><img src="images/appimg26_1.png"></a> <span style='display:none' class="pNum">0</span> <a href="javascript:;" id="2646" onClick="posiT($(this),'')"><img src="images/appimg26.png"></a> </div>
+    </li>
+  </ul>
+</div>
+<div class="btn_bg"></div>
+<style type="text/css">
+.lbyDiv4{ width:100%; height:100%; position:fixed; left:0; top:0; background:rgba(0,0,0,0.5)}
+.lbyDiv4_1{ width:80%; height:21em; position:absolute; top:0; right:0; bottom:0; left:0; margin:auto; background:#fff;}
+.swiper2{width: 100%; height:11.71875em;}
+.swiper2 .swiper-slide{ width:100%; height:100%;}
+.swiper2 .swiper-wrapper{ width:100%; height:100%;}
+.swiper2 img{ width:100%; height:100%;}
+.swiper2 span.swiper-pagination-bullet{ background:#fff; opacity:1;}
+.swiper2 span.swiper-pagination-bullet-active{ background:#000; opacity:.5;}
+div.swiper1 > .swiper-pagination{ bottom:3px;}
+.lbyDiv4_11{ width:1.4em; height:1.4em; font-size:1.25em; text-align:center; display:block; position:absolute; top:.3em; right:2%; background:#f2f2f7; color:#5265b1; border:1px solid #e3e3e8; z-index:99; border-radius:50%;}
+.lbyDiv4_12{width:1.5em; height:1.5em; line-height:1.5em; border-radius:50%; text-align:center; background:#bfbdc9; position:absolute; top:9.6em; right:2%; z-index:99;}
+.lbyDiv4_12 span{ font-size:.875em; width:100%; height:100%; display:block; color:#fff;}
+.lbyDiv4_13{ width:90%; padding:.2em 5%; line-height:2;}
+.lbyDiv4_13 label{ font-size:.875em; display:block;}
+.lbyDiv4_13 span{ font-size:.75em; display:block; color:#ff245a;}
+.lbyDiv4_13 span:before{ content:"￥"; font-size:.725em;}
+.lbyDiv4_14{ width:90%; padding:.2em 5%;}
+.lbyDiv4_14 label{ font-size:.6875em; display:inline-block; padding:.2em .5em; border:1px solid #d6d6d6; color:#333; margin-right:4%; border-radius:5px;}
+.lbyDiv4_14 label.lins{border:1px solid #5466b3; color:#5466b3;}
+.lbyDiv4_15{ width:90%; padding:.2em 5%; line-height:2;}
+.lbyDiv4_15 label{ font-size:.75em; color:#333; display:block;}
+.lbyDiv4_15 span{ font-size:.75em; color:#333; display:block;}
+
+.lbyDiv4_16{ width:36%; height:1.7em; border:1px solid #d6d6d6; border-radius:5px; float:right; position:absolute; bottom:1em; right:6%;}
+.lbyDiv4_16 span{ display:block; height:100%; float:left;}
+.lbyDiv4_16 span img{ width:auto; height:100%; border-radius:5px;}
+.lbyDiv4_16 input{ display:block; float:left; width:29%; height:100%; font-size: 1em; color:#333; display:block; border:0; text-align:center;}
+.lbyDiv4_17{ width:33%; height:1.6em; position:absolute; right:6%; bottom:1.5em;}
+.lbyDiv4_17 input{ width:100%; height:100%; font-size:.875em; color:#fff; border:0; background:#5466b3; border-radius:5px;}
+div.disN{ display:none;}
+.newImg{ width:20%; border-radius:50%; transition:all .8s;-moz-transition:all .8s;-webkit-transition:all .8s; z-index:88;}
+.newImg img{ width:100%; height:100%; border-radius:50%;}
+</style>
+<div class="lbyDiv4 disN"> </div>
+<script type="text/javascript">
+
+  function _report(a,c){
+		$.post('product.php',{action:'ajax_share',type:a,msg:c,thisurl:'http://wx.jxf7717.com/m/?shops_id=87&tid=715',imgurl:'http://wx.jxf7717.com/m/images/logo4.png',title:'洁鲜锋社区生鲜店'},function(data){
+		});
+  }
+		
+wx.config({
+    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: '', // 必填，公众号的唯一标识
+    timestamp: '1450919951', // 必填，生成签名的时间戳
+    nonceStr: 'Kx3amWfHWd6J3dTb', // 必填，生成签名的随机串
+    signature: '2d49c374e5d661e384d273845e960947353d33a3',// 必填，签名，见附录1
+    jsApiList: ['onMenuShareAppMessage','onMenuShareTimeline','onMenuShareQQ'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+wx.ready(function () {
+	wx.onMenuShareAppMessage({
+		title: '洁鲜锋社区生鲜店', // 分享标题
+		desc: '洁鲜锋社区生鲜O2O', // 分享描述
+		link: 'http://wx.jxf7717.com/m/?shops_id=87&tid=715', // 分享链接
+		imgUrl: 'http://wx.jxf7717.com/m/images/logo4.png', // 分享图标
+		success: function () { 
+			// 用户确认分享后执行的回调函数
+			_report('send_msg', 'st:ok');
+		},
+		cancel: function () { 
+			// 用户取消分享后执行的回调函数
+		}
+	});
+});
+
+wx.onMenuShareTimeline({
+      title: '洁鲜锋社区生鲜店', // 分享标题
+	  link: 'http://wx.jxf7717.com/m/?shops_id=87&tid=715', // 分享链接
+	  imgUrl: 'http://wx.jxf7717.com/m/images/logo4.png', // 分享图标
+      success: function () { 
+			// 用户确认分享后执行的回调函数
+			 _report('timeline', 'st:ok');
+		},
+		cancel: function () { 
+			// 用户取消分享后执行的回调函数
+		}
+});
+
+</script> 
+<script type="text/javascript">
+
+    function posiT(obj,attr){
+        $(".newImg").remove();
+        var imgLeft = parseInt(obj.parent().siblings("div").find("a").find("img").offset().left);
+        var imgTop = parseInt(obj.parent().siblings("div").find("a").find("img").offset().top);
+        var imgLeft1 = $(".bot3").offset().left;
+        var imgTop1 = $(".bot3").offset().top;
+        
+        var imgUrl = obj.parent().siblings("div").find("a").find("img").attr('src');
+        $('body').append('<div class="newImg" style="position:absolute; left:'+imgLeft+'px; top:'+imgTop+'px;"><img src="' + imgUrl + '"></div>');
+        setTimeout(function(){
+            $(".newImg").css('left',imgLeft1+'px').css('top',imgTop1+'px').css('width','10%');  
+        },100);
+        setTimeout(function(){
+            $(".newImg").remove();  
+        },900);
+        if($(obj).prevAll('span').html() == 0){
+            sid = $(obj).attr('id');
+            addToCart(sid,'',attr);
+            $(obj).prevAll('span').css('display','block');
+            $(obj).prevAll('a').css('display','block');
+            $(obj).prevAll('span').html(1);
+        }else{
+            pNum = parseInt($(obj).prevAll('span').html())+1;
+            change_number(obj,pNum);
+        }
+        
+    }
+    function posiS(obj){
+        pSum = parseInt($(obj).next('span').html())-1;
+        if(pSum == 0){
+            $(obj).css('display','none');
+            $(obj).next('span').css('display','none');
+            $(obj).next('span').html(pSum);
+            change_number(obj,pSum);
+        }else{
+            $(obj).next('span').html(pSum);
+            change_number(obj,pSum);  
+        }
+    }
+    function guanbi(){
+        $(".lbyDiv4").addClass("disN");
+    }
+
+    function chakan(id){
+        $.post(SITE_URL+'catalog.php?act=ajax_shop',{id:id},function(data){
+            if(data != ''){
+                $(".lbyDiv4").removeClass("disN");
+                $(".lbyDiv4").html(data);
+            }
+        })
+    }
+    function toattr(obj){
+        $(obj).addClass("lins").siblings().removeClass("lins");   
+    }
+    function suan(method,obj){
+        var num = parseInt(obj.siblings("input").val());
+        var numobj = $('input[name="goods_number"]');
+        var vs=numobj.attr('id');
+        if(method == "jia"){
+            if(num == 0){
+                var v=numobj.attr('id');
+                var attr=$('.lins').html();
+                $('#jisuan'+vs).children('a').css('display','block');
+                $('#jisuan'+vs).children('span').css('display','block');
+               
+                addToCart(v,'',attr);
+            }
+            num++  
+            $('#jisuan'+vs).children('span').html(num); 
+        }
+        if(method == "jian"){   
+            if(num>0){
+                num--
+                $('#jisuan'+vs).children('span').html(num);    
+            }
+            if(num == 0){
+                $('#jisuan'+vs).children('a').eq(0).css('display','none');
+                $('#jisuan'+vs).children('span').css('display','none'); 
+            }
+        }
+        if(obj.siblings("input").val() != 0){
+            change_number(numobj,num);  
+        }
+        obj.siblings("input").val(num);
+    }
+    function change_number(obj,num){
+        id = $(obj).attr('id');
+        createwindow();
+        $.post(SITE_URL+'mycart.php',{action:'ajax_change_price',id:id,number:num},function(data){ 
+            removewindow();
+            if(data.error=='0'){
+                if($(obj).prevAll('span').html() > 0){
+                    $(obj).prevAll('span').html(num);
+                }
+                ssum = strlen();
+                $('.mycarts').html(ssum);
+            }else{
+                alert(data.message);
+            }
+        }, "json");
+        return true;
+    }
+    function strlen(){
+        len = $('.pNum').length;
+        s=0;
+        for(i=0;i<len;i++){
+            s+=parseInt($('.pNum').eq(i).html());
+        }
+        return s;
+    }
+</script> 
+<script type="text/javascript">
+var swiper = new Swiper('.swiper-container', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	autoplay : 3000,
+        autoplayDisableOnInteraction : false,
+	//loop:true
+});
+</script>
+<div class="bottom">
+  <ul>
+    <li class="dIn"><a href="#"><i class="bot1"></i>
+      <label>首页</label>
+      </a></li>
+    <li><a href="#"><i class="bot2"></i>
+      <label>超市</label>
+      </a></li>
+    <li><a href="#"><i class="bot3"><span class="mycarts">0</span></i>
+      <label>购物车</label>
+      </a></li>
+    <li><a href="#"><i class="bot4"></i>
+      <label>我</label>
+      </a></li>
+  </ul>
+</div>
+</body>
+</html>

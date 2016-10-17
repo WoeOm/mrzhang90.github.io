@@ -1,0 +1,797 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<title>洁鲜锋社区生鲜便利</title>
+<meta name="title" content="洁鲜锋社区生鲜店" />
+<meta name="keywords" content="洁鲜锋；社区生鲜；O2O" />
+<meta name="description" content="洁鲜锋社区生鲜O2O" />
+<link type="text/css" rel="stylesheet" href="css/comman.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/jquery_dialog.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/css.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery_dialog.js"></script>
+<script type="text/javascript" src="js/common.js?v=12"></script>
+<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="js/goods.js?v=17"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+<link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css" />
+<style type="text/css">
+*{margin: 0;padding: 0;}
+a{text-decoration:none; color:#333;}
+img{display:block;}
+html, body { position: relative; height: 100%; background:#f0f0f0;}
+body{font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size:1em/100%;}
+ul{list-style:none;}
+@media only screen and (max-width:540px){
+  body{ font-size:168.5%;}
+}
+@media only screen and (max-width:480px){
+  body{ font-size:150%;}
+}
+@media only screen and (max-width:414px){
+  body{ font-size:129.375%;}
+}
+@media only screen and (max-width:400px){
+  body{ font-size:125%;}
+}
+@media only screen and (max-width:375px){
+  body{ font-size:117.1825%;}
+}
+@media only screen and (max-width:360px){
+  body{ font-size:112.5%;}
+}
+@media only screen and (max-width:320px){
+  body{ font-size:100%;}
+}
+.top_bg{height:7em;}
+.top{ width:100%; height:2.6875em; background:#2e2e2e; position:fixed; left:0; top:0; z-index:44;}
+.top1{  margin-left:4.6875%; line-height:2.5em; width:73.40625%; float:left;}
+.top1 label{font-size:.6875em; color:#FFF; padding-right:15px;  background:url(images/appimg1.jpg) no-repeat right center; background-size:10px auto;}
+.top2{ width:6.09375%; float:left; margin-right:4%; margin-top:.8em;}
+.top2 img{ width:100%;}
+.top3{ width:6.09375%; float:left; margin-top:.74em;}
+.top3 img{ width:100%;}
+.lbyDiv1{ position:fixed; left:0; top:2.6875em; z-index:44; width:100%; height:1.2em; line-height:1.2em; background:url(images/lbyimg1.jpg) no-repeat 4% center #5466b3; background-size:3.5% auto;}
+.lbyDiv1 label{ font-size:.75em; margin-left:10%; color:#fff; display:block;}
+.swiper-content {
+    width: 100%;
+}
+.swiper-content .inner {
+    display: inline-block;
+    width: 100%;
+}
+.swiper-content h1 {
+    margin: 0 0 15px;
+    font-size: 25px;
+}
+.swiper-content .movie-pic {
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px #000;
+    width: 110px;
+    height: auto;
+}
+.swiper-content .movie-text {
+    margin-left: 120px;
+}
+.swiper-nav {
+    border-bottom: 1px solid #c8c6c7;
+    background:#f0f0f0;
+    height: 2.8em;
+    position: fixed;
+    left: 0;
+    top: 3.8875em;
+    width: 100%;
+    z-index: 33;
+}
+.swiper-nav .swiper-slide {
+    width: 5em;
+    height:100%;
+    text-align: center;
+    position: relative;
+}
+.swiper-nav .swiper-slide, .swiper-nav .angle {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+.swiper-nav img {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px #000;
+}
+.swiper-nav .title {
+    height:1.2em;
+    line-height:1.2em;
+    width:90%;
+    margin:.8em auto 0;
+}
+.swiper-nav .title a{
+    background: #fff;
+    border-radius: 1em;
+    box-shadow: 0 0 0 1px #d6d6d6;
+    color: #333;
+    width:100%;
+    display:block;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: .75em;}
+.active-nav .title a{box-shadow: 0 0 0 1px #5466b3;
+    color: #5466b3;}
+.lbyDiv3{ width:90.9375%; background:#fff; margin:0 4.53125% .4em; display:inline-block;}
+.lbyDiv3_1{ width:29.3%; padding:.3475em 2% .45em; float:left; box-shadow:0 0 0 1px #d6d6d6;}
+.lbyDiv3_1 img{ width:100%;}
+.lbyDiv3_11{ width:100%; padding-top:.75em;}
+.lbyDiv3_11 label{ font-size:.75em; display:block;}
+.lbyDiv3_11 span{ font-size:.6875em; display:block; color:#ababab;height: 1.225em;overflow: hidden;}
+.lbyDiv3_12 label{ font-size:.75em; color:#ff245a;}
+.lbyDiv3_12 label:before{ content:"￥"; font-size:.75em;}
+.lbyDiv3_12 span{ width:19.65%; display:block; float: right;}
+.lbyDiv3_12 span img{ width:100%;}
+
+.btn_bg{ width:100%; height:3.0625em;}
+.bottom{ position:fixed; left:0; bottom:0; width:100%; height:3.0625em; background:#2e2e2e; border-top:1px solid #a5a5a5; z-index:77}
+.bottom ul{}
+.bottom ul li{ width:25%; float:left;text-align:center;}
+.bottom ul li label{color:#FFF; font-size:.75em; display:block;}
+.bottom ul li.dIn label{ color:#5466b3;}
+.bottom ul li i{ width:35%; height:1.75em; display:block; margin:.1em auto 0;}
+.bot1{ background:url(images/shouye.png) no-repeat center center; background-size:100% auto;}
+.dIn .bot1{ background:url(images/shouye1.png) no-repeat center center; background-size:100% auto;}
+.bot2{ background:url(images/chaoshi.png) no-repeat center center; background-size:100% auto;}
+.dIn .bot2{ background:url(images/chaoshi1.png) no-repeat center center; background-size:100% auto;}
+.bot3{ background:url(images/gouwuche.png) no-repeat center center; background-size:100% auto; position:relative;}
+.bot3 span{ width:1.5em; height:1.5em; text-align:center; line-height:1.5em; background:#F00; border-radius:50%;  font-size:.5625em; display:block; color:#fff; position:absolute; top:.2em; right:-41%;}
+.dIn .bot3{ background:url(images/gouwuche1.png) no-repeat center center; background-size:100% auto;}
+.bot4{ background:url(images/wo.png) no-repeat center center; background-size:100% auto;}
+.dIn .bot4{ background:url(images/wo1.png) no-repeat center center; background-size:100% auto;}
+</style>
+</head>
+<body>
+<div class="top_bg"></div>
+<div class="top">
+  <div class="top1"><a href="http://wx.jxf7717.com/m/index.php?act=get_locations">
+    <label>洁鲜锋直营店（华滋奔腾大厦)</label>
+    </a></div>
+  <div class="top2"><a href="http://wx.jxf7717.com/m/myapi.php?type=api&did=87"><img src="images/appimg2.jpg"></a></div>
+  <div class="top3"><a href="http://wx.jxf7717.com/m/catalog.php?act=search"><img src="images/appimg3.jpg"></a></div>
+</div>
+<div class="lbyDiv1">
+  <label>超市营业时间：</label>
+</div>
+<div class="swiper-container swiper-nav">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide " id="0" all="591">
+      <div class="title"><a>酒水饮品</a></div>
+    </div>
+    <div class="swiper-slide active-nav" id="1" all="617">
+      <div class="title"><a>粮油副食</a></div>
+    </div>
+    <div class="swiper-slide " id="2" all="602">
+      <div class="title"><a>特色直供</a></div>
+    </div>
+  </div>
+</div>
+<div class="swiper-container swiper-content">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide">
+      <div class="inner">
+        <div class="lbyDiv3">
+          <div class="lbyDiv3_1" onClick="chakan(2631)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/14506983531450698353.jpg">
+            <div class="lbyDiv3_11">
+              <label>多力 葵花...</label>
+              <span>1.8L/瓶</span> </div>
+            <div class="lbyDiv3_12">
+              <label>32.60</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2630)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/14506982971450698297.jpg">
+            <div class="lbyDiv3_11">
+              <label>海狮 葵花...</label>
+              <span> 1.5L/瓶</span> </div>
+            <div class="lbyDiv3_12">
+              <label>25.20</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2628)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/14506981121450698112.jpg">
+            <div class="lbyDiv3_11">
+              <label>金龙鱼  ...</label>
+              <span> 1.8L/瓶</span> </div>
+            <div class="lbyDiv3_12">
+              <label>23.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2627)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/14506980291450698029.jpg">
+            <div class="lbyDiv3_11">
+              <label>海狮 玉米油</label>
+              <span>2L/瓶</span> </div>
+            <div class="lbyDiv3_12">
+              <label>28.00</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2759)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151221fvqveg1450664440.JPG">
+            <div class="lbyDiv3_11">
+              <label>小粒王大米</label>
+              <span>&nbsp;&nbsp;</span> </div>
+            <div class="lbyDiv3_12">
+              <label>88.00</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2613)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151218wbdlhk1450433340.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机燕麦片 </label>
+              <span>300g</span> </div>
+            <div class="lbyDiv3_12">
+              <label>6.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2612)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151218ybnnxc1450433130.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机小黄米</label>
+              <span> 400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>8.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2611)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151218zwujwg1450432996.jpg">
+            <div class="lbyDiv3_11">
+              <label>农家小米 1kg</label>
+              <span>1kg/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>18.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2610)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151218qrqpxe1450432871.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机长粒香...</label>
+              <span>2.5kg</span> </div>
+            <div class="lbyDiv3_12">
+              <label>40.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2609)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151218hywaaq1450432605.jpg">
+            <div class="lbyDiv3_11">
+              <label>德伟大米</label>
+              <span>2.5kg</span> </div>
+            <div class="lbyDiv3_12">
+              <label>29.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2608)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151218mxwrqn1450425605.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机石头面...</label>
+              <span>1kg</span> </div>
+            <div class="lbyDiv3_12">
+              <label>17.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2606)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151218qdxhcc1450424546.JPG">
+            <div class="lbyDiv3_11">
+              <label>有机黄豆</label>
+              <span>400g</span> </div>
+            <div class="lbyDiv3_12">
+              <label>7.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2605)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151218moavfh1450424149.JPG">
+            <div class="lbyDiv3_11">
+              <label>有机绿豆</label>
+              <span>&nbsp;&nbsp;</span> </div>
+            <div class="lbyDiv3_12">
+              <label>10.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2604)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151214gfcxcj1450073777.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机黑豆 ...</label>
+              <span>&nbsp;&nbsp;</span> </div>
+            <div class="lbyDiv3_12">
+              <label>14.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2603)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202crydni1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label> 野生白蘑</label>
+              <span>100g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>46.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2602)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202isavoq1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>特极  秋...</label>
+              <span>250g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>45.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2601)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202npzbxw1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>榛蘑  压缩</label>
+              <span>250g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>57.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2600)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202cfeeeh1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label> 有机秋木耳</label>
+              <span>250g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>36.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2599)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202bdhkqh1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label> 有机秋木耳</label>
+              <span>45g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>6.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2598)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202ghwunw1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>有机秋木耳...</label>
+              <span>150g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>26.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2597)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202fnxaga1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label> 野生小黄蘑</label>
+              <span>100g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>42.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2596)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202ikfiqa1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>有机秋木耳</label>
+              <span>150g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>26.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2595)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202rsnmss1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label> 野生榛蘑</label>
+              <span>200g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>45.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2594)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202bnonga1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>蓝莓果</label>
+              <span>150g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>41.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2592)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202upawwy1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>野生榛蘑 ...</label>
+              <span>150g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>35.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2591)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202qdjysd1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label> 银耳</label>
+              <span>60g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>7.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2590)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202gobphd1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>有机黑木耳</label>
+              <span>125g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>15.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2589)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202ebyjtl1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>香菇</label>
+              <span>150g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>23.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2588)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202ocswkg1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>蓝莓果</label>
+              <span>150g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>44.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2587)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202bbcqku1449023698.JPG">
+            <div class="lbyDiv3_11">
+              <label>开口榛子</label>
+              <span>200g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>26.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2586)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202gchmlh1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>薏米仁</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>18.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2585)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202arjvjw1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机石头全...</label>
+              <span>1kg/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>17.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2584)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202rsumjh1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机黑香米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>9.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2583)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202spwypx1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机红小豆</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>10.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2582)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202mervsn1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机红芸豆</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>8.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2581)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202emjjki1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机玉米面</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>6.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2580)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202dqwbdf1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机大黄米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>7.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2579)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202pibdeb1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机黑芝麻</label>
+              <span>300g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>10.90</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2578)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202oeawez1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机石头麦...</label>
+              <span>900g/盒</span> </div>
+            <div class="lbyDiv3_12">
+              <label>14.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2577)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202xkgnms1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机大米</label>
+              <span>10kg/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>86.00</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2576)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202eatvcp1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机糯米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>7.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2575)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202xyfkwt1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机荞麦米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>8.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2574)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202yjtido1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机大麦米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>5.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2573)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202pxkoli1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机八宝米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>7.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2572)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202fmneqz1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机燕麦米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>7.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2571)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202vcdrxi1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机高粱米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>6.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2570)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202ubdynp1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机红花生</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>15.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+          <div class="lbyDiv3_1" onClick="chakan(2569)"> <img style="height: 5em" src="http://wx.jxf7717.com/photos/goods/201512/thumb_b/20151202eylizi1449020091.jpg">
+            <div class="lbyDiv3_11">
+              <label>有机糙米</label>
+              <span>400g/袋</span> </div>
+            <div class="lbyDiv3_12">
+              <label>6.80</label>
+              <span><img src="images/lbyimg3.jpg"></span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide"></div>
+  </div>
+</div>
+<div style="height:0.5em"></div>
+<style type="text/css">
+.lbyDiv4{ width:100%; height:100%; position:fixed; left:0; top:0; background:rgba(0,0,0,0.5);z-index:8888;}
+.lbyDiv4_1{ width:80%; height:21em; position:absolute; top:0; right:0; bottom:0; left:0; margin:auto; background:#fff;}
+.swiper2{width: 100%; height:11.71875em;}
+.swiper2 .swiper-slide{ width:100%; height:100%;}
+.swiper2 .swiper-wrapper{ width:100%; height:100%;}
+.swiper2 img{ width:100%; height:100%;}
+.swiper2 span.swiper-pagination-bullet{ background:#fff; opacity:1;}
+.swiper2 span.swiper-pagination-bullet-active{ background:#000; opacity:.5;}
+div.swiper1 > .swiper-pagination{ bottom:3px;}
+.lbyDiv4_11{ width:1.4em; height:1.4em; font-size:1.25em; text-align:center; display:block; position:absolute; top:.3em; right:2%; background:#f2f2f7; color:#d6d6d6; border:1px solid #e3e3e8; z-index:99; border-radius:50%;}
+.lbyDiv4_12{width:1.5em; height:1.5em; line-height:1.5em; border-radius:50%; text-align:center; background:#bfbdc9; position:absolute; top:9.6em; right:2%; z-index:99;}
+.lbyDiv4_12 span{ font-size:.875em; width:100%; height:100%; display:block; color:#fff;}
+.lbyDiv4_13{ width:90%; padding:.2em 5%; line-height:2;}
+.lbyDiv4_13 label{ font-size:.875em; display:block;}
+.lbyDiv4_13 span{ font-size:.75em; display:block; color:#ff245a;}
+.lbyDiv4_13 span:before{ content:"￥"; font-size:.725em;}
+.lbyDiv4_14{ width:90%; padding:.2em 5%;}
+.lbyDiv4_14 label{ font-size:.6875em; display:inline-block; padding:.2em .5em; border:1px solid #d6d6d6; color:#333; margin-right:4%; border-radius:5px;}
+.lbyDiv4_14 label.lins{border:1px solid #5466b3; color:#5466b3;}
+.lbyDiv4_15{ width:90%; padding:.2em 5%; line-height:2;}
+.lbyDiv4_15 label{ font-size:.75em; color:#333; display:block;}
+.lbyDiv4_15 span{ font-size:.75em; color:#333; display:block;}
+
+.lbyDiv4_16{ width:42%; height:2em; border:1px solid #d6d6d6; border-radius:5px; float:right; position:absolute; bottom:1em; right:6%;}
+.lbyDiv4_16 span{ display:block; height:100%; float:left;}
+.lbyDiv4_16 span img{ width:auto; height:100%; border-radius:5px;}
+.lbyDiv4_16 input{ display:block; float:left; width:29%; height:100%; font-size: 1em; color:#333; display:block; border:0; text-align:center;}
+.lbyDiv4_17{ width:33%; height:1.6em; position:absolute; right:6%; bottom:1.5em;}
+.lbyDiv4_17 input{ width:100%; height:100%; font-size:.875em; color:#fff; border:0; background:#5466b3; border-radius:5px;}
+div.disN{ display:none;}
+</style>
+<div class="lbyDiv4 disN"> </div>
+<div class="btn_bg"></div>
+<script type="text/javascript" src="js/idangerous.swiper-2.0.min.js"></script> 
+<script type="text/javascript">
+
+
+$("#cMenu li").click(function(){
+    $(this).addClass("lin").siblings().removeClass("lin");  
+})
+  function _report(a,c){
+        $.post('product.php',{action:'ajax_share',type:a,msg:c,thisurl:'http://wx.jxf7717.com/m/catalog.php?cid=617&tid=715',imgurl:'http://wx.jxf7717.com/photos/goods/201512/thumb_b/14506980291450698029.jpg',title:'商品分类列表'},function(data){
+        });
+  }
+  
+  document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        window.shareData = {  
+            "imgUrl": "http://wx.jxf7717.com/photos/goods/201512/thumb_b/14506980291450698029.jpg",
+            "LineLink": 'http://wx.jxf7717.com/m/catalog.php?cid=617&tid=715',
+            "Title": "商品分类列表",
+            "Content": "商品分类列表"
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', { 
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.LineLink,
+                "desc": window.shareData.Content,
+                "title": window.shareData.Title
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.LineLink,
+                "desc": window.shareData.Content,
+                "title": window.shareData.Title
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.Content,
+                "url": window.shareData.LineLink,
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+        }, false)
+
+$(function(){
+    var cHeight = $('.inner:first').height()
+    $(".swiper-content").css("height",cHeight+"px");
+
+    //Swiper Content
+    var contentSwiper = $('.swiper-content').swiper({
+        initialSlide :$('.active-nav').attr('id'),
+        onSlideChangeStart: function(){
+            updateNavPosition()
+        }
+    })
+    //Nav
+    var navSwiper = $('.swiper-nav').swiper({
+        visibilityFullFit: true,
+        slidesPerView:'auto',
+        
+        //Thumbnails Clicks
+        onSlideClick: function(){
+            contentSwiper.swipeTo( navSwiper.clickedSlideIndex )
+        }
+    })
+    //Update Nav Position
+    function updateNavPosition(){
+        $('.swiper-nav .active-nav').removeClass('active-nav')
+        var activeNav = $('.swiper-nav .swiper-slide').eq(contentSwiper.activeIndex).addClass('active-nav')
+        var cat_id = $('.swiper-nav .swiper-slide').eq(contentSwiper.activeIndex).attr('all');
+        if($('.swiper-content .swiper-slide').eq(contentSwiper.activeIndex).html() == ""){
+            $.post(SITE_URL+'catalog.php?act=ajax_goods_cat',{cat_id:cat_id},function(data){
+                if(data != ''){
+                    $('.swiper-content .swiper-slide').eq(contentSwiper.activeIndex).html(data);
+                    cHeight = $(".swiper-slide-active .inner").height()
+                    $(".swiper-content").css("height",cHeight+"px");
+                }
+            })
+        }else{
+            cHeight = $(".swiper-slide-active .inner").height()
+            $(".swiper-content").css("height",cHeight+"px");    
+        }
+        
+        if (!activeNav.hasClass('swiper-slide-visible')) {
+            if (activeNav.index()>navSwiper.activeIndex) {
+                var thumbsPerNav = Math.floor(navSwiper.width/activeNav.width())-1
+                navSwiper.swipeTo(activeNav.index()-thumbsPerNav)
+
+            }
+            else {
+                navSwiper.swipeTo(activeNav.index())
+            }   
+        }
+    }
+})
+function toattr(obj){
+        $(obj).addClass("lins").siblings().removeClass("lins");   
+    }
+    function guanbi(){
+        $(".lbyDiv4").addClass("disN");
+    }
+
+    function chakan(id){
+        $.post(SITE_URL+'catalog.php?act=ajax_shop',{id:id},function(data){
+            if(data != ''){
+                $(".lbyDiv4").removeClass("disN");
+                $(".lbyDiv4").html(data);
+            }
+        })
+    }
+   
+    function suan(method,obj){
+        var num = parseInt(obj.siblings("input").val());
+        var numobj = $('input[name="goods_number"]');
+        if(method == "jia"){
+            if(num == 0){
+                var v=numobj.attr('id');
+                var attr=$('.lins').html();
+                addToCart(v,'',attr);
+            }
+            num++   
+        }
+        if(method == "jian"){   
+            if(num>0){
+                num--   
+            }
+        }
+        if(obj.siblings("input").val() != 0){
+            change_number(numobj,num);  
+        }
+        obj.siblings("input").val(num);
+    }
+    function change_number(obj,num){
+        id = $(obj).attr('id');
+        createwindow();
+        $.post(SITE_URL+'mycart.php',{action:'ajax_change_price',id:id,number:num},function(data){ 
+            removewindow();
+            if(data.error=='0'){
+                $('.mycarts').html(num);
+            }else{
+                alert(data.message);
+            }
+        }, "json");
+        return true;
+    }
+</script>
+<div class="bottom">
+  <ul>
+    <li class="dIn"><a href="#"><i class="bot1"></i>
+      <label>首页</label>
+      </a></li>
+    <li><a href="#"><i class="bot2"></i>
+      <label>超市</label>
+      </a></li>
+    <li><a href="#"><i class="bot3"><span class="mycarts">0</span></i>
+      <label>购物车</label>
+      </a></li>
+    <li><a href="#"><i class="bot4"></i>
+      <label>我</label>
+      </a></li>
+  </ul>
+</div>
+</body>
+</html>

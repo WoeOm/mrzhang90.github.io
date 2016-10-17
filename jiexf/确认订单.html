@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<title>洁鲜锋社区生鲜便利</title>
+<meta name="title" content="洁鲜锋社区生鲜店" />
+<meta name="keywords" content="洁鲜锋；社区生鲜；O2O" />
+<meta name="description" content="洁鲜锋社区生鲜O2O" />
+<link type="text/css" rel="stylesheet" href="css/comman.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/jquery_dialog.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/css.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery_dialog.js"></script>
+<script type="text/javascript" src="js/common.js?v=12"></script>
+<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="js/goods.js?v=17"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+.qrDiv1{ background:url(images/qrddimg1.png) repeat; background-size:auto .15625em; padding:.15625em 0; margin-top:.9375em;}
+.qrDiv1_1{ height:1.9375em; line-height:1.9375em; background:#fff; width:92%; padding:0 4%; border-bottom:1px solid #f0f0f0;}
+.qrDiv1_1 input{ font-size:.75em; color:#333; border:0;}
+.qrDiv1_2{ height:1.9375em; line-height:1.9375em; background:#fff; width:92%; padding:0 4%; border-bottom:1px solid #f0f0f0;}
+.qrDiv1_2 label{ font-size:.75em; color:#333;}
+.qrDiv1_3{ height:1.9375em; line-height:1.9375em; background:#fff; text-align:center}
+.qrDiv1_3 a{ font-size:.75em; color:#333;}
+.qrDiv1_4{ height:1.9375em; line-height:1.9375em; background:#fff; width:92%; padding:0 4%; border-bottom:1px solid #f0f0f0;}
+.qrDiv1_4 input{ font-size:.75em; border:0; color:#333;}
+.qrDiv2{ width:100%; margin-top:.9375em; display:block;}
+.qrDiv2_1{height:1.9375em; line-height:1.9375em; text-align:right; background:#fff; width:92%; padding:0 4%; border-bottom:1px solid #f0f0f0;}
+.qrDiv2_1 label{ float:left; font-size:.75em;}
+.qrDiv2_1 a{}
+.qrDiv2_1 span{ font-size:.75em; color:#d8d8d8; margin-right:3%;}
+.qrDiv2_1 img{ width:auto; height:.7em; display:inline-block; margin-top:.7em; float:right;}
+.qrDiv3{ width:100%; margin-top:.9375em; display:block;}
+.qrDiv3_1{height:1.9375em; line-height:1.9375em; text-align:right; background:#fff; width:92%; padding:0 4%; border-bottom:1px solid #f0f0f0;}
+.qrDiv3_1 label{ font-size:.75em; float:left;}
+.qrDiv3_1 span{ font-size:.75em; float:right;}
+.qrDiv3_1 span:before{ content:"￥";}
+.qrDiv4{ width:100%; margin-top:.9375em; display:block;}
+.qrDiv4_1{height:1.9375em; line-height:1.9375em; text-align:right; background:#fff; width:92%; padding:0 4%; border-bottom:1px solid #f0f0f0;}
+.qrDiv4_1 label{ font-size:.75em; float:left;}
+.qrDiv4_1 span{ float:right; background:url(images/ctimg5.jpg) no-repeat; background-size:100% 100%; display:block; width:5%; height:.9em; margin-top:.55em;}
+.qrDiv4_1 span.lin{background:url(images/ctimg4.jpg) no-repeat; background-size:100% 100%;}
+.qrDiv5{ width:96%; padding-left:4%; height:3.03125em; margin:1.7em 0 0 0; line-height:3.03125em; background:#dddddd;}
+.qrDiv5 a{ width:28%; text-align:center; display:block; float:right; font-size:.875em; color:#fff; background:#5365b0;}
+.bottom{display: none;}
+.yhqList{ width:100%; display:inline-block; background:#fff; position:fixed; left:0; bottom:0; display:none;height:12em}
+.yhqList label{ display:block; font-size:.75em; line-height:2em; margin-left:4%; border-bottom:1px dashed #EBEBEB;}
+.yhqList span{ width:100%; height:2em; background:#5365b1; line-height:2; display:block;}
+.yhqList a{ color:#fff; font-size:0.825em; float:right; margin-right:5%;line-height: 2.5em}
+.set{ margin: 0;
+         padding: 0;
+         outline: none;
+         border: rgb(191, 204, 220) 1px solid;
+         display: inline-block;
+         background-repeat: no-repeat;
+         border:0;
+         -webkit-appearance: none}
+</style>
+
+<div class="comTop">
+	<a href="javascript:;" onclick="history.go(-1)">返回</a>
+    <label>确认订单</label>
+</div>
+<form action="http://wx.jxf7717.com/m/mycart.php?type=confirm" method="post" name="CONSIGNEE_ADDRESS" id="CONSIGNEE_ADDRESS">
+<div class="qrDiv1">
+	<div class="qrDiv1_1"><input type="text" name="consignee" value="消费" placeholder="请填写联系人姓名"></div>
+    <div class="qrDiv1_4"><input type="text" name="mobile" value="15011553366" placeholder="请输入电话号码"></div>
+    <div class="qrDiv1_2"><label>上海上海宝山区</label></div>
+    <div class="qrDiv1_1"><input type="text" name="address" value="但事实上" placeholder="填写详细地址，楼栋房间号"></div>
+    <input type="hidden" name="province" value="25">
+    <input type="hidden" name="city" value="4394">
+    <input type="hidden" name="district" value="4164">
+</div>
+
+<div class="qrDiv2">
+	<div class="qrDiv2_1">
+    	<label>备注</label><a href="javascript:;"><span><input style="text-align:right" name="postscript" type="text" placeholder="可选" /></span><img src="images/fanhui2.png"></a>
+    </div>
+    <div class="qrDiv2_1">
+    	<label>送达时间</label>
+        <a href="javascript:;">
+            <span>
+                <select name="best_time" class="set">
+                    <!-- <option value="尽快送达">尽快送达</option> -->
+                                            <option value="18:00---19:00">18:00---19:00</option>
+                                            <option value="19:00---20:00">19:00---20:00</option>
+                                            <option value="20:00---21:00">20:00---21:00</option>
+                                            <option value="21:00---22:00">21:00---22:00</option>
+                                            <option value="22:00---23:00">22:00---23:00</option>
+                                            <option value="23:00---00:00">23:00---00:00</option>
+                                    </select>
+            </span>
+            <img src="images/fanhui2.png">
+        </a>
+    </div>
+    <div class="qrDiv2_1">
+    	<label>优惠卷</label><a class="yhq" href="javascript:;"><span>请选择优惠券</span><img src="images/fanhui2.png"></a>
+    </div>
+</div>
+
+<div class="qrDiv3">
+	<div class="qrDiv3_1">
+    	<label>商品价格</label><span>199.80</span>
+    </div>
+    <div class="qrDiv3_1">
+    	<label>优惠卷</label><span class="youhui">0</span>
+        <input type="hidden" name="bonus_money" value="" />
+        <input type="hidden" name="bonus_id" value="" />
+    </div>
+</div>
+
+<div class="qrDiv4">
+	<div class="qrDiv4_1">
+    	<label>可用积分5.00分</label><span></span>
+        <input type="checkbox" style="display:none" name="confirm_jifen" value="5.00" />
+    </div>
+</div>
+<div style="height:4em"></div>
+<div style="position:relative">
+<div class="qrDiv5" style="position:fixed;bottom:0;">
+    <input type='hidden' name='shop_goods' value='2590,2762,1910,' />
+    
+	<label>实际支付：￥<span class="total" all="199.80">199.80</span></label><a href="javascript:;" onclick="return checkvar()" >确认下单</a>
+</div>
+</div>
+</form>
+
+<div class="yhqList">
+    <span><a>取消</a></span>
+        <label id="10.00" all="300">分享优惠券（10元）</label>
+        <label id="20.00" all="875">优惠券(满100减20)</label>
+    </div>
+<script type="text/javascript">
+    
+    price = parseFloat($('.total').attr('all'));
+    jifen = $('input[name="confirm_jifen"]').val();
+    $(".qrDiv4_1 span").click(function(){
+        total = parseFloat($('.total').html());
+        if($(this).hasClass("lin")){
+            $(this).removeClass("lin");
+            $(this).siblings('input').attr("checked",false);
+            if(jifen > 0){
+                $('.total').html(price);
+            }
+        }else{
+            $(this).addClass("lin");
+            $(this).siblings('input').attr("checked",true);
+            $('input[name="bonus_money"]').val('');
+            $('input[name="bonus_id"]').val('');
+            if(jifen > 0){
+                $('.youhui').html('0');
+                $('.yhq').html('<span>请选择优惠券</span><img src="images/fanhui2.png">');
+                if(jifen >= price){
+                    $('.total').html('0.00');
+                }else{
+                    $('.total').html(parseFloat(price-jifen).toFixed(2));
+                }
+            }    
+        }	
+    })
+    $(".yhq").click(function(){
+        $(".yhqList").show();   
+    })
+    $(".yhqList label").click(function(){
+        $(".qrDiv4_1 span").removeClass("lin");
+        $(".qrDiv4_1 span").siblings('input').attr("checked",false);
+        var total = $('.total').attr('all');
+        $(".yhqD").html($(this).html());
+        $(".youhui").html($(this).attr('id'));
+        if(total > 0){
+            var num = parseFloat(total-$(this).attr('id'));
+            $('.total').html(num);
+        }
+        $('.yhq').html($(this).html());
+        $('input[name="bonus_money"]').val($(this).attr('id'));
+        $('input[name="bonus_id"]').val($(this).attr('all'));
+        $(".yhqList").hide();
+    })
+    $(".yhqList a").click(function(){
+        $(".yhqList").hide();
+    })
+    function checkvar(){
+        var consignee = $('input[name="consignee"]').val();
+        var mobile = $('input[name="mobile"]').val();  
+        var address = $('input[name="address"]').val();
+        if(tel(mobile)){
+            if(consignee == '' || address ==''){
+                alert('请添加收货地址');
+                return false;
+            }else{
+                $('#CONSIGNEE_ADDRESS').submit();
+            }
+        }      
+    }
+</script>
+
+<div class="bottom">
+  <ul>
+    <li class="dIn"><a href="#"><i class="bot1"></i>
+      <label>首页</label>
+      </a></li>
+    <li><a href="#"><i class="bot2"></i>
+      <label>超市</label>
+      </a></li>
+    <li><a href="#"><i class="bot3"><span class="mycarts">0</span></i>
+      <label>购物车</label>
+      </a></li>
+    <li><a href="#"><i class="bot4"></i>
+      <label>我</label>
+      </a></li>
+  </ul>
+</div>
+</body>
+</html>

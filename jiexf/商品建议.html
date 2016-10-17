@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<title>洁鲜锋社区生鲜便利</title>
+<meta name="title" content="洁鲜锋社区生鲜店" />
+<meta name="keywords" content="洁鲜锋；社区生鲜；O2O" />
+<meta name="description" content="洁鲜锋社区生鲜O2O" />
+<link type="text/css" rel="stylesheet" href="css/comman.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/jquery_dialog.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/css.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery_dialog.js"></script>
+<script type="text/javascript" src="js/common.js?v=12"></script>
+<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="js/goods.js?v=17"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+.usertitle{
+height:22px; line-height:22px;color:#666; font-weight:bold; font-size:14px; padding:5px;
+border-radius: 5px;
+background-color: #ededed; padding-left:5px; padding-right:5px;
+-moz-border-radius:5px;/*仅Firefox支持，实现圆角效果*/
+-webkit-border-radius:5px;/*仅Safari,Chrome支持，实现圆角效果*/
+-khtml-border-radius:5px;/*仅Safari,Chrome支持，实现圆角效果*/
+border-radius:5px;/*仅Opera，Safari,Chrome支持，实现圆角效果*/
+}
+</style>
+<style type="text/css">
+.spjy{ width:90%; display:inline-block; background:#fff; padding:.5em 5%;}
+.spjy textarea{ width:100%; margin:0 auto; height:9em; border:0;}
+.btnSub{ width:59.375%; height:2.03125em; margin:2em auto 1em;}
+.btnSub input{ width:100%; height:100%; border:0; background:#5365b0; color:#fff; font-size:.875em; border-radius:5px;}
+</style>
+<div class="comTop"> <a href="javascript:;" onclick="history.go(-1)">返回</a>
+  <label>商品建议</label>
+</div>
+<form action="" method="post" name="MESSAGES" id="MESSAGES">
+<div class="spjy"><textarea  name="comment_title" placeholder="如果小店没有您要买的商品，您可以告诉我们想要购买的商品"></textarea></div>
+<div class="btnSub"><input type="button" onclick="submit_message()" value="确认修改"></div>
+</form>
+
+<div id="main" style="padding:5px; min-height:300px">
+	<div class="clear10"></div>
+	
+</div>
+<script type="text/javascript">
+function submit_message(){ 
+	createwindow();
+	var formObj      = document.forms['MESSAGES']; //表单
+	var mesobj        = new Object();
+	if(formObj){
+		mesobj = getFromAttributes(formObj);
+	}else{
+		alert('不存在留言表单对象！');	
+		return false;
+	}
+	
+	$.ajax({
+	   type: "POST",
+	   url: SITE_URL+"user.php",
+	   data: "action=feedback&message=" + $.toJSON(mesobj),
+	   dataType: "json",
+	   success: function(data){
+	   		removewindow();
+			if(data.error==0){
+				/*if(typeof(data.message)!='undefined' && data.message !=""){
+					$('.m_right #tab2').html(data.message);	
+				}*/
+				window.location.reload();
+			}else{
+				//JqueryDialog.Open('系统提醒你','<br />'+data.message,260,50);
+				alert(data.message);
+			}
+	   } //end sucdess
+
+	}); //end ajax
+} // end function
+		
+</script>
+
+<div class="bottom">
+  <ul>
+    <li class="dIn"><a href="#"><i class="bot1"></i>
+      <label>首页</label>
+      </a></li>
+    <li><a href="#"><i class="bot2"></i>
+      <label>超市</label>
+      </a></li>
+    <li><a href="#"><i class="bot3"><span class="mycarts">0</span></i>
+      <label>购物车</label>
+      </a></li>
+    <li><a href="#"><i class="bot4"></i>
+      <label>我</label>
+      </a></li>
+  </ul>
+</div>
+</body>
+</html>

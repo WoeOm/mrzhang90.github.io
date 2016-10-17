@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+@keyframes left{
+	0%{transform:translateX(-100%); opacity:0;}
+	100%{transform:translateX(0); opacity:1;}
+}
+@-webkit-keyframes left1{
+	0%{-webkit-transform:translateX(0%); opacity:0;}
+	100%{-webkit-transform:translateX(30%); opacity:1;}
+}
+
+@keyframes left1{
+	0%{transform:translateX(0); opacity:0;}
+	100%{transform:translateX(30%); opacity:1;}
+}
+@-webkit-keyframes left{
+	0%{-webkit-transform:translateX(-100%); opacity:0;}
+	100%{-webkit-transform:translateX(0); opacity:1;}
+}
+
+@keyframes right{
+	0%{transform:translateX(100%); opacity:0;}
+	100%{transform:translateX(0); opacity:1;}
+}
+@-webkit-keyframes right{
+	0%{-webkit-transform:translateX(100%); opacity:0;}
+	100%{-webkit-transform:translateX(0); opacity:1;}
+}
+@keyframes top{
+	0%{transform:translateY(-100%); opacity:0;}
+	100%{transform:translateY(0); opacity:1;}
+}
+@-webkit-keyframes top{
+	0%{-webkit-transform:translateY(-100%); opacity:0;}
+	100%{-webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes bot{
+	0%{transform:translateY(100%); opacity:0;}
+	100%{transform:translateY(0); opacity:1;}
+}
+@-webkit-keyframes bot{
+	0%{-webkit-transform:translateY(100%); opacity:0;}
+	100%{-webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes opacD{
+	0%{ opacity:0}
+	100%{ opacity:1}	
+}
+@-webkit-keyframes opacD{
+	0%{ opacity:0}
+	100%{ opacity:1}	
+}
+@keyframes scaleD{
+	0%{transform:scale(0)}
+	100%{transform:scale(1)}
+}
+@-webkit-keyframes scaleD{
+	0%{-webkit-transform:scale(0)}
+	100%{-webkit-transform:scale(1)}
+}
+@keyframes circleD{
+	0%{ transform:rotate(0deg)}
+	100%{ transform:rotate(360deg)}	
+}
+@-webkit-keyframes circleD{
+	0%{ -webkit-transform:rotate(0deg)}
+	100%{ -webkit-transform:rotate(360deg)}	
+}
+@-webkit-keyframes top1{
+	0%{-webkit-transform:translateY(-100%); opacity:1;}
+	100%{-webkit-transform:translateY(0); opacity:0;}
+}
+@keyframes bot1{
+	0%{transform:translateY(100%); opacity:1;}
+	100%{transform:translateY(0); opacity:0;}
+}
+
+@keyframes wid1{
+	0%{ width:0; }
+	100%{ width:5.7rem;}
+}
+@-webkit-keyframes wid1{
+	0%{ width:0; }
+	100%{ width:5.7rem;}
+}
+

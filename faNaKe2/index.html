@@ -1,0 +1,490 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>无标题文档</title>
+<script>
+	var oHtml=document.getElementsByTagName("html")[0];
+	var iWidth=document.documentElement.clientWidth;
+	iWidth=iWidth>540?540:iWidth;
+	oHtml.style.fontSize=iWidth/16+"px";
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/swiper.css">
+<link rel="stylesheet" type="text/css" href="css/animation.css">
+<style>
+*{margin: 0;padding: 0;}
+html,body{ height:100%;}
+img{ display:block;}
+.fnkDiv {width: 16rem;height: 100%;}
+.fnkDiv .swiper-slide{ width:100%; height:100%; overflow:hidden; position:relative;}
+.fnkDiv img{ width:100%; height:auto;}
+.fnkDiv1{ background:url(images/bg1.jpg) no-repeat center bottom #262b4c; background-size:100% auto;}
+.fnkDiv1_1{ width:7.3rem; position:absolute; left:1.5rem; top:1.775rem; z-index:4}
+.fnkDiv1_2{ width:8.275rem; position:absolute; left:3.875rem; top:3.925rem; z-index:4}
+.fnkDiv1_3{ width:12.7rem; position:absolute; left:1.75rem; top:11.45rem; z-index:4}
+.fnkDiv1_4{ width:3.85rem; position:absolute; right:2.2rem; bottom:1.9rem; z-index:4}
+.fnkDiv1_5{ width:13.025rem; position:absolute; right:1.1rem; bottom:.5rem; z-index:3}
+.fnkDiv1_6{ width:25rem; position:absolute; right:0; bottom:0rem; z-index:2}
+.fnkDiv2{ background:url(images/bg2.jpg) no-repeat center top; background-size:100% 100%;}
+.upSlide{ width:1.25rem; position:absolute; left:7.375rem; bottom:1rem; z-index:12;}
+.upSlide img{ width:100%; height:auto;}
+.swiper-slide-active .upSlide{animation:bot1 1s linear 0s infinite backwards;-webkit-animation:bot1 1s linear 0s infinite backwards;}
+
+.swiper-slide-active .fnkDiv1_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv1_2{animation:scaleD 1s linear 0s backwards;-webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv1_3{animation:right 1s linear 0s backwards;-webkit-animation:right 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv1_4{animation:scaleD 1s linear 0s backwards;-webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv1_5{animation:bot 1s linear .5s backwards;-webkit-animation:bot 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv1_6{animation:bot 1s linear .5s backwards ;-webkit-animation:bot 1s linear .5s backwards ;}
+
+.fnkDiv2_1{ width:7.3rem; position:absolute; left:1.5rem; top:2.125rem; z-index:4}
+.fnkDiv2_2{ width:3.75rem; position:absolute; left:2.425rem; top:4rem; z-index:4}
+.fnkDiv2_3{ width:13rem; position:absolute; left:1.5rem; top:5.35rem; z-index:4}
+.fnkDiv2_5{ width:14.3rem; position:absolute; left:.9rem; top:9.325rem; z-index:3}
+
+.swiper-slide-active .fnkDiv2_1{animation:left 1s linear 0s backwards,opacD 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards,opacD 1s linear 0s backwards;;}
+.swiper-slide-active .fnkDiv2_2{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv2_3{animation:right 1s linear 0s backwards;-webkit-animation:right 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv2_5{animation:opacD 1.5s linear .5s backwards;-webkit-animation:opacD 1.5s linear .5s backwards;}
+
+.fnkDiv3{ background:url(images/bg3.jpg) no-repeat center top; background-size:100% 100%;}
+.fnkDiv3_1{ width:7.3rem; position:absolute; left:1.5rem; top:1.775rem; z-index:4}
+.fnkDiv3_2{ width:2.35rem; position:absolute; right:1.15rem; top:1.15rem; z-index:4}
+.fnkDiv3_3{ width:2.075rem; position:absolute; left:7rem; top:3.6rem; z-index:4}
+.fnkDiv3_4{ width:1rem; position:absolute; left:10.8rem; top:4.4rem; z-index:4}
+.fnkDiv3_5{ width:1rem; position:absolute; left:12.6rem; top:5rem; z-index:4}
+.fnkDiv3_6{ width:1.95rem; position:absolute; left:13.5rem; top:7.2rem; z-index:4}
+.fnkDiv3_7{ width:1.6rem; position:absolute; left:13.8rem; top:9.5rem; z-index:4}
+.fnkDiv3_8{ width:1.6rem; position:absolute; left:12rem; top:11rem; z-index:4}
+.fnkDiv3_9{ width:3.275rem; position:absolute; left:6.6rem; top:11.7rem; z-index:4}
+.fnkDiv3_10{ width:1.5rem; position:absolute; left:3.4rem; top:10.2rem; z-index:4}
+.fnkDiv3_11{ width:1.175rem; position:absolute; left:1.1rem; top:9.6rem; z-index:4}
+.fnkDiv3_12{ width:1rem; position:absolute; left:.6rem; top:6.8rem; z-index:4}
+.fnkDiv3_13{ width:1.3rem; position:absolute; left:2.1rem; top:5.2rem; z-index:4}
+.fnkDiv3_14{ width:12.3rem; position:absolute; right:2.1rem; bottom:2.65rem; z-index:4}
+.fnkDiv3_15{ width:5.8rem; position:absolute; right:0rem; bottom:0rem; z-index:4}
+.fnkDiv3_16{ width:12.175rem; position:absolute; left:1.7rem; top:4.85rem; z-index:4}
+.swiper-slide-active .fnkDiv3_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv3_2{animation:opacD 1s linear 0s backwards;-webkit-animation:opacD 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv3_3{animation:scaleD .2s linear .2s backwards;-webkit-animation:scaleD .2s linear .2s backwards;}
+.swiper-slide-active .fnkDiv3_4{animation:scaleD .2s linear .4s backwards;-webkit-animation:scaleD .2s linear .4s backwards;}
+.swiper-slide-active .fnkDiv3_5{animation:scaleD .2s linear .6s backwards;-webkit-animation:scaleD .2s linear .6s backwards;}
+.swiper-slide-active .fnkDiv3_6{animation:scaleD .2s linear .8s backwards;-webkit-animation:scaleD .2s linear .8s backwards;}
+.swiper-slide-active .fnkDiv3_7{animation:scaleD .2s linear 1s backwards;-webkit-animation:scaleD .2s linear 1s backwards;}
+.swiper-slide-active .fnkDiv3_8{animation:scaleD .2s linear 1.2s backwards;-webkit-animation:scaleD .2s linear 1.2s backwards;}
+.swiper-slide-active .fnkDiv3_9{animation:scaleD .2s linear 1.4s backwards;-webkit-animation:scaleD .2s linear 1.4s backwards;}
+.swiper-slide-active .fnkDiv3_10{animation:scaleD .2s linear 1.6s backwards;-webkit-animation:scaleD .2s linear 1.6s backwards;}
+.swiper-slide-active .fnkDiv3_11{animation:scaleD .2s linear 1.8s backwards;-webkit-animation:scaleD .2s linear 1.8s backwards;}
+.swiper-slide-active .fnkDiv3_12{animation:scaleD .2s linear 2s backwards;-webkit-animation:scaleD .2s linear 2s backwards;}
+.swiper-slide-active .fnkDiv3_13{animation:scaleD .2s linear 2.2s backwards;-webkit-animation:scaleD .2s linear 2.2s backwards;}
+.swiper-slide-active .fnkDiv3_14{animation:left 1s linear 2.2s backwards;-webkit-animation:left 1s linear 2.2s backwards;}
+.swiper-slide-active .fnkDiv3_15{animation:right 1s linear 2.2s backwards;-webkit-animation:right 1s linear 2.2s backwards;}
+.swiper-slide-active .fnkDiv3_16{animation:opacD 1s linear 0s backwards;-webkit-animation:opacD 1s linear 0s backwards;}
+
+
+.fnkDiv4{ background:url(images/bg4.jpg) no-repeat center top; background-size:100% 100%;}
+.fnkDiv4_1{ width:7.325rem; position:absolute; left:1.5rem; top:2rem; z-index:4}
+.fnkDiv4_2{ width:10.95rem; position:absolute; left:2.525rem; top:2.75rem; z-index:4}
+.fnkDiv4_3{ width:13.85rem; position:absolute; left:1.05rem; top:8.5rem; z-index:4}
+.fnkDiv4_4{ width:16rem; position:absolute; left:0; bottom:0; z-index:4}
+.fnkDiv4_5{height: 2.6rem; left: 12rem; opacity: 0.4; position: absolute; top: 5rem; width: 2.6rem; z-index: 2;}
+.swiper-slide-active .fnkDiv4_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv4_2{animation:scaleD 1s linear .5s backwards;-webkit-animation:scaleD 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv4_3{animation:opacD 1s linear 1s backwards;-webkit-animation:opacD 1s linear 1s backwards;}
+.swiper-slide-active .fnkDiv4_4{animation:bot 1s linear 0s backwards;-webkit-animation:bot 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv4_5{animation:circleD 5s linear 0s infinite backwards;-webkit-animation:circleD 5s linear 0s infinite backwards;}
+
+.fnkDiv5{ background:url(images/bg5.jpg) no-repeat center top; background-size:100% 100%;}
+.fnkDiv5_1{ width:7.2rem; position:absolute; left:1.5rem; top:2rem; z-index:4}
+.fnkDiv5_2{ width:7.175rem; position:absolute; left:4.45rem; top:4.2rem; z-index:4}
+.fnkDiv5_3{ width:13.325rem; position:absolute; left:1.325rem; top:9.825rem; z-index:4}
+.fnkDiv5_4{ width:13.325rem; position:absolute; left:1.325rem; top:15.825rem; z-index:4}
+.fnkDiv5_5{ width:16rem; position:absolute; left:0; top:8.85rem; z-index:3}
+.swiper-slide-active .fnkDiv5_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv5_2{animation:right 1s linear 1.5s backwards;-webkit-animation:right 1s linear 1.5s backwards;}
+.swiper-slide-active .fnkDiv5_3{animation:top 1s linear .5s backwards;-webkit-animation:top 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv5_4{animation:bot 1s linear .5s backwards;-webkit-animation:bot 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv5_5{animation:opacD .5s linear 0s backwards;-webkit-animation:opacD .5s linear 0s backwards;}
+
+.fnkDiv6{ background:url(images/bg6.jpg) no-repeat center top; background-size:100% 100%;}
+.fnkDiv6_1{ width:7.3rem; position:absolute; left:1.5rem; top:2rem; z-index:4}
+.fnkDiv6_2{ width:15.5rem; position:absolute; left:.25rem; top:4.5rem; z-index:2}
+.fnkDiv6_3{ width:15rem; position:absolute; left:.5rem; top:4.75rem; z-index:4}
+.fnkDiv6_4{ width:13.7rem; position:absolute; left:1.15rem; top:14.75rem; z-index:4}
+.fnkDiv6_5{ width:13.75rem; position:absolute; left:1.25rem; top:16.75rem; z-index:4}
+.swiper-slide-active .fnkDiv6_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv6_2{animation:opacD .5s linear 0s backwards;-webkit-animation:opacD .5s linear 0s backwards;}
+.swiper-slide-active .fnkDiv6_3{animation:scaleD 2s linear .5s backwards;-webkit-animation:scaleD 2s linear .5s backwards;}
+.swiper-slide-active .fnkDiv6_4{animation:scaleD 2s linear .7s backwards;-webkit-animation:scaleD 2s linear .7s backwards;}
+.swiper-slide-active .fnkDiv6_5{animation:scaleD 2s linear .9s backwards;-webkit-animation:scaleD 2s linear .9s backwards;}
+
+.fnkDiv7{ background:url(images/bg7.jpg) no-repeat center top #fee600; background-size:100% auto;}
+.fnkDiv7_1{ width:7.325rem; position:absolute; left:1.5rem; top:2.275rem; z-index:4}
+.fnkDiv7_2{ width:15.5rem; position:absolute; left:.25rem; top:3.45rem; z-index:4;}
+.fnkDiv7_3{ width:3.425rem; position:absolute; left:10rem; bottom:7.8rem; z-index:4;}
+.fnkDiv7_4{ width:12.575rem; position:absolute; left:1.75rem; bottom:6.3rem; z-index:4;}
+.fnkDiv7_5{ width:13.325rem; position:absolute; left:1.25rem; bottom:1.4rem; z-index:4;}
+.fnkDiv7_6{ width:16rem; position:absolute; left:0; bottom:0; z-index:2;}
+.swiper-slide-active .fnkDiv7_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv7_2{animation:scaleD 1s linear .5s backwards;-webkit-animation:scaleD 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv7_3{animation:right 1s linear 2s backwards;-webkit-animation:right 1s linear 2s backwards;}
+.swiper-slide-active .fnkDiv7_4{animation:left 1s linear 1s backwards;-webkit-animation:left 1s linear 1s backwards;}
+.swiper-slide-active .fnkDiv7_5{animation:right 1s linear 1s backwards;-webkit-animation:right 1s linear 1s backwards;}
+.swiper-slide-active .fnkDiv7_6{animation:bot .8s linear 0s backwards;-webkit-animation:bot .8s linear 0s backwards;}
+
+.fnkDiv8{ background:url(images/bg8.jpg) no-repeat center top; background-size:100% 100%;}
+.fnkDiv8_1{ width:7.3rem; position:absolute; left:1.5rem; top:1.85rem; z-index:4}
+.fnkDiv8_2{ width:16rem; position:absolute; left:0rem; top:3.175rem; z-index:4}
+.fnkDiv8_3{ width:2.075rem; position:absolute; left:1.67rem; top:13.95rem; z-index:4}
+.fnkDiv8_4{ width:.85rem; position:absolute; left:3rem; top:18.8rem; z-index:4}
+.fnkDiv8_5{ width:9.175rem; position:absolute; left:5rem; top:14.75rem; z-index:4}
+.fnkDiv8_6{ width:14.75rem; position:absolute; left:.625rem; top:13.375rem; z-index:2}
+.swiper-slide-active .fnkDiv8_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv8_2{animation:opacD .5s linear 0s backwards;-webkit-animation:opacD .5s linear 0s backwards;}
+.swiper-slide-active .fnkDiv8_3{animation:scaleD 1s linear 1s backwards;-webkit-animation:scaleD 1s linear 1s backwards;}
+.swiper-slide-active .fnkDiv8_4{animation:top 1s linear 2s backwards;-webkit-animation:top 1s linear 2s backwards;}
+.swiper-slide-active .fnkDiv8_5{animation:right 1s linear 2s backwards;-webkit-animation:right 1s linear 2s backwards;}
+.swiper-slide-active .fnkDiv8_6{animation:opacD .5s linear .5s backwards;-webkit-animation:opacD .5s linear .5s backwards;}
+
+.fnkDiv9{ background:url(images/bg9.jpg) no-repeat center top; background-size:100% 100%;}
+.fnkDiv9_1{ width:7rem; position:absolute; left:4.5rem; top:2.375rem; z-index:4}
+.fnkDiv9_2{ width:5.65rem; position:absolute; left:5.175rem; top:12.35rem; z-index:4}
+.fnkDiv9_3{ width:7rem; position:absolute; left:4.5rem; top:18.65rem; z-index:4}
+.swiper-slide-active .fnkDiv9_1{animation:scaleD 1s linear 0s backwards;-webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv9_2{animation:scaleD 1s linear .5s backwards;-webkit-animation:scaleD 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv9_3{animation:scaleD 1s linear 1s backwards;-webkit-animation:scaleD 1s linear 1s backwards;}
+
+.fnkDiv10{ background:url(images/bg10.jpg) no-repeat center top; background-size:100% 100%;}
+.fnkDiv10_1{ width:4.825rem; position:absolute; left:1.05rem; top:1.45rem; z-index:2}
+.fnkDiv10_2{ width:14rem; position:absolute; left:1rem; top:2rem; z-index:1}
+.fnkDiv10_3{ width:1.75rem; position:absolute; left:7.3rem; top:3.65rem; z-index:4}
+.fnkDiv10_4{ width:7.1rem; position:absolute; left:4.45rem; top:5.5rem; z-index:4}
+.fnkDiv10_5{ width:5.2rem; position:absolute; left:5.7rem; top:1.8rem; z-index:5}
+.fnkDiv10_6{ width:10.9rem; position:absolute; left:2.55rem; top:6.7rem; z-index:4}
+.fnkDiv10_7{ width:9.65rem; position:absolute; left:3.175rem; top:22.5rem; z-index:2}
+
+.swiper-slide-active .fnkDiv10_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv10_2{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv10_3{animation:top .5s linear 1s backwards;-webkit-animation:top .5s linear 1s backwards;}
+.swiper-slide-active .fnkDiv10_4{animation:top 1s linear 2s backwards;-webkit-animation:top 1s linear 2s backwards;}
+.swiper-slide-active .fnkDiv10_5{animation:scaleD .5s linear 1.5s backwards;-webkit-animation:scaleD .5s linear 1.5s backwards;}
+.swiper-slide-active .fnkDiv10_6{animation:scaleD 1s linear 2s backwards;-webkit-animation:scaleD 1s linear 2s backwards;}
+.swiper-slide-active .fnkDiv10_7{animation:scaleD 1s linear 2.5s backwards;-webkit-animation:scaleD 1s linear 2.5s backwards;}
+
+.fnkDiv11{ background:url(images/bg11.jpg) no-repeat center bottom #e1e1e2; background-size:100% auto;}
+.fnkDiv11_1{ width:5.5rem; position:absolute; left:.85rem; top:1.275rem; z-index:1}
+.fnkDiv11_2{ width:4.125rem; position:absolute; left:5.95rem; top:5rem; z-index:1}
+.fnkDiv11_3{ width:.725rem; position:absolute; left:2.45rem; top:2.425rem; z-index:2}
+.fnkDiv11_4{ width:1.375rem; position:absolute; left:3.375rem; top:2.425rem; z-index:2}
+
+.fnkDiv11_5{ width:3.85rem; position:absolute; left:4.925rem; top:2.425rem; z-index:3}
+.fnkDiv11_6{ width:4.55rem; position:absolute; left:8.975rem; top:2.425rem; z-index:3}
+.fnkDiv11_7{ width:5.975rem; position:absolute; left:7.55rem; top:6.025rem; z-index:3}
+.fnkDiv11_8{ width:3.35rem; position:absolute; left:10.225rem; top:7.375rem; z-index:3}
+.fnkDiv11_9{ width:3.15rem; position:absolute; left:10.375rem; top:9.6rem; z-index:3}
+.fnkDiv11_10{ width:3.15rem; position:absolute; left:10.375rem; top:14.65rem; z-index:3}
+.fnkDiv11_11{ width:3.15rem; position:absolute; left:10.375rem; top:16.05rem; z-index:3}
+.fnkDiv11_12{ width:1.925rem; position:absolute; left:11.65rem; top:18.525rem; z-index:3}
+.fnkDiv11_13{ width:5.5rem; position:absolute; left:5.975rem; top:17.55rem; z-index:3}
+.fnkDiv11_14{ width:5.5rem; position:absolute; left:5.975rem; top:19.625rem; z-index:3}
+.fnkDiv11_15{ width:8.875rem; position:absolute; left:2.4rem; top:21.05rem; z-index:3}
+.fnkDiv11_16{ width:1.375rem; position:absolute; left:4.375rem; top:15.525rem; z-index:3}
+.fnkDiv11_17{ width:1.775rem; position:absolute; left:2.4rem; top:15.525rem; z-index:3}
+.fnkDiv11_18{ width:3.375rem; position:absolute; left:2.45rem; top:14.325rem; z-index:3}
+.fnkDiv11_19{ width:2.375rem; position:absolute; left:3.375rem; top:9.6rem; z-index:3}
+.fnkDiv11_20{ width:.925rem; position:absolute; left:2.45rem; top:8.35rem; z-index:3}
+.fnkDiv11_21{ width:2.175rem; position:absolute; left:3.6rem; top:8.35rem; z-index:3}
+.fnkDiv11_22{ width:3.375rem; position:absolute; left:2.45rem; top:6.125rem; z-index:3}
+.fnkDiv11_23{ width:2.325rem; position:absolute; left:7.575rem; top:11.35rem; z-index:4}
+
+.swiper-slide-active .fnkDiv11_1{animation:left .5s linear 0s backwards;-webkit-animation:left .5s linear 0s backwards;}
+.swiper-slide-active .fnkDiv11_2{animation:scaleD .5s linear 0s backwards;-webkit-animation:scaleD .5s linear 0s backwards;}
+.swiper-slide-active .fnkDiv11_3{animation:scaleD .3s linear .5s backwards;-webkit-animation:scaleD .3s linear .5s backwards;}
+.swiper-slide-active .fnkDiv11_4{animation:scaleD .3s linear 1.2s backwards;-webkit-animation:scaleD .3s linear 1.2s backwards;}
+.swiper-slide-active .fnkDiv11_5{animation:scaleD .3s linear .8s backwards;-webkit-animation:scaleD .3s linear .8s backwards;}
+.swiper-slide-active .fnkDiv11_6{animation:scaleD .3s linear 1.1s backwards;-webkit-animation:scaleD .3s linear 1.1s backwards;}
+.swiper-slide-active .fnkDiv11_7{animation:scaleD .3s linear .7s backwards;-webkit-animation:scaleD .3s linear .7s backwards;}
+.swiper-slide-active .fnkDiv11_8{animation:scaleD .3s linear .4s backwards;-webkit-animation:scaleD .3s linear .4s backwards;}
+.swiper-slide-active .fnkDiv11_9{animation:scaleD .3s linear .6s backwards;-webkit-animation:scaleD .3s linear .6s backwards;}
+.swiper-slide-active .fnkDiv11_10{animation:scaleD .3s linear .9s backwards;-webkit-animation:scaleD .3s linear .9s backwards;}
+.swiper-slide-active .fnkDiv11_11{animation:scaleD .3s linear .6s backwards;-webkit-animation:scaleD .3s linear .6s backwards;}
+.swiper-slide-active .fnkDiv11_12{animation:scaleD .3s linear 1.1s backwards;-webkit-animation:scaleD .3s linear 1.1s backwards;}
+.swiper-slide-active .fnkDiv11_13{animation:scaleD .3s linear .8s backwards;-webkit-animation:scaleD .3s linear .8s backwards;}
+.swiper-slide-active .fnkDiv11_14{animation:scaleD .3s linear 1.2s backwards;-webkit-animation:scaleD .3s linear 1.2s backwards;}
+.swiper-slide-active .fnkDiv11_15{animation:scaleD .3s linear 1.4s backwards;-webkit-animation:scaleD .3s linear 1.4s backwards;}
+.swiper-slide-active .fnkDiv11_16{animation:scaleD .3s linear .6s backwards;-webkit-animation:scaleD .3s linear .6s backwards;}
+.swiper-slide-active .fnkDiv11_17{animation:scaleD .3s linear .8s backwards;-webkit-animation:scaleD .3s linear .8s backwards;}
+.swiper-slide-active .fnkDiv11_18{animation:scaleD .3s linear 1s backwards;-webkit-animation:scaleD .3s linear 1s backwards;}
+.swiper-slide-active .fnkDiv11_19{animation:scaleD .3s linear .9s backwards;-webkit-animation:scaleD .3s linear .9s backwards;}
+.swiper-slide-active .fnkDiv11_20{animation:scaleD .3s linear .5s backwards;-webkit-animation:scaleD .3s linear .5s backwards;}
+.swiper-slide-active .fnkDiv11_21{animation:scaleD .3s linear .8s backwards;-webkit-animation:scaleD .3s linear .8s backwards;}
+.swiper-slide-active .fnkDiv11_22{animation:scaleD .3s linear 1.2s backwards;-webkit-animation:scaleD .3s linear 1.2s backwards;}
+.swiper-slide-active .fnkDiv11_23{animation:scaleD .5s linear .8s backwards;-webkit-animation:scaleD .5s linear .8s backwards;}
+
+.fnkDiv12{ background:url(images/bg12.jpg) no-repeat #000; background-size:100% auto;}
+.fnkDiv12_1{ width:5.2rem; position:absolute; left:1.175rem; top:1.25rem; z-index:8;}
+.fnkDiv12_2{ width:4rem; position:absolute; left:6rem; top:3.575rem; z-index:8;}
+.fnkDiv12_3{ width:13rem; position:absolute; left:1.5rem; top:6.4rem; z-index:8;}
+.fnkDiv12_4{ width:8.5rem; position:absolute; left:3.95rem; top:9rem; z-index:5;}
+.fnkDiv12_5{ width:16rem; position:absolute; left:0; top:4.825rem; z-index:3;}
+.fnkDiv12_6{ width:4.15rem; position:absolute; left:6.1rem; top:10.9rem; z-index:9;}
+.fnkDiv12_7{ width:8.125rem; position:absolute; left:0; top:0; z-index:12}
+.fnkDiv12_8{ width:8rem; position:absolute; right:0; top:0; z-index:12}
+.fnkDiv12_9{ width:16rem; position:absolute; left:0; top:12.85rem; z-index:11}
+
+.swiper-slide-active .fnkDiv12_1{animation:left 1s linear 0s backwards;-webkit-animation:left 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv12_2{animation:scaleD 1s linear 0s backwards;-webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv12_3{animation:scaleD 1s linear .5s backwards;-webkit-animation:scaleD 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv12_4{animation:scaleD 1s linear 0s backwards;-webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv12_5{animation:opacD .5s linear 1.5s backwards;-webkit-animation:opacD .5s linear 1.5s backwards;}
+.swiper-slide-active .fnkDiv12_6{animation:opacD .5s linear 1.5s backwards;-webkit-animation:opacD .5s linear 1.5s backwards;}
+.swiper-slide-active .fnkDiv12_7{animation:left .5s linear 2.5s backwards;-webkit-animation:left .5s linear 2.5s backwards;}
+.swiper-slide-active .fnkDiv12_8{animation:right .5s linear 3s backwards;-webkit-animation:right .5s linear 3s backwards;}
+.swiper-slide-active .fnkDiv12_9{animation:bot .5s linear 3.5s backwards;-webkit-animation:bot .5s linear 3.5s backwards;}
+
+
+.fnkDiv13{ background:url(images/bg13.jpg) no-repeat #000; background-size:100% auto;}
+.fnkDiv13_1{ width:5.275rem; position:absolute; left:1.15rem; top:1.25rem; z-index:1;}
+.fnkDiv13_2{ width:4.5rem; position:absolute; left:5.75rem; top:3.35rem; z-index:1;}
+.fnkDiv13_3{ width:14.8rem; position:absolute; left:.6rem; top:6.4rem; z-index:1;}
+.fnkDiv13_4{ width:9.3rem; height:4.4rem; padding:.3rem 0 0 .5rem; color:#fff; box-sizing:border-box; position:absolute; left:3.35rem; top:11.175rem; background:url(images/fnk13_4.png) no-repeat; background-size:100% 100%;}
+.fnkDiv13_5{ height:3.85rem; width:1.1rem; float:left;}
+.fnkDiv13_5 img,.fnkDiv13_7 img{ width:100%; height:100%;}
+.fnkDiv13_6{ height:3.85rem; width:5.7rem; float:left; background:url(images/fnk13_6.png) repeat-x; background-size:auto 100%;}
+.fnkDiv13_7{ height:3.85rem; width:1.1rem; float:left;}
+.fnkDiv13_8{ width:8rem; position:absolute; left:.49rem; top:.55rem; z-index:1;}
+.fnkDiv13_9{ width:16rem; position:absolute; left:0; top:0; z-index:5;}
+.fnkDiv13_10{ width:16rem; position:absolute; left:0; top:7.8rem; z-index:4;}
+.fnkDiv13_11{ width:16rem; position:absolute; left:0; bottom:0; z-index:3;}
+.swiper-slide-active .fnkDiv13_1{animation:left .5s linear 0s backwards;-webkit-animation:left .5s linear 0s backwards;}
+.swiper-slide-active .fnkDiv13_2{animation:scaleD 1s linear .5s backwards;-webkit-animation:scaleD 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv13_3{animation:scaleD 1s linear 1s backwards;-webkit-animation:scaleD 1s linear 1s backwards;}
+.swiper-slide-active .fnkDiv13_4{animation:scaleD 1s linear .5s backwards;-webkit-animation:scaleD 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv13_6{animation:wid1 2s linear 2s backwards;-webkit-animation:wid1 2s linear 2s backwards;}
+.swiper-slide-active .fnkDiv13_9{animation:left .8s linear 4.5s backwards;-webkit-animation:left .8s linear 4.5s backwards;}
+.swiper-slide-active .fnkDiv13_10{animation:left .8s linear 5s backwards;-webkit-animation:left .8s linear 5s backwards;}
+.swiper-slide-active .fnkDiv13_11{animation:left .8s linear 5.5s backwards;-webkit-animation:left .8s linear 5.5s backwards;}
+
+
+.fnkDiv14{ background:url(images/bg14.jpg) no-repeat #000; background-size:100% auto;}
+.fnkDiv14_1{ width:5.2rem; position:absolute; left:1.15rem; top:1.25rem; z-index:1;}
+.fnkDiv14_2{ width:4.45rem; position:absolute; left:5.775rem; top:3.525rem; z-index:2;}
+.fnkDiv14_3{ width:14.5rem; position:absolute; left:.75rem; top:6.375rem; z-index:2;}
+.fnkDiv14_4{ width:5.625rem; height:5.675rem; background:none; position:absolute; left:4.825rem; top:12.325rem; z-index:2;}
+.fnkDiv14_5{ width:16rem; position:absolute; left:0; top:0; z-index:6;}
+.fnkDiv14_6{ width:8.575rem; position:absolute; left:0; top:8.8rem; z-index:5;}
+.fnkDiv14_7{ width:13.8rem; position:absolute; left:1.625rem; top:4.275rem; z-index:4;}
+.fnkDiv14_8{ width:8.225rem; position:absolute; right:0; top:0; z-index:3;}
+.fnkDiv14_9{ width:16rem; position:absolute; left:0; top:14rem; z-index:2;}
+.swiper-slide-active .fnkDiv14_1{animation:left .5s linear 0s backwards; -webkit-animation:left .5s linear 0s backwards;}
+.swiper-slide-active .fnkDiv14_2{animation:scaleD 1s linear 0s backwards; -webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv14_3{animation:scaleD 1s linear 0s backwards; -webkit-animation:scaleD 1s linear 0s backwards;}
+.swiper-slide-active .fnkDiv14_5{animation:left 1s linear 2s backwards;-webkit-animation:left 1s linear 2s backwards;}
+.swiper-slide-active .fnkDiv14_4{ background:url(images/fnk14_4.gif) no-repeat; background-size:100% 100%;animation:scaleD 1s linear .5s backwards;-webkit-animation:scaleD 1s linear .5s backwards;}
+.swiper-slide-active .fnkDiv14_6{animation:left 1s linear 5.5s backwards;-webkit-animation:left 1s linear 5.5s backwards;}
+.swiper-slide-active .fnkDiv14_7{animation:scaleD 1s linear 6.5s backwards;-webkit-animation:scaleD 1s linear 6.5s backwards;}
+.swiper-slide-active .fnkDiv14_8{animation:right 1s linear 3.5s backwards;-webkit-animation:right 1s linear 3.5s backwards;}
+.swiper-slide-active .fnkDiv14_9{animation:bot 1s linear 4.5s backwards;-webkit-animation:bot 1s linear 4.5s backwards;}
+
+.music{position:fixed;right: 10px; top: 5px;z-index: 300;width: 11%; background-position:-999px -999px;}
+.music img{ width:100%; height:auto;}
+</style>
+</head>
+
+<body>
+<!---->
+<div class="music">
+    <audio id="video" autoplay="autoplay" loop style="display:none;width:1px;height:1px;">
+        <source src="hhyy1.mp3" id="video_url_mp3" type="audio/mpeg">
+    </audio>
+    <img src="images/music_play.png" id="btnImg">
+</div>
+<!---->
+<div class="swiper-container fnkDiv">
+	<div class="swiper-wrapper">
+        <div class="swiper-slide fnkDiv1">
+        	<div class="fnkDiv1_1"><img src="images/fnk1_1.png"></div>
+            <div class="fnkDiv1_2"><img src="images/fnk1_2.png"></div>
+            <div class="fnkDiv1_3"><img src="images/fnk1_3.png"></div>
+            <div class="fnkDiv1_4"><img src="images/fnk1_4.png"></div>
+            <div class="fnkDiv1_5"><img src="images/fnk1_5.png"></div>
+            <div class="fnkDiv1_6"><img src="images/fnk1_6.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv2">
+        	<div class="fnkDiv2_1"><img src="images/fnk2_1.png"></div>
+            <div class="fnkDiv2_2"><img src="images/fnk2_2.png"></div>
+            <div class="fnkDiv2_3"><img src="images/fnk2_3.png"></div>
+            <div class="fnkDiv2_5"><img src="images/fnk2_5.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        
+        <div class="swiper-slide fnkDiv11">
+        	<div class="fnkDiv11_1"><img src="images/fnk11_1.png"></div>
+            <div class="fnkDiv11_2"><img src="images/fnk11_2.png"></div>
+            <div class="fnkDiv11_3"><img src="images/fnk11_3.png"></div>
+            <div class="fnkDiv11_4"><img src="images/fnk11_4.png"></div>
+            <div class="fnkDiv11_5"><img src="images/fnk11_5.png"></div>
+            <div class="fnkDiv11_6"><img src="images/fnk11_6.png"></div>
+            <div class="fnkDiv11_7"><img src="images/fnk11_7.png"></div>
+            <div class="fnkDiv11_8"><img src="images/fnk11_8.png"></div>
+            <div class="fnkDiv11_9"><img src="images/fnk11_9.png"></div>
+            <div class="fnkDiv11_10"><img src="images/fnk11_10.png"></div>
+            <div class="fnkDiv11_11"><img src="images/fnk11_11.png"></div>
+            <div class="fnkDiv11_12"><img src="images/fnk11_12.png"></div>
+            <div class="fnkDiv11_13"><img src="images/fnk11_13.png"></div>
+            <div class="fnkDiv11_14"><img src="images/fnk11_14.png"></div>
+            <div class="fnkDiv11_15"><img src="images/fnk11_15.png"></div>
+            <div class="fnkDiv11_16"><img src="images/fnk11_16.png"></div>
+            <div class="fnkDiv11_17"><img src="images/fnk11_17.png"></div>
+            <div class="fnkDiv11_18"><img src="images/fnk11_18.png"></div>
+            <div class="fnkDiv11_19"><img src="images/fnk11_19.png"></div>
+            <div class="fnkDiv11_20"><img src="images/fnk11_20.png"></div>
+            <div class="fnkDiv11_21"><img src="images/fnk11_21.png"></div>
+            <div class="fnkDiv11_22"><img src="images/fnk11_22.png"></div>
+            <div class="fnkDiv11_23"><img src="images/fnk11_23.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        
+        <div class="swiper-slide fnkDiv3">
+        	<div class="fnkDiv3_1"><img src="images/fnk3_1.png"></div>
+            <div class="fnkDiv3_2"><img src="images/fnk3_2.png"></div>
+            <div class="fnkDiv3_3"><img src="images/fnk3_3.png"></div>
+            <div class="fnkDiv3_4"><img src="images/fnk3_4.png"></div>
+            <div class="fnkDiv3_5"><img src="images/fnk3_5.png"></div>
+            <div class="fnkDiv3_6"><img src="images/fnk3_6.png"></div>
+            <div class="fnkDiv3_7"><img src="images/fnk3_7.png"></div>
+            <div class="fnkDiv3_8"><img src="images/fnk3_8.png"></div>
+            <div class="fnkDiv3_9"><img src="images/fnk3_9.png"></div>
+            <div class="fnkDiv3_10"><img src="images/fnk3_10.png"></div>
+            <div class="fnkDiv3_11"><img src="images/fnk3_11.png"></div>
+            <div class="fnkDiv3_12"><img src="images/fnk3_12.png"></div>
+            <div class="fnkDiv3_13"><img src="images/fnk3_13.png"></div>
+            <div class="fnkDiv3_14"><img src="images/fnk3_14.png"></div>
+            <div class="fnkDiv3_15"><img src="images/fnk3_15.png"></div>
+            <div class="fnkDiv3_16"><img src="images/fnk3_16.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv4">
+        	<div class="fnkDiv4_1"><img src="images/fnk4_1.png"></div>
+            <div class="fnkDiv4_2"><img src="images/fnk4_2.png"></div>
+            <div class="fnkDiv4_3"><img src="images/fnk4_3.png"></div>
+            <div class="fnkDiv4_4"><img src="images/fnk4_4.png"></div>
+            <div class="fnkDiv4_5"><img src="images/fnk4_5.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv12">
+            <div class="fnkDiv12_1"><img src="images/fnk12_1.png"></div>
+            <div class="fnkDiv12_2"><img src="images/fnk12_2.png"></div>
+            <div class="fnkDiv12_3"><img src="images/fnk12_3.png"></div>
+            <div class="fnkDiv12_4"><img src="images/fnk12_4.png"></div>
+            <div class="fnkDiv12_5"><img src="images/fnk12_5.png"></div>
+            <div class="fnkDiv12_6"><img src="images/fnk12_6.png"></div>
+            
+            <div class="fnkDiv12_7"><img src="images/fnk12_7.png"></div>
+            <div class="fnkDiv12_8"><img src="images/fnk12_8.png"></div>
+            <div class="fnkDiv12_9"><img src="images/fnk12_9.jpg"></div>
+            
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv13">
+        	<div class="fnkDiv13_1"><img src="images/fnk13_1.png"></div>
+            <div class="fnkDiv13_2"><img src="images/fnk13_2.png"></div>
+            <div class="fnkDiv13_3"><img src="images/fnk13_3.png"></div>
+            <div class="fnkDiv13_4">
+            	<div class="fnkDiv13_5"><img src="images/fnk13_5.png"></div>
+                <div class="fnkDiv13_6"></div>
+                <div class="fnkDiv13_7"><img src="images/fnk13_7.png"></div>
+                <div class="fnkDiv13_8"><img src="images/fnk13_8.png"></div>
+            </div>
+            
+            <div class="fnkDiv13_9"><img src="images/fnk13_9.jpg"></div>
+            <div class="fnkDiv13_10"><img src="images/fnk13_10.jpg"></div>
+            <div class="fnkDiv13_11"><img src="images/fnk13_11.jpg"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv14">
+        	<div class="fnkDiv14_1"><img src="images/fnk14_1.png"></div>
+            <div class="fnkDiv14_2"><img src="images/fnk14_2.png"></div>
+            <div class="fnkDiv14_3"><img src="images/fnk14_3.png"></div>
+            <div class="fnkDiv14_4"></div>
+            <div class="fnkDiv14_5"><img src="images/fnk14_5.png"></div>
+            <div class="fnkDiv14_6"><img src="images/fnk14_6.png"></div>
+            <div class="fnkDiv14_7"><img src="images/fnk14_7.png"></div>
+            <div class="fnkDiv14_8"><img src="images/fnk14_8.png"></div>
+            <div class="fnkDiv14_9"><img src="images/fnk14_9.jpg"></div>
+        </div>
+        <div class="swiper-slide fnkDiv5">
+        	<div class="fnkDiv5_1"><img src="images/fnk5_1.png"></div>
+            <div class="fnkDiv5_2"><img src="images/fnk5_2.png"></div>
+            <div class="fnkDiv5_3"><img src="images/fnk5_3.png"></div>
+            <div class="fnkDiv5_4"><img src="images/fnk5_4.png"></div>
+            <div class="fnkDiv5_5"><img src="images/fnk5_5.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv6">
+        	<div class="fnkDiv6_1"><img src="images/fnk6_1.png"></div>
+            <div class="fnkDiv6_2"><img src="images/fnk6_2.png"></div>
+            <div class="fnkDiv6_3"><img src="images/fnk6_3.png"></div>
+            <div class="fnkDiv6_4"><img src="images/fnk6_4.png"></div>
+            <div class="fnkDiv6_5"><img src="images/fnk6_5.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv7">
+        	<div class="fnkDiv7_1"><img src="images/fnk7_1.png"></div>
+            <div class="fnkDiv7_2"><img src="images/fnk7_2.png"></div>
+            <div class="fnkDiv7_3"><img src="images/fnk7_3.png"></div>
+            <div class="fnkDiv7_4"><img src="images/fnk7_4.png"></div>
+            <div class="fnkDiv7_5"><img src="images/fnk7_5.png"></div>
+            <div class="fnkDiv7_6"><img src="images/fnk7_6.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv8">
+        	<div class="fnkDiv8_1"><img src="images/fnk8_1.png"></div>
+            <div class="fnkDiv8_2"><img src="images/fnk8_2.png"></div>
+            <div class="fnkDiv8_3"><img src="images/fnk8_3.png"></div>
+            <div class="fnkDiv8_4"><img src="images/fnk8_4.png"></div>
+            <div class="fnkDiv8_5"><img src="images/fnk8_5.png"></div>
+            <div class="fnkDiv8_6"><img src="images/fnk8_6.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv10">
+        	<div class="fnkDiv10_1"><img src="images/fnk10_1.png"></div>
+            <div class="fnkDiv10_2"><img src="images/fnk10_2.png"></div>
+            <div class="fnkDiv10_3"><img src="images/fnk10_3.png"></div>
+            <div class="fnkDiv10_4"><img src="images/fnk10_4.png"></div>
+            <div class="fnkDiv10_5"><img src="images/fnk10_5.png"></div>
+            <div class="fnkDiv10_6"><img src="images/fnk10_6.png"></div>
+            <div class="fnkDiv10_7"><img src="images/fnk10_7.png"></div>
+        </div>
+        <div class="swiper-slide fnkDiv9">
+        	<div class="fnkDiv9_1"><img src="images/fnk9_1.png"></div>
+            <div class="fnkDiv9_2"><img src="images/fnk9_2.png"></div>
+            <div class="fnkDiv9_3"><img src="images/fnk9_3.png"></div>
+            <div class="upSlide"><img src="images/upslide.png"></div>
+        </div>
+    </div>
+</div>
+<script>
+var mySwiper1 = new Swiper('.fnkDiv',{
+	direction : 'vertical'
+})
+document.getElementById('btnImg').onclick = function(){
+	var videoV = document.getElementById('video');
+	if(this.getAttribute('src') == 'images/music_play.png'){
+		this.setAttribute('src','images/music_stop.png');
+		videoV.pause();
+	}else{
+		this.setAttribute('src','images/music_play.png');
+		videoV.play();
+	}
+}
+</script>
+</body>
+</html>

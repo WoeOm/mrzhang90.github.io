@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<title>洁鲜锋社区生鲜便利</title>
+<meta name="title" content="洁鲜锋社区生鲜店" />
+<meta name="keywords" content="洁鲜锋；社区生鲜；O2O" />
+<meta name="description" content="洁鲜锋社区生鲜O2O" />
+<link type="text/css" rel="stylesheet" href="css/comman.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/jquery_dialog.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/css.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery_dialog.js"></script>
+<script type="text/javascript" src="js/common.js?v=12"></script>
+<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="js/goods.js?v=17"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+<style type="text/css">
+.ssTop{ width:100%; height:2.75m; line-height:2.7em; background:#2e2e2e; position:relative;}
+.ssTop a{ position:absolute; left:0; padding-left:10%; top:0em; font-size:.75em; width:20%; color:#FFF; background:url(images/fanhui.png) no-repeat 20% center; background-size:7% auto;}
+.ssTop label{ width:100%; display:block; text-align:center; color:#FFF; font-size:.75em;}
+.pLeft{ overflow-y:auto; background:#dadada; width:33%; float:left;}
+.pLeft ul{}
+.pLeft ul li{ border-left:5px solid #dadada; color:#333; padding-left:24.6%; font-size:.75em; line-height:3.5;}
+.pRight{ overflow-y:auto; width:58.4375%; float:right; margin-right:3.9%;}
+.pRight ul li {font-size:.75em; padding-left:7.7%; color:#333; line-height:3.375; border-bottom:1px solid #dadada;}
+.pRight ul li a{ color:#333;}
+/*.pRight ul li a{ width:4.2%; height:1em; display:block; float:right; margin-top:1.2em; background:url(images/fanhui2.png) no-repeat left center; background-size:100% auto;}*/
+.pLeft ul li.lin{ border-left:5px solid #5365b0; color:#5365b0; background:#FFF;}
+</style>
+<div class="ssTop"> <a href="javascript:;" onclick="history.go(-1)">选择店铺</a>
+  <label>选择店铺</label>
+</div>
+<div class="pLeft">
+  <ul>
+    <li class="lin" onClick="get_region(4164,4)">宝山区</li>
+    <li  onClick="get_region(4171,4)">普陀区</li>
+    <li  onClick="get_region(4176,4)">嘉定区</li>
+    <li  onClick="get_region(4177,4)">浦东区</li>
+    <li  onClick="get_region(4180,4)">虹口区</li>
+    <li  onClick="get_region(4207,4)">长宁区</li>
+  </ul>
+</div>
+<div class="pRight">
+  <ul class="ulist">
+    <li><a href="javascript:;" onClick="toEnter(this)" id="87">洁鲜锋直营店（华滋奔腾大厦)</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+//地区默认固定高度
+dzPos();
+function dzPos(){
+	var winHeight = $(window).height();
+	var topHeight = $(".ssTop").height();
+	var ulHeight = winHeight - topHeight;
+	$(".pLeft").css("height",ulHeight + "px");
+	$(".pRight").css("height",ulHeight + "px");
+}
+
+$(".pLeft li").each(function(index) {
+    $(this).click(function(){
+		$(this).addClass("lin").siblings("li").removeClass("lin");
+	})
+});
+
+function get_region(id,types){
+    if(id > 0 && types > 0){
+        $.post(SITE_URL+'index.php?act=get_shops',{id:id,type:types},function(data){
+            $('.ulist').html(data);
+        })
+    }
+}
+function toEnter(obj){
+
+      var id=$(obj).attr('id');
+      if(id > 0){
+          window.location.href= SITE_URL+'?shops_id='+id;
+      }
+  }
+</script>
+<div class="bottom">
+  <ul>
+    <li class="dIn"><a href="#"><i class="bot1"></i>
+      <label>首页</label>
+      </a></li>
+    <li><a href="#"><i class="bot2"></i>
+      <label>超市</label>
+      </a></li>
+    <li><a href="#"><i class="bot3"><span class="mycarts">0</span></i>
+      <label>购物车</label>
+      </a></li>
+    <li><a href="#"><i class="bot4"></i>
+      <label>我</label>
+      </a></li>
+  </ul>
+</div>
+</body>
+</html>
