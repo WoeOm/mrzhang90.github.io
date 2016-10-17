@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>积分提现</title>
+<script>
+	var oHtml=document.getElementsByTagName("html")[0];
+	var iWidth=document.documentElement.clientWidth;
+	iWidth=iWidth>540?540:iWidth;
+	oHtml.style.fontSize=iWidth/16+"px";
+</script>
+</head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<body>
+<div class="top">我的订单</div>
+<!---->
+<div class="ddDiv1">
+	<div class="ddDiv1_2"><label>积分提现</label><img src="images/ddimg2.jpg"></div>
+    <div class="ddDiv1_1"><label>积分赠送</label><img src="images/ddimg1.jpg"></div>
+</div>
+
+<div class="txDiv1">
+	<div class="txDiv1_1"><label>剩余积分：</label><span>501</span></div>
+    <div class="txDiv1_2"><label>提现积分：</label><input type="text"></div>
+    <input class="txDiv1_3" type="button" value="申请提现">
+    <a class="txDiv1_4" href="#"><img src="images/tximg4.jpg"></a>
+</div>
+
+<!---->
+<div class="bot_bg"></div>
+<div class="bottom">
+	<div class="bot1"><a href="#"><label>大转盘</label></a></div>
+    <div class="bot2"><a href="#"><label>积分商城</label></a></div>
+    <div class="bot3"><a href="#"><label>我要赚钱</label></a></div>
+    <div class="bot4 lin"><a href="#"><label>个人中心</label></a></div>
+</div>
+
+
+<style>
+.smDivBg{ width:16rem; height:100%; position:fixed; left:0; top:0; background:rgba(0,0,0,0.6); z-index:2; display:none;}
+.smDiv{ width:13rem; padding:.5rem; background:#fff; border-radius:.25rem; position:fixed; left:1rem; top:2rem; z-index:5; display:none;}
+.smDiv span{ background:red; color:#fff; width:1rem; height:1rem; border-radius:50%; font-size:.75rem; line-height:1rem; text-align:center; display:block; position:absolute; top:-.5rem; right:-.5rem;}
+.smDiv h2{ font-size:.75rem; color:#666; text-align:center; margin:.4rem 0 .5rem 0;}
+.smDiv1{ font-size:.65rem; color:#555; line-height:1.8;}
+.smDiv1 p{ text-indent:2em; margin-bottom:.2rem;}
+</style>
+<div class="smDivBg"></div>
+<div class="smDiv">
+	<span class="smDiv0">X</span>
+	<h2>积分说明</h2>
+    <div class="smDiv1"><p>积分说明积分说明积分说明积分说明积分说,积分说明积分说</p><p>明积分说明,积分说明积分说明积分说明积分说明,积分说明积分说明,积分说明</p><p>积分说明积分说明,积分说明积分说明积分说明积分说明积分说明积分说明积分说,</p><p>积分说明积分说明积分说明,积分说明积分说明积分说明积分说明,积分说明积分说明,积分说明积分说明积分说明,积分说明积分说明</p></div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(".txDiv1_4").click(function(){
+	$(".smDivBg").show();
+	$(".smDiv").show();
+		
+})
+$(".smDiv0").click(function(){
+	$(".smDivBg").hide();
+	$(".smDiv").hide();
+		
+})
+</script>
+</body>
+</html>

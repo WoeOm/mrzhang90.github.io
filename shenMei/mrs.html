@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>美容师</title>
+<style type="text/css">
+*{font-family: Helvetica Neue, Helvetica, Arial, sans-serif;margin: 0;padding: 0;font-size:1em/100%;color:#777;}
+a{text-decoration:none; color:#777;}
+body{ background:url(images/bg.jpg); margin:0; padding:0;}
+@media only screen and (max-width:540px){
+  body{ font-size:168.5%;}
+}
+@media only screen and (max-width:480px){
+  body{ font-size:150%;}
+}
+@media only screen and (max-width:414px){
+  body{ font-size:129.375%;}
+}
+@media only screen and (max-width:400px){
+  body{ font-size:125%;}
+}
+@media only screen and (max-width:360px){
+  body{ font-size:112.5%;}
+}
+@media only screen and (max-width:320px){
+  body{ font-size:100%;}
+}
+.banner{ width:100%; display:block;}
+.banner img{ width:100%; height:auto;}
+
+.mCen1{ width:94%; margin:.625em 3% 0; padding:1.25em 0 .625em; float:left; display:block; background:#FFF;}
+.mCen11{ width:30%; border:1px solid #666; height:5.875em; float:left; margin:0 5%;}
+.mCen11 img{ width:100%; height:100%;}
+.mCen12{ width:53%; float:left;}
+.mCen121{ width:100%; height:2.125em; line-height:2.125em; border-top:1px solid #c2c2c2; border-bottom:1px solid #c2c2c2;}
+.mCen121 img{ width:1em; height:1em; float:left; margin:.6em 4% 0 30%;}
+.mCen121 a{ font-size:.875em; float:left;}
+.mCen122{ width:100%; height:2.125em; margin-top:1.45em; line-height:2.125em; border-top:1px solid #c2c2c2; border-bottom:1px solid #c2c2c2; position:relative;}
+.mCen122 img{ width:1em; height:1em; float:left; margin:.6em 4% 0 30%;}
+.mCen122 a{ font-size:.875em; float:left; color:#d50002;}
+.mCen122 input{ position:absolute; width:100%; left:0; top:0; opacity:0;}
+.mCen2{ width:94%; margin:.625em 3% 0;float:left; padding:.875em 0 .625em; display:block; background:#FFF;}
+.mCen21{ height:1.5625em; line-height:1.5625em; margin-bottom:1.34em;}
+.mCen21 label{ font-size:.75em; width:20%; margin-left:5%; display:block; float:left;}
+.mCen21 input{ height:100%; width:70%; border:1px solid #ccc;}
+.mCen22{ height:1.5625em; line-height:1.5625em; margin-bottom:.4em; position:relative;}
+.mCen22 label{ font-size:.75em; width:20%; margin-left:5%; display:block; float:left;}
+.mCen22 input{ background:#d50002; height:1.8em; line-height:1.8em; width:25%; border:0; color:#FFF;}
+.mCen22 #file1{ position:absolute; left:25%; top:0; opacity:0;}
+.mCen23{ width:70%; margin-left:25%;}
+.mCen231{ background:#e6e7e7; width:100%; display:inline-block; margin-bottom:.9375em;}
+.mCen231 img{ width:43%; height:5.6em; border:1px solid #ccc; margin-left:4%; margin-top:.4em; display:block; float:left;}
+.mCen232{ background:#d50002; color:#FFF; display:block; height:2em; line-height:2em; width:100%; border:0;}
+.mCen232 img{ float:left; width:1.8em; height:auto; margin:.5em 2% 0 30%}
+.mCen232 label{ font-size:.875em; color:#FFF; float:left;}
+.mCen24{ width:100%; display:inline-block; margin-bottom:1.34em;}
+.mCen24 label{ font-size:.75em; width:20%; margin-left:5%; display:block; float:left;}
+.mCen24 textarea{height:4em; width:70%; border:1px solid #ccc;}
+.f_bot{ height:2.75em; margin-top:.625em; width:100%; float:left;}
+.footer{ width:100%; display:block; position:fixed; left:0; bottom:0; height:2.75em; line-height:2.75em; background:#424242}
+.footer a{ width:50%; display:block; font-size:.875em; color:#FFF; float:left; text-align:center;}
+.footer a.lin{ background:#262626}
+.disB{ display:block;}
+</style>
+</head>
+
+<body>
+<div class="banner"><a href="#"><img src="images/banner2.jpg"></a></div>
+
+<div class="mCen1">
+	<div class="mCen11" id="result"><img src="images/fxs1.jpg"></div>
+    <div class="mCen12">
+    	<div class="mCen121"><img src="images/mrs2.jpg"><a href="#">修改资料</a></div>
+        <div class="mCen122"><img src="images/mrs3.jpg"><a href="#">上传图像</a><input type="file" id="file" onchange="readAsDataURL()" /></div>
+    </div>
+</div>
+<div class="mCen2">
+	<div class="mCen21"><label>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label><input type="text"></div>
+	<div class="mCen21"><label>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位</label><input type="text"></div>
+    <div class="mCen21"><label>沙龙名称</label><input type="text"></div>
+    <div class="mCen24"><label>简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介</label><textarea></textarea></div>
+    <div class="mCen22"><label>上传作品</label><input type="button" value="选择图片"><input type="file" id="file1" multiple onchange="readAsDataURL1()" /></div>
+    <div class="mCen23">
+    	<div class="mCen231" id="result1"></div>
+        <a class="mCen232"><img src="images/fxs4.png"><label>提交报名</label></a>
+    </div>
+</div>
+
+<!---->
+<div class="f_bot"></div>
+<div class="footer">
+	<a href="#">我是发型师&nbsp;我要秀</a>
+    <a class="lin" href="#">我是美容师&nbsp;我要秀</a>
+</div>
+<script type="text/javascript">
+var result = document.getElementById("result");
+function readAsDataURL()
+{
+    //检查是否为图像文件
+    var file = document.getElementById("file").files[0];
+    if(!/image\/\w+/.test(file.type))
+    {
+        alert("请确保文件为图像类型");
+        return false;
+    }    
+    var reader = new FileReader();
+    //将文件以Data URL形式进行读入页面
+    reader.readAsDataURL(file);
+    reader.onload = function(e)
+    {
+       var result=document.getElementById("result");
+       //在页面上显示文件
+       result.innerHTML = '<img src="'+this.result+'" alt=""/>'
+    }
+}
+
+var result1 = document.getElementById("result1");
+function readAsDataURL1()
+{
+    //检查是否为图像文件
+    var file = document.getElementById("file1").files;
+	for(var i = 0;i<file.length;i++){
+		var reader = new FileReader();
+		reader.readAsDataURL(file[i]);
+		reader.onload = function(e){
+			var c = '<img src="'+this.result+'" />';
+			result1.innerHTML += c;
+		}
+	}
+
+}
+</script>
+</body>
+</html>

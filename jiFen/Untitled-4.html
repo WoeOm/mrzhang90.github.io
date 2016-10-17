@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+		   		
+<link rel="stylesheet" type="text/css" href="http://ofxk.tct6.com/adm1awebfhvx/css/content.css"/>
+<link rel="stylesheet" type="text/css" href="http://ofxk.tct6.com/adm1awebfhvx/css/style.css"/>
+<body>
+
+				   <table border="0" cellpadding="5" cellspacing="0">
+		    <tbody><tr>
+						  <td>
+			  <label><input name="quanxuan" class="one" value="s01" type="checkbox">管理首页</label>
+			  <table style="margin:-3px 0px 2px 18px;" border="0" cellpadding="2" cellspacing="0">
+			  				  	<tbody><tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">基本设置</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="101" type="checkbox">信息设置</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="102" type="checkbox">站点SEO</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="103" type="checkbox">参数设置</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="104" type="checkbox">清空缓存</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="3201" type="checkbox">手机预览</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  </tbody></table>
+			  </td>
+						  <td>
+			  <label><input name="quanxuan" onclick="listCheck($(this))" class="one" value="s02" type="checkbox">系统设置</label>
+			  <table style="margin:-3px 0px 2px 18px;" border="0" cellpadding="2" cellspacing="0">
+			  				  	<tbody><tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">数据库设置</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="301" type="checkbox">备份数据库</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="303" type="checkbox">还原数据库</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="304" type="checkbox">数据表优化</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  	<tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">管理员设置</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="501" type="checkbox">管理员列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="502" type="checkbox">添加管理员</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="503" type="checkbox">管理员日记</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="504" type="checkbox">修改密码</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="505" type="checkbox">权限组列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="506" type="checkbox">添加权限组</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  </tbody></table>
+			  </td>
+						  <td>
+			  <label><input name="quanxuan" onclick="listCheck($(this))" class="one" value="s03" type="checkbox">用户管理</label>
+			  <table style="margin:-3px 0px 2px 18px;" border="0" cellpadding="2" cellspacing="0">
+			  				  	<tbody><tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">会员管理</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="601" type="checkbox">会员列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="602" type="checkbox">添加会员</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="603" type="checkbox">提款申请</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="604" type="checkbox">会员关系</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="605" type="checkbox">邀请列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="606" type="checkbox">分享统计</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="607" type="checkbox">充值统计</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="601" type="checkbox">分享统计</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="608" type="checkbox">帐变记录</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="6010" type="checkbox">会员等级</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="6011" type="checkbox">生日统计</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  	<tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">会员工具</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="801" type="checkbox">消息群发</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="802" type="checkbox">消息列表</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  	<tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">在线留言</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2001" type="checkbox">留言列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2002" type="checkbox">已处理留言</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2003" type="checkbox">未处理留言</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  </tbody></table>
+			  </td>
+						  <td>
+			  <label><input name="quanxuan" onclick="listCheck($(this))" class="one" value="s05" type="checkbox">产品管理</label>
+			  <table style="margin:-3px 0px 2px 18px;" border="0" cellpadding="2" cellspacing="0">
+			  				  	<tbody><tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">商品管理</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1001" type="checkbox">积分商品</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1002" type="checkbox">商品列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1021" type="checkbox">待审核商品</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1003" type="checkbox">我的回收站</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1004" type="checkbox">添加商品</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1005" type="checkbox">批量传图</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1026" type="checkbox">批量上传</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1007" type="checkbox">分类列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1008" type="checkbox">添加分类</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1009" type="checkbox">品牌列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1010" type="checkbox">添加品牌</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1011" type="checkbox">商品属性</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1013" type="checkbox">优惠券</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1014" type="checkbox">用户评论</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  </tbody></table>
+			  </td>
+						  <td>
+			  <label><input name="quanxuan" onclick="listCheck($(this))" class="one" value="s08" type="checkbox">订单管理</label>
+			  <table style="margin:-3px 0px 2px 18px;" border="0" cellpadding="2" cellspacing="0">
+			  				  	<tbody><tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">订单管理</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2301" type="checkbox">订单列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2302" type="checkbox">发货单</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2304" type="checkbox">退货单</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2305" type="checkbox">退款单</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2307" type="checkbox">换货申请单</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2308" type="checkbox">退款申请单</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2309" type="checkbox">生成物流单</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  	<tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">其他设置</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2401" type="checkbox">地区设置</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2413" type="checkbox">支付方式</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2414" type="checkbox">配送方式</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  </tbody></table>
+			  </td>
+						  <td>
+			  <label><input name="quanxuan" onclick="listCheck($(this))" class="one" value="s06" type="checkbox">其他扩展</label>
+			  <table style="margin:-3px 0px 2px 18px;" border="0" cellpadding="2" cellspacing="0">
+			  				  	<tbody><tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">广告设置</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1601" type="checkbox">广告列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1602" type="checkbox">广告标签</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1603" type="checkbox">添加标签</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1604" type="checkbox">添加广告</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  	<tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">平台设置</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1701" type="checkbox">导航栏列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="1702" type="checkbox">添加导航栏</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  </tbody></table>
+			  </td>
+						  <td>
+			  <label><input name="quanxuan" onclick="listCheck($(this))" class="one" value="s07" type="checkbox">数据管理</label>
+			  <table style="margin:-3px 0px 2px 18px;" border="0" cellpadding="2" cellspacing="0">
+			  				  	<tbody><tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">数据分析</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2105" type="checkbox">分红分配记录</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2105" type="checkbox">订单销售分析</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2101" type="checkbox">订单走势</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2102" type="checkbox">销售走势</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  </tbody></table>
+			  </td>
+						  <td>
+			  <label><input name="quanxuan" onclick="listCheck($(this))" class="one" value="s09" type="checkbox">公众平台</label>
+			  <table style="margin:-3px 0px 2px 18px;" border="0" cellpadding="2" cellspacing="0">
+			  				  	<tbody><tr>
+			  		<td> 
+			  			<label><input name="quanxuan" onclick="listCheck($(this))" class="two" type="checkbox">公众平台</label>
+			  			<table style="margin:-3px 0px 2px 20px;" border="0" cellpadding="2" cellspacing="0">
+					  						  	<tbody><tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2601" type="checkbox">公众号管理</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2602" type="checkbox">关注时回复</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2603" type="checkbox">图文信息</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2604" type="checkbox">文本信息</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2605" type="checkbox">分类列表</label>
+					  		</td>
+					  	</tr>
+			  								  	<tr>
+					  		<td> 
+					  			<label><input name="quanxuan" onclick="listCheck($(this))" class="three" value="2606" type="checkbox">自定义菜单</label>
+					  		</td>
+					  	</tr>
+			  						  			</tbody></table>
+			  		</td>
+			  	</tr>
+			  				  </tbody></table>
+			  </td>
+			            </tr>
+            <tr>
+            <td>
+			  <label><input name="quanxuan" value="s20" type="checkbox">修改会员佣金</label>
+			  </td>
+               <td>
+			  <label><input name="quanxuan" value="3201" type="checkbox">分销设置</label>
+			  </td>
+               <td>
+			  <label><input name="quanxuan" value="603" type="checkbox">提款申请</label>
+			  </td>
+               <td>
+			  <label><input name="quanxuan" value="2413" type="checkbox">支付方式</label>
+			  </td>
+			</tr>
+		   </tbody></table>
+<script type="text/javascript" src="js/jquery.min.js"></script>           
+<script>
+ onclick="listCheck($(this))"
+function listCheck(obj){
+	if(obj.attr('checked')){
+		obj.attr('checked',true);
+		obj.parent('label').siblings('table').find('input').attr('checked',true)
+	}else{
+		obj.attr('checked',false);
+		obj.parent('label').siblings('table').find('input').attr('checked',false)
+	}
+	$(".two").each(function(index) {
+        if($(this).parent('label').siblings('table').find("input:checked").length >= 1){
+			$(this).attr('checked',true);
+		}else{
+			$(this).attr('checked',false);
+		}
+    });	
+	$(".one").each(function(index) {
+        if($(this).parent('label').siblings('table').find("input:checked").length >= 1){
+			$(this).attr('checked',true);
+		}else{
+			$(this).attr('checked',false);
+		}
+    });
+}
+</script> 		
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>结算页面</title>
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<!---->
+<script language="javascript">
+<!--
+var where = new Array(35);
+function comefrom(loca,locacity) { this.loca = loca; this.locacity = locacity; }
+where[0]= new comefrom("选择省","选择城市");
+where[1] = new comefrom("北京","|东城|西城|崇文|宣武|朝阳|丰台|石景山|海淀|门头沟|房山|通州|顺义|昌平|大兴|平谷|怀柔|密云|延庆");  //欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+where[2] = new comefrom("上海","|黄浦|卢湾|徐汇|长宁|静安|普陀|闸北|虹口|杨浦|闵行|宝山|嘉定|浦东|金山|松江|青浦|南汇|奉贤|崇明");//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+where[3] = new comefrom("天津","|和平|东丽|河东|西青|河西|津南|南开|北辰|河北|武清|红挢|塘沽|汉沽|大港|宁河|静海|宝坻|蓟县");
+where[4] = new comefrom("重庆","|万州|涪陵|渝中|大渡口|江北|沙坪坝|九龙坡|南岸|北碚|万盛|双挢|渝北|巴南|黔江|长寿|綦江|潼南|铜梁|大足|荣昌|壁山|梁平|城口|丰都|垫江|武隆|忠县|开县|云阳|奉节|巫山|巫溪|石柱|秀山|酉阳|彭水|江津|合川|永川|南川");
+where[5] = new comefrom("河北","|石家庄|邯郸|邢台|保定|张家口|承德|廊坊|唐山|秦皇岛|沧州|衡水");
+where[6] = new comefrom("山西","|太原|大同|阳泉|长治|晋城|朔州|吕梁|忻州|晋中|临汾|运城");
+where[7] = new comefrom("内蒙古","|呼和浩特|包头|乌海|赤峰|呼伦贝尔盟|阿拉善盟|哲里木盟|兴安盟|乌兰察布盟|锡林郭勒盟|巴彦淖尔盟|伊克昭盟");
+where[8] = new comefrom("辽宁","|沈阳|大连|鞍山|抚顺|本溪|丹东|锦州|营口|阜新|辽阳|盘锦|铁岭|朝阳|葫芦岛");
+where[9] = new comefrom("吉林","|长春|吉林|四平|辽源|通化|白山|松原|白城|延边");
+where[10] = new comefrom("黑龙江","|哈尔滨|齐齐哈尔|牡丹江|佳木斯|大庆|绥化|鹤岗|鸡西|黑河|双鸭山|伊春|七台河|大兴安岭");
+where[11] = new comefrom("江苏","|南京|镇江|苏州|南通|扬州|盐城|徐州|连云港|常州|无锡|宿迁|泰州|淮安");
+where[12] = new comefrom("浙江","|杭州|宁波|温州|嘉兴|湖州|绍兴|金华|衢州|舟山|台州|丽水");
+where[13] = new comefrom("安徽","|合肥|芜湖|蚌埠|马鞍山|淮北|铜陵|安庆|黄山|滁州|宿州|池州|淮南|巢湖|阜阳|六安|宣城|亳州");
+where[14] = new comefrom("福建","|福州|厦门|莆田|三明|泉州|漳州|南平|龙岩|宁德");
+where[15] = new comefrom("江西","|南昌市|景德镇|九江|鹰潭|萍乡|新馀|赣州|吉安|宜春|抚州|上饶");
+where[16] = new comefrom("山东","|济南|青岛|淄博|枣庄|东营|烟台|潍坊|济宁|泰安|威海|日照|莱芜|临沂|德州|聊城|滨州|菏泽");
+where[17] = new comefrom("河南","|郑州|开封|洛阳|平顶山|安阳|鹤壁|新乡|焦作|濮阳|许昌|漯河|三门峡|南阳|商丘|信阳|周口|驻马店|济源");
+where[18] = new comefrom("湖北","|武汉|宜昌|荆州|襄樊|黄石|荆门|黄冈|十堰|恩施|潜江|天门|仙桃|随州|咸宁|孝感|鄂州");
+where[19] = new comefrom("湖南","|长沙|常德|株洲|湘潭|衡阳|岳阳|邵阳|益阳|娄底|怀化|郴州|永州|湘西|张家界");
+where[20] = new comefrom("广东","|广州|深圳|珠海|汕头|东莞|中山|佛山|韶关|江门|湛江|茂名|肇庆|惠州|梅州|汕尾|河源|阳江|清远|潮州|揭阳|云浮");
+where[21] = new comefrom("广西","|南宁|柳州|桂林|梧州|北海|防城港|钦州|贵港|玉林|南宁地区|柳州地区|贺州|百色|河池");
+where[22] = new comefrom("海南","|海口|三亚");
+where[23] = new comefrom("四川","|成都|绵阳|德阳|自贡|攀枝花|广元|内江|乐山|南充|宜宾|广安|达川|雅安|眉山|甘孜|凉山|泸州");
+where[24] = new comefrom("贵州","|贵阳|六盘水|遵义|安顺|铜仁|黔西南|毕节|黔东南|黔南");
+where[25] = new comefrom("云南","|昆明|大理|曲靖|玉溪|昭通|楚雄|红河|文山|思茅|西双版纳|保山|德宏|丽江|怒江|迪庆|临沧");
+where[26] = new comefrom("西藏","|拉萨|日喀则|山南|林芝|昌都|阿里|那曲");
+where[27] = new comefrom("陕西","|西安|宝鸡|咸阳|铜川|渭南|延安|榆林|汉中|安康|商洛");
+where[28] = new comefrom("甘肃","|兰州|嘉峪关|金昌|白银|天水|酒泉|张掖|武威|定西|陇南|平凉|庆阳|临夏|甘南");
+where[29] = new comefrom("宁夏","|银川|石嘴山|吴忠|固原");
+where[30] = new comefrom("青海","|西宁|海东|海南|海北|黄南|玉树|果洛|海西");
+where[31] = new comefrom("新疆","|乌鲁木齐|石河子|克拉玛依|伊犁|巴音郭勒|昌吉|克孜勒苏柯尔克孜|博尔塔拉|吐鲁番|哈密|喀什|和田|阿克苏");
+where[32] = new comefrom("香港","");
+where[33] = new comefrom("澳门","");
+where[34] = new comefrom("台湾","|台北|高雄|台中|台南|屏东|南投|云林|新竹|彰化|苗栗|嘉义|花莲|桃园|宜兰|基隆|台东|金门|马祖|澎湖");
+where[35] = new comefrom("其它","|北美洲|南美洲|亚洲|非洲|欧洲|大洋洲");
+function select() {
+with(document.creator.province) { var loca2 = options[selectedIndex].value;}
+for(i = 0;i < where.length;i ++) {
+if (where[i].loca == loca2) {
+loca3 = (where[i].locacity).split("|");
+for(j = 0;j < loca3.length;j++) { with(document.creator.city) { length = loca3.length; options[j].text = loca3[j]; options[j].value = loca3[j]; var loca4=options[selectedIndex].value;}}
+break;
+}}
+document.creator.newlocation.value=loca2+loca4;
+}
+function init() {
+with(document.creator.province) {
+length = where.length;
+for(k=0;k<where.length;k++) { options[k].text = where[k].loca; options[k].value = where[k].loca; }
+options[selectedIndex].text = where[0].loca; options[selectedIndex].value = where[0].loca;
+}
+with(document.creator.city) {
+loca3 = (where[0].locacity).split("|");
+length = loca3.length;
+for(l=0;l<length;l++) { options[l].text = loca3[l]; options[l].value = loca3[l]; }
+options[selectedIndex].text = loca3[0]; options[selectedIndex].value = loca3[0];
+}} 
+-->
+</script>
+<style type="text/css">
+.js1{ width:94%; display:inline-block; border:1px solid #e7e7e7; margin:.625em 0 0 3%; border-radius:5px;}
+.js11{ width:100%; display:inline-block; background:url(images/gw1.jpg) no-repeat 8% center; background-size:.9375em .9375em; margin:1.5em 0 .8em;}
+.js11 label{ color:#01a14b; font-size:1em; margin-left:14%;}
+.js12{ height:1.6em; line-height:1.6em; margin-bottom:.6em;}
+.js12 label{ width:21%; display:inline-block; color:#777; text-align:right; font-size:.75em;}
+.js12 input{ width:69%; display:inline-block; padding-left:2%; height:1.7em; color:#777; font-size:.75em; border:1px solid #dcdcdc; border-radius:4px;}
+.js12 select{ width:69%; display:inline-block; padding-left:2%; height:1.7em; color:#777; font-size:.75em; border:1px solid #dcdcdc; border-radius:4px; background:url(images/gw9.jpg) no-repeat 95% center; background-size:.65em auto;}
+.js12 select.js122{ width:37%; padding-left:2%; margin-right:4%;}
+.js12 select.js123{ width:31%; padding-left:2%;}
+.js13{ width:100%; display:inline-block;}
+.js13 input{ margin-left:21%; width:24.6875%; height:1.8125em; font-size:.875em; background:#ff6f0b; color:#FFF; border:0; border-radius:5px; margin-bottom:1em;}
+.js2{ width:94%; display:inline-block; border:1px solid #e7e7e7; padding:1em 0; margin:.625em 0 0 3%; border-radius:5px;}
+.js21{ display:block; float:left; margin-left:3%;}
+.js21 img{ width:4.375em; height:4.375em;}
+.js22{ width:70%; float:right;}
+.js221{ width:100%; display:inline-block; position:relative;}
+.js221 label{ font-size:.875em; color:#777;}
+.js221 span{ padding:.4em .5em; border:1px solid #dcdcdc; border-radius:5px; font-size:.75em; line-height:1; background:#f4f4f4; color:#ff6f0b; display:block; position:absolute; right:4%; top:-.5em;}
+.js222{ width:100%; display:inline-block; margin:.4em 0 .5em 0;}
+.js222 label{ font-size:.75em; color:#999;}
+.js222 label.js2221{ color:#777; margin-left:5%;}
+.js222 span{ font-size:.75em; font-style:italic; color:#999;}
+.js222 span.js2222{ color:#ff6f0b;}
+.js2231{ border:1px solid #e5e5e5; width:1.625em; height:1.375em; line-height:1.375em; text-align:center;font-size:14px; font-weight:bold; display:inline-block;border-top-left-radius:5px;border-bottom-left-radius:5px; margin-right:3%;}
+.js2232{ border:1px solid #ff6f0b;font-size:14px; color:#ff6f0b; border-radius:5px; width:1.625em; height:1.375em; text-align:center; line-height:1.375em; display:inline-block; margin-right:3%;}
+.js2233{ border:1px solid #e5e5e5; width:1.625em; height:1.375em; line-height:1.375em; text-align:center; font-weight:bold; font-size:14px; display:inline-block;border-top-right-radius:5px;border-bottom-right-radius:5px;}
+.js2234{ font-size:.75em; color:#777; margin:0 5% 0 3%;}
+.js2235{ font-size:.75em; color:#777;}
+.js2236{ font-size:.75em; color:#ff6f0b; font-style:italic}
+.js3{ width:90%; padding:.625em 0 .625em 4%; display:inline-block; border:1px solid #e7e7e7; margin:.625em 0 0 3%; border-radius:5px; color:#777;}
+.js31{ width:100%; display:inline-block; margin-bottom:1em;}
+.js31 span{ font-size:.75em; float:left; display:block; margin-right:2%;}
+.js31 img{ width:.75em; height:.75em; margin-top:.2em; margin-right:2%; float:left; vertical-align:middle;}
+.js31 label{ font-size:.75em; float:left;}
+.js32{ width:100%; display:inline-block; margin-bottom:1em;}
+.js321{ float:left; font-size:.75em; line-height:1; margin-right:2%;}
+.js32 label{ width:.75em; height:.75em; display:block; float:left; margin-right:1%; background:url(images/gw5.jpg) no-repeat; background-size:100% 100%;}
+.js32 span{ font-size:.75em; margin-right:2%; display:block; line-height:1; float:left;}
+.js32 label.cs{background:url(images/gw4.jpg) no-repeat; background-size:100% 100%;}
+.js33{ width:100%; display:inline-block;}
+.js33 span{ font-size:.75em; display:block; float:left; vertical-align:middle; margin-right:2%;}
+.js33 textarea{ border:1px solid #dcdcdc; width:64%; font-size:.75em; color:#777; padding:.2em 2%; height:3.5em; border-radius:8px;}
+.js4{ width:100%; display:inline-block;}
+.js41{ margin:1.35em 0 .8em 0; width:100%; display:inline-block;}
+.js41 label{ margin-left:14%; color:#999; font-size:.75em;}
+.js41 span{ color:#ff6f0b; font-weight:bold; font-size:.875em;}
+.js42{ width:100%; display:inline-block; margin-bottom:1em;}
+.js42 input{ width:34.375%; color:#FFF; font-size:14px; border-radius:5px; height:2.1875em; border:0;}
+.js421{ background:#ff6f0b; margin-left:14%; margin-right:3.75%;}
+.js422{ background:#bebebe;}
+.ts_bg{ width:100%; height:100%; background:rgba(0,0,0,0.5); position:fixed; left:0; top:0; z-index:6; display:none;}
+.ts1{ width:80%; height:8.125em; display:inline-block; position:fixed; left:0; top:0; bottom:0; right:0; margin:auto; z-index:200; background:#FFF; border-radius:5px; display:none;}
+.ts11{ width:100%; height:2.125em; position:relative; line-height:2.125em; background:#ff6f0b;border-top-left-radius:5px; border-top-right-radius:5px;}
+.ts11 label{ display:block; text-align:center; font-size:.875em; color:#FFF;}
+.ts111{ width:1.71875em; height:1.71875em; position:absolute; left:8%; top:.2em;}
+.ts112{ width:.875em; height:.875em; position:absolute; right:4%; top:.6em;}
+.ts12{ width:100%; height:6em; border-bottom-left-radius:5px; border-bottom-right-radius:5px;}
+.ts12 h2{ color:#ff6f0b; font-size:.75em; text-align:center; margin:1.8em 0 1.2em 0;}
+.ts12 input{ height:1.8em; width:32%; margin-left:34%; background:#ff6f0b; color:#FFF; font-size:.875em; border-radius:5px; line-height:1; border:0;}
+
+.ts2{ width:80%; height:8.125em; display:inline-block; position:fixed; left:0; top:0; bottom:0; right:0; margin:auto; z-index:200; background:#FFF; border-radius:5px; display:none;}
+.ts21{ width:100%; height:2.125em; position:relative; line-height:2.125em; background:#ff6f0b;border-top-left-radius:5px; border-top-right-radius:5px;}
+.ts21 label{ display:block; text-align:center; font-size:.875em; color:#FFF;}
+.ts211{ width:1.71875em; height:1.71875em; position:absolute; left:8%; top:.2em;}
+.ts212{ width:.875em; height:.875em; position:absolute; right:4%; top:.6em;}
+.ts22{ width:100%; height:6em; border-bottom-left-radius:5px; border-bottom-right-radius:5px;}
+.ts22 h2{ color:#ff6f0b; font-size:.75em; text-align:center; margin:1.8em 0 1.2em 0;}
+.ts22 input{ height:1.8em; width:32%; margin-left:34%; background:#ff6f0b; color:#FFF; font-size:.875em; border-radius:5px; line-height:1; border:0;}
+</style>
+<body>
+<div class="ftop">
+	<a href="#"><img src="images/back.png"></a>
+	<label>人参鹿茸</label>
+</div>
+<form name="creator">
+<div class="js1">
+	<div class="js11"><label>新添收货地址</label></div>
+	<div class="js12"><label>姓名：</label><input class="js121" type="text" placeholder="请输入您的姓名"></div>
+    <div class="js12"><label>区域：</label><select class="js122" name="province" onChange="select()"></select><select class="js123" name="city" onChange="select()"></select></div>
+    <div class="js12"><label>地址：</label><input placeholder="请输入您的地址" class="js121" type="text"></div>
+    <div class="js12"><label>电话：</label><input placeholder="请输入您的电话" class="js121" type="text"></div>
+    <div class="js13"><input type="button" value="添加"></div>
+</div>
+</form>
+<!---->
+<div class="js2">
+	<a href="#" class="js21"><img src="images/gw2.jpg"></a>
+    <div class="js22">
+    	<div class="js221"><label>海南龙豆(四角豆）新鲜</label><span onClick="del($(this))">删除</span></div>
+        <div class="js222"><label>市场价：</label><span>￥13.8</span><label class="js2221">微商价：</label><span class="js2222">￥10.8</span></div>
+		<div class="js223"><label class="js2231" onClick="change($(this),-1)">-</label><span class="js2232">1</span><label class="js2233" onClick="change($(this),1)">+</label><span class="js2234">袋</span><span class="js2235">小计：</span><span class="js2236">￥43.2</span></div>
+    </div>
+</div>
+<div class="js2">
+	<a href="#" class="js21"><img src="images/gw3.jpg"></a>
+    <div class="js22">
+    	<div class="js221"><label>海南龙豆(四角豆）新鲜</label><span onClick="del($(this))">删除</span></div>
+        <div class="js222"><label>市场价：</label><span>￥13.8</span><label class="js2221">微商价：</label><span class="js2222">￥10.8</span></div>
+		<div class="js223"><label class="js2231" onClick="change($(this),-1)">-</label><span class="js2232">1</span><label class="js2233" onClick="change($(this),1)">+</label><span class="js2234">袋</span><span class="js2235">小计：</span><span class="js2236">￥43.2</span></div>
+    </div>
+</div>
+<div class="js2">
+	<a href="#" class="js21"><img src="images/gw2.jpg"></a>
+    <div class="js22">
+    	<div class="js221"><label>海南龙豆(四角豆）新鲜</label><span onClick="del($(this))">删除</span></div>
+        <div class="js222"><label>市场价：</label><span>￥13.8</span><label class="js2221">微商价：</label><span class="js2222">￥10.8</span></div>
+		<div class="js223"><label class="js2231" onClick="change($(this),-1)">-</label><span class="js2232">1</span><label class="js2233" onClick="change($(this),1)">+</label><span class="js2234">袋</span><span class="js2235">小计：</span><span class="js2236">￥43.2</span></div>
+    </div>
+</div>
+<!---->
+<div class="js3">
+	<div class="js31"><span>支付方式：</span><img src="images/gw4.jpg"><label>微信支付</label></div>
+    <div class="js32"><div class="js321">配送方式：</div><label class="cs"></label><span>快递</span><label></label><span>EMS</span></div>
+    <div class="js33"><span>订单附言：</span><textarea></textarea></div>
+</div>
+<div class="js4">
+	<div class="js41"><label>结算总金额：</label><span>￥43.2元</span></div>
+    <div class="js42"><input type="button" class="js421" value="确认提交"><input type="button" class="js422" value="清空购物车"></div>
+</div>
+
+<!---->
+<div class="ts_bg"></div>
+<div class="ts1">
+	<div class="ts11">
+    	<img src="images/gw6.jpg" class="ts111"><label>恭喜！ 提交成功</label><img src="images/gw8.jpg" class="ts112">
+    </div>
+    <div class="ts12">
+    	<h2>立刻返回首页</h2><input type="button" value="确定">
+    </div>
+</div>
+
+<div class="ts2">
+	<div class="ts21">
+    	<img src="images/gw7.jpg" class="ts211"><label>抱歉！ 提交失败</label><img src="images/gw8.jpg" class="ts212">
+    </div>
+    <div class="ts22">
+    	<h2>查看并重新提交订单</h2><input type="button" value="确定">
+    </div>
+</div>
+ 
+<script src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+function change(obj,cVal){
+	var pVal = parseFloat(obj.parent().siblings('.js222').find('.js2222').html().substring(1));
+	var dVal = parseInt(obj.siblings(".js2232").html());
+	if(dVal > 0 && cVal < 0){
+		dVal = dVal + cVal	
+	}
+	if(dVal >= 0 && cVal > 0){
+		dVal = dVal + cVal	
+	}
+	obj.siblings(".js2232").html(dVal);
+	obj.siblings('.js2236').html("￥" + (dVal*pVal).toFixed(2));
+}
+function del(obj){
+	obj.parent().parent().parent().remove();
+}
+$(document).ready(function(e) {
+	
+	init();
+	$(".js2222").each(function(index) {
+        var pVal = parseFloat($(this).html().substring(1));
+		var nVal = parseInt($(".js2232").eq(index).html());
+		$(".js2236").eq(index).html("￥" + (pVal*nVal).toFixed(2));
+    });
+	
+    $(".js32 label").each(function(index) {
+        $(this).click(function(){
+			$(this).addClass('cs').siblings().removeClass('cs');	
+		})
+    });
+});
+</script>
+
+
+<div class="footer_bg"></div>
+<div class="footer">
+	<ul>
+    	<li><a href="#"><img src="images/fot1.png"><label>首页</label></a></li>
+        <li><a href="#"><img src="images/fot2.png"><label>分类</label></a></li>
+        <li>&nbsp;</li>
+        <li><a href="#"><img src="images/fot3.png"><label>会员</label></a></li>
+        <li><a href="#"><img src="images/fot4.png"><label>购物车</label></a></li>
+    </ul>
+    <div class="footer1"><a href="#"><img src="images/fotc.png"></a></div>
+</div>
+</body>
+</html>
+
+ 

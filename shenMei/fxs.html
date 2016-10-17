@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>发型师</title>
+<style type="text/css">
+*{font-family: Helvetica Neue, Helvetica, Arial, sans-serif;margin: 0;padding: 0;font-size:1em/100%;color:#777;}
+a{text-decoration:none; color:#777;}
+body{ background:url(images/bg.jpg);}
+@media only screen and (max-width:540px){
+  body{ font-size:168.5%;}
+}
+@media only screen and (max-width:480px){
+  body{ font-size:150%;}
+}
+@media only screen and (max-width:414px){
+  body{ font-size:129.375%;}
+}
+@media only screen and (max-width:400px){
+  body{ font-size:125%;}
+}
+@media only screen and (max-width:360px){
+  body{ font-size:112.5%;}
+}
+@media only screen and (max-width:320px){
+  body{ font-size:100%;}
+}
+.banner{ width:100%; display:block;}
+.banner img{ width:100%; height:auto;}
+
+.fCen1{ width:94%; margin:.625em 3% 0; padding:1.25em 0 .625em; float:left; display:block; background:#FFF;}
+.fCen11{ width:30%; border:1px solid #666; height:5.875em; float:left; margin:0 5%;}
+.fCen11 img{ width:100%; height:100%;}
+.fCen12{ width:53%; float:left;}
+.fCen121{ width:100%; height:2.125em; line-height:2.125em; border-top:1px solid #c2c2c2; border-bottom:1px solid #c2c2c2;}
+.fCen121 img{ width:1em; height:1em; float:left; margin:.6em 4% 0 30%;}
+.fCen121 a{ font-size:.875em; float:left;}
+.fCen122{ width:100%; height:2.125em; margin-top:1.45em; line-height:2.125em; border-top:1px solid #c2c2c2; border-bottom:1px solid #c2c2c2; position:relative;}
+.fCen122 img{ width:1em; height:1em; float:left; margin:.6em 4% 0 30%;}
+.fCen122 a{ font-size:.875em; float:left; color:#ff0080;}
+.fCen122 input{ position:absolute; width:100%; left:0; top:0; opacity:0;}
+.fCen2{ width:94%; margin:.625em 3% 0;float:left; padding:.875em 0 .625em; display:block; background:#FFF;}
+.fCen21{ height:1.5625em; line-height:1.5625em; margin-bottom:1.34em;}
+.fCen21 label{ font-size:.75em; width:20%; margin-left:5%; display:block; float:left;}
+.fCen21 input{ height:100%; width:70%; border:1px solid #ccc;}
+.fCen22{ height:1.5625em; line-height:1.5625em; margin-bottom:.4em; position:relative;}
+.fCen22 label{ font-size:.75em; width:20%; margin-left:5%; display:block; float:left;}
+.fCen22 input{ background:#ff0080; height:1.8em; line-height:1.8em; width:25%; border:0; color:#FFF;}
+.fCen22 #file1{ position:absolute; left:25%; top:0; opacity:0;}
+.fCen23{ width:70%; margin-left:25%;}
+.fCen231{ background:#e6e7e7; width:100%; display:inline-block; margin-bottom:.9375em;}
+.fCen231 img{ width:43%; height:5.6em; border:1px solid #ccc; margin-left:4%; margin-top:.4em; display:block; float:left;}
+.fCen232{ background:#ff0080; color:#FFF; display:block; height:2em; line-height:2em; width:100%; border:0;}
+.fCen232 img{ float:left; width:1.8em; height:auto; margin:.5em 2% 0 30%}
+.fCen232 label{ font-size:.875em; color:#FFF; float:left;}
+.fCen24{ width:100%; display:inline-block; margin-bottom:1.34em;}
+.fCen24 label{ font-size:.75em; width:20%; margin-left:5%; display:block; float:left;}
+.fCen24 textarea{height:4em; width:70%; border:1px solid #ccc;}
+
+.f_bot{ height:2.75em; margin-top:.625em; width:100%; float:left;}
+.footer{ width:100%; display:block; position:fixed; left:0; bottom:0; height:2.75em; line-height:2.75em; background:#424242}
+.footer a{ width:50%; display:block; font-size:.875em; color:#FFF; float:left; text-align:center;}
+.footer a.lin{ background:#262626}
+.disB{ display:block;}
+</style>
+</head>
+
+<body>
+<div class="banner"><a href="#"><img src="images/banner1.jpg"></a></div>
+<!---->
+<div class="fCen1">
+	<div class="fCen11" id="result"><img src="images/fxs1.jpg"></div>
+    <div class="fCen12">
+    	<div class="fCen121"><img src="images/fxs2.jpg"><a href="#">修改资料</a></div>
+        <div class="fCen122"><img src="images/fxs3.jpg"><a href="#">上传图像</a><input type="file" id="file" onchange="readAsDataURL()" /></div>
+    </div>
+</div>
+<div class="fCen2">
+	<div class="fCen21"><label>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label><input type="text"></div>
+	<div class="fCen21"><label>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位</label><input type="text"></div>
+    <div class="fCen21"><label>沙龙名称</label><input type="text"></div>
+    <div class="fCen24"><label>简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介</label><textarea></textarea></div>
+    <div class="fCen22"><label>上传作品</label><input type="button" value="选择图片"><input type="file" id="file1" multiple onchange="readAsDataURL1()" /></div>
+    <div class="fCen23">
+    	<div class="fCen231" id="result1"></div>
+        <a class="fCen232"><img src="images/fxs4.png"><label>提交报名</label></a>
+    </div>
+</div>
+<!---->
+<div class="f_bot"></div>
+<div class="footer">
+	<a class="lin" href="#">我是发型师&nbsp;我要秀</a>
+    <a href="#">我是美容师&nbsp;我要秀</a>
+</div>
+
+<script type="text/javascript">
+var result = document.getElementById("result");
+function readAsDataURL()
+{
+    //检查是否为图像文件
+    var file = document.getElementById("file").files[0];
+    if(!/image\/\w+/.test(file.type))
+    {
+        alert("请确保文件为图像类型");
+        return false;
+    }    
+    var reader = new FileReader();
+    //将文件以Data URL形式进行读入页面
+    reader.readAsDataURL(file);
+    reader.onload = function(e)
+    {
+       var result=document.getElementById("result");
+       //在页面上显示文件
+       result.innerHTML = '<img src="'+this.result+'" alt=""/>'
+    }
+}
+
+var result1 = document.getElementById("result1");
+function readAsDataURL1()
+{
+    //检查是否为图像文件
+    var file = document.getElementById("file1").files;
+	for(var i = 0;i<file.length;i++){
+		var reader = new FileReader();
+		reader.readAsDataURL(file[i]);
+		reader.onload = function(e){
+			var c = '<img src="'+this.result+'" />';
+			result1.innerHTML += c;
+		}
+	}
+
+}
+</script>
+</body>
+</html>

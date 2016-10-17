@@ -1,0 +1,920 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>云微客二周年</title>
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<style>
+html, body {
+	position: relative;
+	height: 100%;
+}
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 1em/100%;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+@media only screen and (max-width:540px) {
+body {
+	font-size: 168.5%;
+}
+}
+@media only screen and (max-width:480px) {
+body {
+	font-size: 150%;
+}
+}
+@media only screen and (max-width:414px) {
+body {
+	font-size: 129.375%;
+}
+}
+@media only screen and (max-width:400px) {
+body {
+	font-size: 125%;
+}
+}
+@media only screen and (max-width:360px) {
+body {
+	font-size: 112.5%;
+}
+}
+@media only screen and (max-width:320px) {
+body {
+	font-size: 100%;
+}
+}
+.slide1 {
+	background: url(images/bg1.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.slide1_1 {
+	width: 100%;
+	display: block;
+}
+.slide1_1 img {
+	width: 39%;
+	height: auto;
+	margin: 1em 0 0 5%;
+}
+.slide1_2 {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+.slide1_2 img {
+	width: 53%;
+	height: auto;
+	margin-top: 4.4em;
+	margin-bottom: 0.8em;
+}
+.slide1_3 {
+}
+.slide1_3 label {
+	width: 53%;
+	margin: 0 auto;
+	line-height: 1.6;
+	display: block;
+	font-size: 0.875em;
+	color: #666;
+}
+.slide2 {
+	background: url(images/bg2.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.s2_list {
+	padding-left: 10%;
+	padding-right: 2%;
+	margin-top: 0.5em;
+}
+.s2_list span {
+	font-size: 0.875em;
+	display: block;
+	color: #00a6ff
+}
+.s2_list label {
+	font-size: 0.75em;
+	line-height: 2;
+	display: block;
+	color: #393939
+}
+.slide2_1 {
+	background: url(images/img3_1.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 1.1em;
+	padding-top: 1em;
+}
+.slide2_2 {
+	background: url(images/img3_2.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 3px;
+}
+.slide2_3 {
+	background: url(images/img3_3.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 3px;
+}
+.slide2_4 {
+	background: url(images/img3_4.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 3px;
+}
+.slide2_5 {
+	background: url(images/img3_5.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 3px;
+}
+.slide3 {
+	background: url(images/bg3.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.s3_list {
+	padding-left: 10%;
+	padding-right: 2%;
+	margin-top: 0.5em;
+}
+.s3_list span {
+	font-size: 0.875em;
+	display: block;
+	color: #00a6ff
+}
+.s3_list label {
+	font-size: 0.75em;
+	line-height: 2;
+	display: block;
+	color: #393939
+}
+.slide3_1 {
+	background: url(images/img4_1.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 2.1em;
+	padding-top: 2em;
+}
+.slide3_2 {
+	background: url(images/img4_2.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 3px;
+}
+.slide3_3 {
+	background: url(images/img4_3.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 3px;
+}
+.slide3_4 {
+	background: url(images/img4_4.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 3px;
+}
+.slide3_5 {
+	background: url(images/img4_5.png) no-repeat;
+	background-size: auto 1em;
+	background-position: 4% 3px;
+}
+.slide4 {
+	background: url(images/bg4.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.slide4_1 {
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding-top: 3em;
+}
+.slide4_1 img {
+	width: 54.8675%;
+	height: auto;
+}
+.slide4_2 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 0.4em;
+	margin-bottom: 2.1875em;
+}
+.slide4_2 label {
+	background: #00a6ff;
+	color: #FFF;
+	font-size: 1em;
+	padding: 0.2em 0.4em;
+}
+.s4_list {
+	width: 88%;
+	display: block;
+	padding-left: 12%;
+	margin-bottom: 0.9em;
+}
+.s4_list span {
+	display: block;
+	color: #00a6ff;
+	font-size: 0.875em;
+	font-weight: bold;
+	margin-bottom: 0.1em;
+}
+.s4_list label {
+	display: block;
+	color: #383838;
+	font-size: 0.75em;
+	line-height: 1.6;
+}
+.slide4_6 {
+	width: 48%;
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.slide4_6 img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.slide5 {
+	background: url(images/bg5.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.slide5_1 {
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding-top: 1.5em;
+}
+.slide5_1 img {
+	width: 44.84%;
+	height: auto;
+}
+.slide5_2 {
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 0.5em;
+}
+.slide5_2 img {
+	width: 59.6875%;
+	height: auto;
+}
+.slide5_3 {
+	width: 100%;
+	display: block;
+	margin-top: 0.8em;
+}
+.slide5_3 label {
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	color: #3a3a3a;
+	font-size: 0.75em;
+}
+.slide5_4 {
+	width: 100%;
+	background: #00a6ff;
+	display: block;
+	padding: 1.3125em 0 0.8em;
+	margin-top: 1em;
+}
+.s5_list {
+	width: 100%;
+	display: block;
+	margin-bottom: 0.6875em;
+}
+.s5_list label {
+	width: 25%;
+	display: inline-block;
+	line-height: 24px;
+	margin-right: 5%;
+	font-size: 14px;
+	text-align: right;
+	color: #FFF;
+}
+.s5_list label span {
+	line-height: 24px;
+	height: 24px;
+	display: inline-block;
+	color: #ffff00;
+	margin-right: 5%;
+}
+.s5_list input {
+	width: 50%;
+	margin-right: 13%;
+	display: inline-block;
+	height: 24px;
+	border: 0;
+}
+.slide5_5 {
+	width: 100%;
+	text-align: center;
+	display: block;
+	margin-top: 1em;
+}
+.slide5_5 input {
+	height: 2.1em;
+	width: 35.3125%;
+	border: 0;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+	background: #fa8d0c;
+	border-radius: 5px;
+}
+.slide5_6 {
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 1em;
+}
+.slide5_6 label {
+	width: 87%;
+	display: block;
+	font-size: 0.75em;
+	color: #333;
+	margin: 0 auto;
+}
+.swiper-slide-active .slide1_1 img {
+	-webkit-animation: slideleft 1s linear 1.5s both;
+	animation: slideleft 1s linear 1.5s both;
+}
+.swiper-slide-active .slide1_2 img {
+	-webkit-animation: sca1 2s linear 0s both;
+	animation: sca1 2s linear 0s both;
+}
+.swiper-slide-active .slide1_3 label {
+	-webkit-animation: opaS 2s linear 2s both;
+	animation: opaS 2s linear 2s both;
+}
+.swiper-slide-active .slide2_1 {
+	-webkit-animation: slideright1 2s linear 0s both;
+	animation: slideright1 2s linear 0s both;
+}
+.swiper-slide-active .slide2_2 {
+	-webkit-animation: slideright1 2s linear 0.5s both;
+	animation: slideright1 2s linear 0.5s both;
+}
+.swiper-slide-active .slide2_3 {
+	-webkit-animation: slideright1 2s linear 1s both;
+	animation: slideright1 2s linear 1s both;
+}
+.swiper-slide-active .slide2_4 {
+	-webkit-animation: slideright1 2s linear 1.5s both;
+	animation: slideright1 2s linear 1.5s both;
+}
+.swiper-slide-active .slide2_5 {
+	-webkit-animation: slideright1 2s linear 2s both;
+	animation: slideright1 2s linear 2s both;
+}
+.swiper-slide-active .slide3_1 {
+	-webkit-animation: slideleft 2s linear 0s both;
+	animation: slideleft 2s linear 0s both;
+}
+.swiper-slide-active .slide3_2 {
+	-webkit-animation: slideleft 2s linear 0.5s both;
+	animation: slideleft 2s linear 0.5s both;
+}
+.swiper-slide-active .slide3_3 {
+	-webkit-animation: slideleft 2s linear 1s both;
+	animation: slideleft 2s linear 1s both;
+}
+.swiper-slide-active .slide3_4 {
+	-webkit-animation: slideleft 2s linear 1.5s both;
+	animation: slideleft 2s linear 1.5s both;
+}
+.swiper-slide-active .slide3_5 {
+	-webkit-animation: slideleft 2s linear 2s both;
+	animation: slideleft 2s linear 2s both;
+}
+.swiper-slide-active .slide4_1 img {
+	-webkit-animation: slideright1 2s linear 0s both;
+	animation: slideright1 2s linear 0s both;
+}
+.swiper-slide-active .slide4_2 label {
+	-webkit-animation: opaS 2s linear 0s both;
+	animation: opaS 2s linear 0s both;
+}
+.swiper-slide-active .slide4_3 {
+	-webkit-animation: slideleft 2s linear 1.5s both;
+	animation: slideleft 2s linear 1.5s both;
+}
+.swiper-slide-active .slide4_4 {
+	-webkit-animation: slideleft 2s linear 2s both;
+	animation: slideleft 2s linear 2s both;
+}
+.swiper-slide-active .slide4_5 {
+	-webkit-animation: slideleft 2s linear 2.5s both;
+	animation: slideleft 2s linear 2.5s both;
+}
+.swiper-slide-active .slide4_6 {
+	-webkit-animation: slideright 2s linear 2s both;
+	animation: slideright 2s linear 2s both;
+}
+.swiper-slide-active .slide5_1 img {
+	-webkit-animation: slideright1 2s linear 0s both;
+	animation: slideright1 2s linear 0s both;
+}
+.swiper-slide-active .slide5_2 img {
+	-webkit-animation: opaS 2s linear 1s both;
+	animation: opaS 2s linear 1s both;
+}
+.swiper-slide-active .slide5_3 label {
+	-webkit-animation: slideleft 2s linear 1.5s both;
+	animation: slideleft 2s linear 1.5s both;
+}
+.swiper-slide-active .slide5_41 {
+	-webkit-animation: slideright2 2s linear 2s both;
+	animation: slideright2 2s linear 2s both;
+}
+.swiper-slide-active .slide5_42 {
+	-webkit-animation: slideright2 2s linear 2.5s both;
+	animation: slideright2 2s linear 2.5s both;
+}
+.swiper-slide-active .slide5_43 {
+	-webkit-animation: slideright2 2s linear 3s both;
+	animation: slideright2 2s linear 3s both;
+}
+.swiper-slide-active .slide5_44 {
+	-webkit-animation: slideright2 2s linear 3.5s both;
+	animation: slideright2 2s linear 3.5s both;
+}
+.swiper-slide-active .slide5_5 input {
+	-webkit-animation: slideright2 2s linear 2s both;
+	animation: slideright2 2s linear 2s both;
+}
+.swiper-slide-active .slide5_6 label {
+	-webkit-animation: slideleft 2s linear 2.5s both;
+	animation: slideleft 2s linear 2.5s both;
+}
+ @keyframes sca1 {
+ 0% {
+transform:scale(0)
+}
+ 85% {
+transform:scale(1)
+}
+ 90% {
+transform:scale(1.1)
+}
+ 95% {
+transform:scale(0.9)
+}
+ 100% {
+transform:scale(1)
+}
+}
+@-webkit-keyframes sca1 {
+ 0% {
+-webkit-transform:scale(0)
+}
+ 85% {
+-webkit-transform:scale(1)
+}
+ 90% {
+-webkit-transform:scale(1.1)
+}
+ 95% {
+-webkit-transform:scale(0.9)
+}
+ 100% {
+-webkit-transform:scale(1)
+}
+}
+@keyframes slideleft {
+ 0% {
+transform:translateX(-120%)
+}
+ 80% {
+transform:translateX(4%)
+}
+ 85% {
+transform:translateX(-4%)
+}
+ 90% {
+transform:translateX(4%)
+}
+ 95% {
+transform:translateX(-4%)
+}
+ 100% {
+transform:translateX(0)
+}
+}
+@-webkit-keyframes slideleft {
+ 0% {
+-webkit-transform:translateX(-120%)
+}
+ 80% {
+-webkit-transform:translateX(4%)
+}
+ 85% {
+-webkit-transform:translateX(-4%)
+}
+ 90% {
+-webkit-transform:translateX(4%)
+}
+ 95% {
+-webkit-transform:translateX(-4%)
+}
+ 100% {
+-webkit-transform:translateX(0)
+}
+}
+ @keyframes slideright2 {
+ 0% {
+transform:translateX(300%)
+}
+ 80% {
+transform:translateX(4%)
+}
+ 85% {
+transform:translateX(-4%)
+}
+ 90% {
+transform:translateX(4%)
+}
+ 95% {
+transform:translateX(-4%)
+}
+ 100% {
+transform:translateX(0)
+}
+}
+@-webkit-keyframes slideright2 {
+ 0% {
+-webkit-transform:translateX(300%)
+}
+ 80% {
+-webkit-transform:translateX(4%)
+}
+ 85% {
+-webkit-transform:translateX(-4%)
+}
+ 90% {
+-webkit-transform:translateX(4%)
+}
+ 95% {
+-webkit-transform:translateX(-4%)
+}
+ 100% {
+-webkit-transform:translateX(0)
+}
+}
+ @keyframes slideright1 {
+ 0% {
+transform:translateX(120%)
+}
+ 80% {
+transform:translateX(4%)
+}
+ 85% {
+transform:translateX(-4%)
+}
+ 90% {
+transform:translateX(4%)
+}
+ 95% {
+transform:translateX(-4%)
+}
+ 100% {
+transform:translateX(0)
+}
+}
+@-webkit-keyframes slideright1 {
+ 0% {
+-webkit-transform:translateX(120%)
+}
+ 80% {
+-webkit-transform:translateX(4%)
+}
+ 85% {
+-webkit-transform:translateX(-4%)
+}
+ 90% {
+-webkit-transform:translateX(4%)
+}
+ 95% {
+-webkit-transform:translateX(-4%)
+}
+ 100% {
+-webkit-transform:translateX(0)
+}
+}
+ @keyframes slideright {
+ 0% {
+transform:translate(100%, -10%)
+}
+ 5% {
+transform:translate(95%, 10%)
+}
+ 10% {
+transform:translate(90%, -10%)
+}
+ 15% {
+transform:translate(85%, 10%)
+}
+ 20% {
+transform:translate(80%, -10%)
+}
+ 25% {
+transform:translate(75%, 10%)
+}
+ 30% {
+transform:translate(70%, -10%)
+}
+ 35% {
+transform:translate(65%, 10%)
+}
+ 40% {
+transform:translate(60%, -10%)
+}
+ 45% {
+transform:translate(55%, 10%)
+}
+ 50% {
+transform:translate(50%, -10%)
+}
+ 55% {
+transform:translate(45%, 10%)
+}
+ 60% {
+transform:translate(40%, -10%)
+}
+ 65% {
+transform:translate(35%, 10%)
+}
+ 70% {
+transform:translate(30%, -10%)
+}
+ 75% {
+transform:translate(25%, 10%)
+}
+ 80% {
+transform:translate(20%, -10%)
+}
+ 85% {
+transform:translate(15%, 10%)
+}
+ 90% {
+transform:translate(10%, -10%)
+}
+ 95% {
+transform:translate(5%, 10%)
+}
+ 100% {
+transform:translate(0, 0)
+}
+}
+@-webkit-keyframes slideright {
+ 0% {
+-webkit-transform:translate(100%, -10%)
+}
+ 5% {
+-webkit-transform:translate(95%, 10%)
+}
+ 10% {
+-webkit-transform:translate(90%, -10%)
+}
+ 15% {
+-webkit-transform:translate(85%, 10%)
+}
+ 20% {
+-webkit-transform:translate(80%, -10%)
+}
+ 25% {
+-webkit-transform:translate(75%, 10%)
+}
+ 30% {
+-webkit-transform:translate(70%, -10%)
+}
+ 35% {
+-webkit-transform:translate(65%, 10%)
+}
+ 40% {
+-webkit-transform:translate(60%, -10%)
+}
+ 45% {
+-webkit-transform:translate(55%, 10%)
+}
+ 50% {
+-webkit-transform:translate(50%, -10%)
+}
+ 55% {
+-webkit-transform:translate(45%, 10%)
+}
+ 60% {
+-webkit-transform:translate(40%, -10%)
+}
+ 65% {
+-webkit-transform:translate(35%, 10%)
+}
+ 70% {
+-webkit-transform:translate(30%, -10%)
+}
+ 75% {
+-webkit-transform:translate(25%, 10%)
+}
+ 80% {
+-webkit-transform:translate(20%, -10%)
+}
+ 85% {
+-webkit-transform:translate(15%, 10%)
+}
+ 90% {
+-webkit-transform:translate(10%, -10%)
+}
+ 95% {
+-webkit-transform:translate(5%, 10%)
+}
+ 100% {
+-webkit-transform:translate(0, 0)
+}
+}
+ @keyframes opaS {
+ 0% {
+opacity:0
+}
+ 100% {
+opacity:1
+}
+}
+@-webkit-keyframes opaS {
+ 0% {
+opacity:0
+}
+ 100% {
+opacity:1
+}
+}
+@keyframes scale1 {
+ 0% { transform:rotate(0deg)}
+ 100% { transform:rotate(360deg)}
+}
+@-webkit-keyframes scale1 {
+ 0% { -webkit-transform:rotate(0deg)}
+ 100% { -webkit-transform:rotate(360deg)}
+}
+</style>
+</head>
+
+<body>
+<!-- Swiper -->
+<div class="video_exist play_yinfu" id="audio_btn" style="display: block;">
+  <div id="yinfu" class="rotate"></div>
+  <audio autoplay="" id="media" src="hhyy1.mp3" loop></audio>
+</div>
+<style type="text/css">
+#audio_btn{background-repeat: no-repeat;
+    display: none;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    z-index: 200;
+}
+.play_yinfu {
+background-image: url("images/music.gif");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: 60px 60px;
+}
+
+.rotate {
+    -webkit-animation: scale1 2s linear 0s infinite;
+	animation: scale1 2s linear 0s infinite;
+    background-image: url("images/music_off.png");
+    background-size: 100% 100%;
+    height: 30px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    width: 30px;
+}
+.off {
+    background-image: url("images/music_off.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+</style>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide slide1">
+      <div class="slide1_1"><img src="images/img2.png"></div>
+      <div class="slide1_2"><img src="images/img3.png"></div>
+      <div class="slide1_3">
+        <label>感谢与云微客同行至今的伙伴们，因为你们的陪伴，云微客才有现在的成就，未来的路任重而道远，我们期待更多的伙伴加入，携手共进。</label>
+      </div>
+    </div>
+    <div class="swiper-slide slide2">
+      <div class="s2_list slide2_1"> <span>行业内专业技术与营销体系完美融合的企业</span>
+        <label>让产品应用真正的结合用户需求提供更多的便捷性！</label>
+      </div>
+      <div class="s2_list slide2_2"> <span>云微客与腾讯保持密切合作关系</span>
+        <label>产品基于9亿用户平台，营销更精准！</label>
+      </div>
+      <div class="s2_list slide2_3"> <span>集团化公司</span>
+        <label>多行业发展，让云微客贴合用户需求提供了实战和落地，让产品有了真正的生命力，也让其他产业有了多于其他同行没有的优势！</label>
+      </div>
+      <div class="s2_list slide2_4"> <span>独立的开发系统</span>
+        <label>让您拥有绝对的主动权，又保证产品的完美升级！</label>
+      </div>
+      <div class="s2_list slide2_5"> <span>中国互联网协会会员</span>
+        <label>与互联网高层的融入沟通，不仅是企业实力的展现，更能保证趋势的正确，引领前行。</label>
+      </div>
+    </div>
+    <div class="swiper-slide slide3">
+      <div class="s3_list slide3_1"> <span>多专业团队共同协作</span>
+        <label>目前公司拥有独立的技术团队、运营团队、市场策划与营销团队、培训团队以最大程度的保障合作的成功。</label>
+      </div>
+      <div class="s3_list slide3_2"> <span>独立的市场战略</span>
+        <label>云微客利用自己的优势拥有独立的市场战略规划，为共同的合作，制定短期、中期和长期利润与战略，让您更容易成功</label>
+      </div>
+      <div class="s3_list slide3_3"> <span>一次合作费用享有终生的服务与升级</span>
+        <label>更好的保证后期的服务，公司的利润来自于中后期。</label>
+      </div>
+      <div class="s3_list slide3_4"> <span>完善区域体系</span>
+        <label>让你无论身处何处，都能够便捷的享受公司的落地式培训</label>
+      </div>
+      <div class="s3_list slide3_5"> <span>一对一运营老师对接</span>
+        <label>保证后期合作后享受专业的培训、扶持和跟踪。</label>
+      </div>
+    </div>
+    <div class="swiper-slide slide4">
+      <div class="slide4_1"><img src="images/img5.png"></div>
+      <div class="slide4_2">
+        <label>凡此期间与公司合作合作商均可获得</label>
+      </div>
+      <div class="slide4_3 s4_list"> <span>8.0版本大礼包：</span>
+        <label>一，赠送10000元创业资金</label>
+        <label>二，广告机2台</label>
+        <label>三，培训补贴2000元</label>
+      </div>
+      <div class="slide4_4 s4_list"> <span>6.0版本大礼包：</span>
+        <label>一，赠送6000元创业资金</label>
+        <label>二，广告机1台</label>
+        <label>三，培训补贴1000元</label>
+      </div>
+      <div class="slide4_5 s4_list"> <span>5.0版本大礼包：</span>
+        <label>一，赠送10000元创业资金</label>
+        <label>二，培训补贴1000元</label>
+      </div>
+      <div class="slide4_6"><img src="images/img4.png"></div>
+    </div>
+    <div class="swiper-slide slide5">
+      <div class="slide5_1"><img src="images/img6.png"></div>
+      <div class="slide5_2"><img src="images/img7.png"></div>
+      <div class="slide5_3">
+        <label>亲，每地区仅限一名，时间紧张、名额有限，报名疯抢中！云微客期待您的加入</label>
+      </div>
+      <div class="slide5_4">
+        <div class="slide5_41 s5_list">
+          <label><span>*</span>姓名</label>
+          <input type="text">
+        </div>
+        <div class="slide5_42 s5_list">
+          <label><span>*</span>电话</label>
+          <input type="text">
+        </div>
+        <div class="slide5_43 s5_list">
+          <label><span>*</span>地址</label>
+          <input type="text">
+        </div>
+        <div class="slide5_44 s5_list">
+          <label>意向版本</label>
+          <input type="text">
+        </div>
+      </div>
+      <div class="slide5_5">
+        <input type="button" value="提交">
+      </div>
+      <div class="slide5_6">
+        <label>本活动解释权归同创蓝天投资管理（北京）有限公司2015年7月30日宣</label>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/swiper.min.js"></script> 
+<script>
+var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical'
+});
+$("#audio_btn").click(function(){
+	if($(this).hasClass('off')){
+		$(this).removeClass('off').addClass('play_yinfu');
+		$("#yinfu").addClass('rotate');
+		document.getElementById('media').play();
+	}else if($(this).hasClass('play_yinfu')){
+		$(this).removeClass('play_yinfu').addClass('off');
+		$("#yinfu").removeClass('rotate');
+		document.getElementById('media').pause();
+	}
+})
+</script>
+</body>
+</html>

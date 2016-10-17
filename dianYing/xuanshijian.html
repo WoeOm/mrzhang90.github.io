@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>选时间</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<style type="text/css">
+.xsjCen{ width:100%; display:inline-block; background:#FFF;}
+.xsjCen1{ padding-left:3.125%;}
+.xsjCen1 label{ font-size:1em; color:#ef5d6b; line-height:3;}
+.xsjCen2{ width:93.75%; display:inline-block; margin-left:3.125%; border-top:1px solid #eee; border-bottom:1px solid #eee; padding:1em 0;}
+.xsjCen2_1{ width:100%; display:inline-block; margin-bottom:.875em;}
+.xsjCen2_1 select{ width:33%; float:left; height:1.55em; border:0; background:url(images/xsjimg1.jpg) no-repeat right center; background-size:.7em auto; margin-right:4%;}
+.xsjCen2_1 input{ width:17%; height:1.55em; border:0; border-radius:5px; background:#eeb63e; color:#FFF; float:right;}
+.xsjCen2_2{ width:100%; display:inline-block;}
+.xsjCen2_2 select{ width:33%; float:left; height:1.55em; border:0;background:url(images/xsjimg1.jpg) no-repeat right center; background-size:.7em auto;}
+.xsjCen2_2 input{ width:17%; height:1.55em; border:0; border-radius:5px; background:#eeb63e; color:#FFF; float:right;}
+.xsjCen3{ padding-left:3.125%; width:93.75%; display:inline-block; text-align:right;}
+.xsjCen3 label{ font-size:1em; color:#ef5d6b; line-height:3;}
+.btnSub{ width:93.75%; height:2.75em; margin:1em 0 1em 3.125%; display:inline-block;}
+.btnSub input{ width:100%; height:100%; border:0; background:#ef5d6b; border-radius:4px; color:#FFF;}
+</style>
+<div class="top">
+	<a href="#"><img src="images/backimg.jpg"></a>
+	<label>影片</label>
+</div>
+<!-- Swiper -->
+<div class="swiper-container swiper-banner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+	</div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="xsjCen">
+	<div class="xsjCen1"><label>私人定制</label></div>
+    <div class="xsjCen2">
+    	<div class="xsjCen2_1">
+        	<select><option>11月11日</option><option>11月12日</option></select>
+            <select><option>11:30</option><option>11:31</option></select>
+            <input type="button" value="修改">
+        </div>
+        <div class="xsjCen2_2">
+        	<select><option>让子弹飞一会</option><option>复仇者联盟</option></select>
+            <input type="button" value="修改">
+        </div>
+    </div>
+    <div class="xsjCen3"><label>票价：100元</label></div>
+</div>
+<div class="btnSub"><input type="button" value="立即购买"></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-banner',{
+	loop : true,
+	autoplay:3000,
+	pagination: '.swiper-pagination',
+});
+</script>
+</body>
+</html>

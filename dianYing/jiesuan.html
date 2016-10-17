@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>电影</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<div class="top">
+	<a href="#"><img src="images/backimg.jpg"></a>
+	<label>影片</label>
+</div>
+<style type="text/css">
+body{ background:#FFF;}
+.arList{ min-height:23em;}
+.arList1{ width:93.75%; margin-left:3.125%; padding:.9375em 0; border-bottom:1px solid #eee; display:inline-block;}
+.arList1_1{}
+.arList1_1 img{ width:21.33%; float:left; margin-right:4.6875%;}
+.arList1_11{ width:73%; float:right;}
+.arList1_111{ width:100%; height:1.8125em; line-height:1.8125em;}
+.arList1_111 label{ float:left; font-size:.725}
+.dNum{ width:27.34%; height:.9375em; float:right; line-height:.9375em; border:1px solid #ccc; border-radius:4px; margin-top:.4em;}
+.dNum span{ width:25%; height:100%; float:left; text-align:center; font-size:12px; background:#eee; color:#797979;}
+.dNum input{ width:50%; height:100%; border:0; float:left; height:100%; text-align:center;}
+.arList1_112{ margin-top:.375em;}
+.arList1_112 span{ font-size:.75em; color:#ef5d6b;}
+.arList1_112 label{ font-size:.75em; color:#ef5d6b;}
+.priceDiv{ display:inline-block; width:92%; line-height:2.4; text-align:right; padding:0 4%; font-size:.75em}
+.priceDiv1{ display:inline-block; color:#515151; margin-right:4%}
+.priceDiv2{ display:inline-block; color:#ef5d6b;}
+.priceDiv2 span{color:#ef5d6b;}
+
+.btn1{ width:100%; height:2.75em; padding:1em 0; background:#eee; display:inline-block;}
+.btn1 input{ width:93.75%; margin-left:3.125%; height:100%; border:0; background:#ef5d6b; border-radius:4px; color:#FFF;}
+</style>
+<div class="arList">
+	<div class="arList1">
+    	<div class="arList1_1">
+        	<a><img src="images/dimg.jpg"></a>
+            <div class="arList1_11">
+            	<div class="arList1_111"><label>可口可乐250ml</label><div class="dNum"><span onClick="jian($(this))">-</span><input type="text" class="pNum" value="1"><span onClick="jia($(this))">+</span></div></div>
+                <div class="arList1_112"><span>￥</span><label class="pri">2.53</label></div>
+            </div>
+        </div>
+    </div>
+    <div class="arList1">
+    	<div class="arList1_1">
+        	<a><img src="images/dimg.jpg"></a>
+            <div class="arList1_11">
+            	<div class="arList1_111"><label>可口可乐250ml</label><div class="dNum"><span onClick="jian($(this))">-</span><input type="text" class="pNum" value="1"><span onClick="jia($(this))">+</span></div></div>
+                <div class="arList1_112"><span>￥</span><label class="pri">2.52</label></div>
+            </div>
+        </div>
+    </div>
+    <div class="priceDiv"><div class="priceDiv1">共计<label>2</label>件商品</div><div class="priceDiv2">合计：<span>￥5.00</span></div></div>
+</div>
+
+<div class="btn1"><input type="button" value="立即购买"></div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+priT();
+function jia(obj){
+	var pNum = obj.siblings("input").val();
+	pNum++;
+	obj.siblings("input").val(pNum);
+	priT();
+}
+function jian(obj){
+	var pNum = obj.siblings("input").val();
+	if(pNum > 0){
+		pNum--;
+	}
+	obj.siblings("input").val(pNum);	
+	priT();
+}
+
+function priT(){
+	var priceZ = 0;
+	var priceN = 0;
+	$(".arList1").each(function(index) {
+        var priT = parseFloat($(".arList1").eq(index).find(".pri").html());
+		var priN = parseInt($(this).find(".pNum").val());
+		var ddd = priT*priN;
+		priceZ += ddd;
+		priceN += priN;
+		priceZ = parseFloat(priceZ.toFixed(2))
+    });
+	$(".priceDiv1 label").html(priceN+"");
+	$(".priceDiv2 span").html("￥" + priceZ);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>选座</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<style type="text/css">
+.xzTitle{ width:46.875%;border-top: 1.5em solid #ef5d6b; border-left:.5em solid transparent; border-right:.5em solid transparent; position:relative; margin:.8em auto .5em;}
+.xzTitle label{ position:absolute; top:-1.6em; left:0; width:100%; display:block; text-align:center; font-size:.875em; color:#FFF;}
+.booking-details {position: relative;width:93.75%;  padding:0 3.125%;}
+.booking-details h3 {margin: 5px 5px 0 0;font-size: 16px;}
+.booking-details p{line-height:26px; font-size:16px; color:#999}
+.booking-details p span{color:#666}
+div.seatCharts-cell {color: #182C4E;width:5.8%; margin:.3em 0.2%;float: left;text-align: center;outline: none;font-size:.725em; line-height:2;}
+div.seatCharts-seat {color: #fff;cursor: pointer;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+div.seatCharts-row {height: 35px;}
+div.seatCharts-seat.available {background-color: #B9DEA0;}
+div.seatCharts-seat.focused {background-color: #76B474;border: none;}
+div.seatCharts-seat.selected {background-color: #E6CAC4;}
+div.seatCharts-seat.unavailable {background-color: #472B34;cursor: not-allowed;}
+div.seatCharts-legend {padding-left: 0px;width:54%;}
+ul.seatCharts-legendList {padding-left: 0px; width:100%; text-align:center;}
+.seatCharts-legendItem{float:left; width:50%;}
+span.seatCharts-legendDescription { float:left}
+.checkout-button { width:100%; border:0; background:#ef5d6b; font-size:1em; font-weight:bold; border-radius:5px; color:#FFF; height:2.75em; margin-top:1em;}
+#selected-seats {max-height: 150px;overflow-y: auto;overflow-x: none;}
+#selected-seats li{float:left; width:120px; height:26px; line-height:26px; border:1px solid #d3d3d3; background:#f7f7f7; margin:6px; font-size:14px; font-weight:bold; text-align:center}
+div.dabled{height:1.4em; width:22%; margin-right:4%; margin-top:.2em;}
+</style>
+<div class="top">
+	<a href="#"><img src="images/backimg.jpg"></a>
+	<label>影片</label>
+</div>
+<!-- Swiper -->
+<div class="swiper-container swiper-banner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+	</div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<div class="xzTitle"><label>一号屏幕</label></div>
+<div id="main">
+   <div class="demo">
+   		<div id="seat-map">					
+		</div>
+		<div class="booking-details">
+			<p>影片：<span>星际穿越</span></p>
+			<p>时间：<span>11月14日 21:00</span></p>
+			<p>座位：</p>
+			<ul id="selected-seats">
+            
+            </ul>
+			<p>票数：<span id="counter">0</span></p>
+			<p>总计：<b>￥<span id="total">0</span></b></p>
+			<div id="legend"></div>		
+			<button class="checkout-button">提交</button>
+		</div>
+		<div style="clear:both"></div>
+   </div>
+	
+  <br/>
+</div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.seat-charts.min.js"></script>
+<script type="text/javascript">
+var price = 80; //票价
+$(document).ready(function() {
+	var $cart = $('#selected-seats'), //座位区
+	$counter = $('#counter'), //票数
+	$total = $('#total'); //总计金额
+	
+	var sc = $('#seat-map').seatCharts({
+		map: [  //座位图
+			'aaaaaaaaaaaaaaa',
+            'aaaaaaaaaaaaaaa',
+            'aaaaaaaaaaaaaaa',
+            'aaaaaaaaaaaaaaa',
+            'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+			'aaaaaaaaaaaaaaa',
+            'aaaaaaaaaaaaaaa'
+		],
+		naming : {
+			top : false,
+			getLabel : function (character, row, column) {
+				return column;
+			}
+		},
+		legend : { //定义图例
+			node : $('#legend'),
+			items : [
+				[ 'a', 'available dabled',   '可选座' ],
+				[ 'a', 'unavailable dabled', '已售出']
+			]					
+		},
+		click: function () { //点击事件
+			if (this.status() == 'available') { //可选座
+				$('<li>'+(this.settings.row+1)+'排'+this.settings.label+'座<input  style="width:50px" type="text" name="hang'+(this.settings.row+1)+'pai'+this.settings.label+'" /></li>')
+					.attr('id', 'cart-item-'+this.settings.id)
+					.data('seatId', this.settings.id)
+					.appendTo($cart);
+
+				$counter.text(sc.find('selected').length+1);
+				$total.text(recalculateTotal(sc)+price);
+							
+				return 'selected';
+			} else if (this.status() == 'selected') { //已选中
+					//更新数量
+					$counter.text(sc.find('selected').length-1);
+					//更新总计
+					$total.text(recalculateTotal(sc)-price);
+						
+					//删除已预订座位
+					$('#cart-item-'+this.settings.id).remove();
+					//可选座
+					return 'available';
+			} else if (this.status() == 'unavailable') { //已售出
+				return 'unavailable';
+			} else {
+				return this.style();
+			}
+		}
+	});
+	//已售出的座位
+	sc.get().status('unavailable');
+		
+});
+//计算总金额
+function recalculateTotal(sc) {
+	var total = 0;
+	sc.find('selected').each(function () {
+		total += price;
+	});
+			
+	return total;
+}
+</script>
+
+<script src="js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-banner',{
+	loop : true,
+	autoplay:3000,
+	pagination: '.swiper-pagination',
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>电影</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<style>
+body{ background:#FFF;}
+.navDiv{ width:96.875%; height:1.875em; line-height:2.14; padding:.34375em 0; border-bottom:1px solid #eee; margin:.3125em auto 0;}
+.navDiv div{ width:49%; float:left; text-align:center; font-size:.875em; font-weight:bold;}
+.navDiv div:nth-child(1){ border-right:1px solid #eee;}
+.navIn{ color:#ef5d6b}
+.nav1{ list-style:none; width:100%; height:2.05em; float:left; border-bottom:.625em solid #eee;}
+.nav1 a{ font-size:.725em; line-height:2.75; display:block; color:#797979; text-align:center; border-bottom:1px solid #ccc;}
+.nav1 .swiper-slide-active a{ border-bottom:1px solid #ef5d6b; color:#ef5d6b;}
+.proList{ width:100%; display:none;}
+
+.proDiv{ width:93.75%; margin:0 auto; display:none;}
+.proDiv li{ border-bottom:1px solid #eee; width:100%; display:inline-block; padding:.9375em 0;}
+.proDiv li img{ width:18%; float:left;}
+.proDiv1{ float:right; width:78%;}
+.proDiv1_1{ width:100%; display:inline-block; line-height:2em;}
+.proDiv1_1 label{ float:left; color:#515151; font-size:.9375em;}
+.proDiv1_1 span{ float:right; color:#ccc; font-size:.725em;}
+.proDiv1_2{ width:100%; display:inline-block; line-height:1.6em;}
+.proDiv1_2 label{ float:left; color:#929292; font-size:.75em;}
+.proDiv1_2 a{ float:right; color:#ef5d6b; border:1px solid #ef5d6b; border-radius:5px; padding:0 .7em; font-size:.725em;}
+
+.nav2{ list-style:none; width:100%; float:left; border-bottom:.625em solid #eee;}
+.nav2 li{ width:33.3%; display:block; float:left; text-align:center;}
+.nav2 li a{ font-size:.725em; line-height:2.75; display:block; color:#797979; border-bottom:1px solid #ccc;}
+.nav2 li.lin{}
+.nav2 li.lin a{ border-bottom:1px solid #ef5d6b; color:#ef5d6b;}
+
+.ylDiv{ width:94.6875%; margin:0 auto; display:none;}
+.ylDiv li{ width:28.38%; margin:.9375em 2.4% 0; float:left; position:relative;}
+.ylDiv li p{ width:100%; height:100%; display:none; background:rgba(0,0,0,0.5); position:absolute; left:0; top:0;}
+.ylDiv li p span{ width:43%; height:2.4em; position:absolute; left:28.5%; top:2.5em; background:url(images/imgbg.png) no-repeat; background-size:100% auto;}
+.ylDiv li.tagD  p{ display:block;}
+.ylDiv li img{ width:100%; height:auto;}
+.btnSub{ width:93.75%; height:2.75em; margin:1em 0 1em 3.125%; display:inline-block;}
+.btnSub input{ width:100%; height:100%; border:0; background:#ef5d6b; border-radius:4px; color:#FFF;}
+
+
+</style>
+<div class="top">
+	<a href="#"><img src="images/backimg.jpg"></a>
+	<label>影片</label>
+</div>
+<!-- Swiper -->
+<div class="swiper-container swiper-banner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+        <div class="swiper-slide"><img src="images/banner.jpg"></div>
+	</div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiperation1"></div>
+</div>
+<div class="navDiv">
+	<div class="navIn">影片</div>
+    <div>商品</div>
+</div>
+
+<div class="proList disB">
+<div class="swiper-container nav1">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="#">11月8日</a></div>
+        <div class="swiper-slide"><a href="#">11月9日</a></div>
+        <div class="swiper-slide"><a href="#">11月10日</a></div>
+        <div class="swiper-slide"><a href="#">11月11日</a></div>
+        <div class="swiper-slide"><a href="#">11月12日</a></div>
+        <div class="swiper-slide"><a href="#">11月13日</a></div>
+	</div>
+</div>
+<!---->
+    <ul class="proDiv disB">
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄1有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英2雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之7英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之3英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+    </ul>
+    <ul class="proDiv">
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之2英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+    </ul>
+    <ul class="proDiv">
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之2英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+    </ul>
+    <ul class="proDiv">
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之2英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+    </ul>
+    <ul class="proDiv">
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之3英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+    </ul>
+    <ul class="proDiv">
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄4有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/proimg.jpg"></a>
+            <div class="proDiv1">
+                <p class="proDiv1_1"><label>黄飞鸿之英雄有梦</label><span>11/08</span></p>
+                <p class="proDiv1_2"><label>满30开场</label><a href="#">购买</a></p>
+            </div>
+        </li>
+    </ul>
+<!---->
+</div>
+<div class="proList">
+	<ul class="nav2">
+        <li class="lin"><a>饮料</a></li><li><a>零食</a></li><li><a>热销</a></li>
+    </ul>
+    <ul class="ylDiv disB">
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+    </ul>
+    <ul class="ylDiv">
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+    </ul>
+    <ul class="ylDiv">
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+        <li><a><img src="images/dimg.jpg"></a><p><span></span></p></li>
+    </ul>
+    <div class="btnSub"><input type="button" value="立即购买"></div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-banner',{
+	loop : true,
+	autoplay:3000,
+	pagination: '.swiperation1',
+});
+var swiper1 = new Swiper('.nav1',{
+	slidesPerView : 3,
+	centeredSlides : true,
+	onSlideChangeEnd: function(swiper){
+      var i = swiper1.activeIndex;
+	  $(".proDiv").eq(i).addClass("disB").siblings(".proDiv").removeClass("disB");
+    }
+});
+//mySwiper.slidePrev();
+//mySwiper.slideNext();
+$(".navDiv div").each(function(index) {
+    $(this).click(function(){
+		$(this).addClass("navIn").siblings().removeClass("navIn");
+		$(".proList").eq(index).addClass("disB").siblings().removeClass("disB");
+	})
+});
+$(".nav2 li").each(function(index) {
+    $(this).click(function(){
+		$(this).addClass("lin").siblings().removeClass("lin");
+		$(".ylDiv").eq(index).addClass("disB").siblings().removeClass("disB");
+	})
+});
+$(".ylDiv li").click(function(){
+	$(this).toggleClass("tagD");	
+})
+</script>
+</body>
+</html>
