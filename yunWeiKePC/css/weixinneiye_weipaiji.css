@@ -1,0 +1,356 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0}
+body{ font-family: "微软雅黑", "黑体", NoxchiArial44539; background:#FFF; font-size:14px;}
+a{ text-decoration:none;}
+img{ display:block;
+border:none;}
+ul{ list-style-type:none;}
+.clearB{ clear:both;}
+/*top*/
+#top_div{
+	background:#fff;
+	width:1000px;
+	height:185px;
+	border:1 solid red;
+	margin:0 auto;
+}
+#top_1_bg{
+	background:#fff;
+	width:100%;
+	height:137px;
+}
+#top_div_1{
+	float:left;
+	width:1000px;
+	height:137px;
+	}
+#top_div_1_1{
+	float:left;
+	width:204px;
+	height:137px;
+	background-image:url(../images/images/pos_top_1_1_02.jpg);
+}
+#top_div_1_2{
+	float:left;
+	width:136px;
+	height:137px;
+	background-image:url(../images/images/pos_top_1_2_03.jpg);
+}
+#top_div_1_3{
+	float:left;
+	width:223px;
+	height:137px;
+	text-align:center;
+	line-height:137px;
+	color:#666;
+	font-size:17px;
+}
+#top_div_1_4_1{
+	width:203px;
+	height:26px;
+	text-align:right;
+}
+#top_div_1_4_1 p{
+	color:#555;
+}
+#top_div_1_4_2{
+	float:left;
+	width:203px;
+	height:29px;
+	background:url(../images/images/pos_top_phone_08.jpg);
+}
+#top_div_1_4{
+	float:right;
+	width:44px;
+	height:101px;
+	background:url(../images/images/pos_top_img_06.jpg)
+}
+#top_div_1_5{
+	margin:40px 19px 0 0;
+	float:right;
+	width:203px;
+	height:97px;
+}
+
+
+#top_2_bg{
+	width:100%;
+	height:48px;
+	background:#404145;
+}
+#top_div_2{
+	width:1002px;
+	height:48px;
+	margin:0 auto;
+}
+#top_div_2 ul{
+	 width:1000px; height:48px;margin:0 auto;list-style-type:none;
+}
+#top_div_2 li{
+	width:135px; text-align:center; line-height:48px; display:inline-block; float:left;
+}
+#top_div_2 li a{ color:#FFF; font-size:16px; display:block;}
+#top_div_2 li a:hover{ background:#00aeef;}
+
+/*微拍打印机*/
+#weipaidayinji_bg{
+	width:100%;
+	height:455px;
+	background:url(../images/images/weipaiji_topbg_02.jpg);
+	position:relative;
+	z-index:10;
+}
+#weipaidayinji{
+	width:1000px;
+	height:455px;
+	margin:0 auto;
+}
+#weipaidayinji_1{
+	z-index:9999;
+	width:441px;
+	height:455px;
+	float:left;
+	margin-top:91px;
+	margin-left:20px;
+}
+#weipaidayinji_1 img{
+	display:block;
+}
+#weipaidayinji_2{
+	width:539px;
+	height:455px;
+	float:left;
+}
+.weipai_span_01{
+	font-size:34px;
+	font-weight:bold;
+	color:#fff;
+	border-left:5px solid #ffc047;
+	padding-left:10px;
+}
+.weipai_span_02{
+	margin-left:22px;
+	font-size:22px;
+	font-weight:bold;
+	color:#ffc047;
+}
+.weipai_span_03{
+	margin-left:22px;
+	font-size:22px;
+	font-weight:bold;
+	color:#002a58;
+}
+#weipaidayinji_txt_1{
+	margin-top:87px;
+}
+#weipaidayinji_txt_2{
+	width:255px;
+	height:118px;
+	margin-top:24px;
+}
+#weipaidayinji_txt_2 p{
+	font-size:17px;
+	color:#fff;
+	margin-bottom:12px;
+}
+#weipaidayinji_button{
+	margin-top:32px;
+}
+
+
+/*个性化*/
+#gexing_bg{
+	width:100%;
+	height:588px;
+	background:#f3f3f3;
+	position:relative;
+	z-index:6;
+}
+#gexing{
+	width:1000px;
+	height:588px;
+	margin:0 auto;
+}
+#gexing_top{
+	width:1000px;
+	height:142px;
+	background:url(../images/images/gexing_bg_45.jpg);
+	margin-right:136px;
+	font-size:30px;
+	padding-top:90px;
+	color:#286bbc;
+}
+#gexing_top p{
+	position:absolute;
+	left:41%;
+	}
+#gexing_left{
+	position:relative;
+	float:left;
+	margin-left:50px;
+}
+#gexing_left_1{
+	margin-left:60px;
+	margin-top:-40px;
+	width:346px;
+	height:349px;
+}
+#gexing_left_2 p{
+	font-size:18px;
+	text-align:center;
+	line-height:36.5px;
+	color:#fff;
+	width:33px;
+	height:73px;
+	position:absolute;
+}
+#gexing_right{
+	float:left;
+	margin:50px 0 0 135px;
+}
+#gexing_right_txt_2{
+	width:300px;
+	height:118px;
+	margin-top:24px;
+}
+#gexing_right_txt_2 p{
+	font-size:17px;
+	color:#404145;
+	margin-bottom:12px;
+}
+.gexing_span_01{
+	font-size:34px;
+	font-weight:bold;
+	color:#404145;
+	border-left:5px solid #286bbc;
+	padding-left:10px;
+}
+.gexing_span_02{
+	color:#286bbc;
+	font-size:15px;
+}
+.gexing_span_03{
+	color:#359b21;
+	font-size:24px;
+	font-weight:bold;
+}
+#gexing_right_txt_3{
+	margin-top:30px;
+}
+#dayinji_bg{
+	width:100%;
+	height:560px;
+	background:url(../images/images/weipaidayinji_bg_68_68.jpg);
+	position:relative;
+	z-index:10;
+}
+#dayinji{
+	width:1000px;
+	height:560px;
+	margin:0 auto;
+}
+#dayinji_1{
+	float:left;
+}
+#dayinji_2{
+	float:left;
+}
+#dayinji{
+	width:1000px;
+	height:560px;
+	margin:0 auto;
+}
+#dayinji_1{
+	z-index:9999;
+	width:441px;
+	height:455px;
+	float:left;
+	margin-top:91px;
+	margin-left:20px;
+}
+#dayinji_1 img{
+	display:block;
+}
+#dayinji_2{
+	width:539px;
+	height:455px;
+	float:left;
+}
+.dayinji_span_01{
+	font-size:34px;
+	font-weight:bold;
+	color:#fff;
+	border-left:5px solid #359b21;
+	padding-left:10px;
+}
+.dayinji_span_02{
+	margin-left:22px;
+	font-size:22px;
+	font-weight:bold;
+	color:#359b21;
+}
+.dayinji_span_03{
+	margin-left:22px;
+	font-size:22px;
+	font-weight:bold;
+	color:#262626;
+}
+#dayinji_txt_1{
+	margin-top:87px;
+}
+#dayinji_txt_2{
+	width:272px;
+	height:118px;
+	margin-top:24px;
+}
+#dayinji_txt_2 p{
+	font-size:17px;
+	color:#fff;
+	margin-bottom:12px;
+}
+#dayinji_button{
+	margin-top:80px;
+}
+
+
+
+#sidayingli_bg{
+	width:100%;
+	height:400px;
+	background:#fff;
+}
+#sidayingli{
+	width:1000px;
+	height:400px;
+	margin:0 auto;
+	position:relative;
+}
+#sidayingli_top{
+	width:612px;
+	margin:0px auto;
+	text-align:center;
+	position:relative;
+	top:45px;
+}
+#sidayingli_top p{
+	font-size:29px;
+	color:#232323;
+}
+#sidayingli_pic{
+	width:546px;
+	height:213px;
+	margin:100px auto;
+	position:relative;
+}
+.txt_1{
+	font-size:14px;
+	width:186px;
+	height:38px;
+	position:absolute;
+	margin-top:45px;
+}
+.txt_2{
+	font-size:18px;
+	font-weight:bold;
+}

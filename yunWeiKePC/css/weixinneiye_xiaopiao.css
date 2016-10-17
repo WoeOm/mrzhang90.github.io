@@ -1,0 +1,87 @@
+
+/*banner*/
+
+#xiaopiaoji_1_bg{
+	width:100%;
+	height:550px;
+	background:url(../images/images/xiaopiao_1_bg_02.jpg);
+	position:relative;
+}
+#xiaopiaoji_1{
+	position:absolute;
+	left:39px;
+	width:1238px;
+	height:550px;
+	margin:0 auto;
+	position:relative;
+	background:url(../images/images/xiaopiao_03.jpg);}
+#xiaopiaoji_1_2{position:absolute;top:236px;}
+#xiaopiaoji_2_bg{width:100%;height:508px;background:#fff;}
+#xiaopiaoji_2{width:1000px;height:508px;margin:0 auto;position:relative;}
+#xiaopiaoji_2_1{width:451px;height:508px;float:left;position:relative;}
+#xiaopiaoji_2_1 img{position:absolute;left:0;top:79px;}
+#xiaopiaoji_2_2{width:549px;height:508px;float:left;position:relative;}
+#xiaopiaoji_2_2_2{width:420px;height:29px;}
+#xiaopiaoji_2_2_1{position:absolute;left:140px;top:150px;}
+#xiaopiaoji_2_2_2{position:absolute;left:140px;top:200px;}
+#xiaopiaoji_2_2_3{position:absolute;left:140px;top:265px;}
+#xiao_1{width:25px;height:25px;text-align:center;line-height:25px;font-size:14px; font-weight:bold;border-radius:3px;background:#cd6bf2;color:#fff;float:left;}
+#xiao_2{width:98px;height:25px;text-align:center;line-height:25px;font-size:23px; font-weight:bold;color:#cd6bf2;float:left;margin-left:20px;}
+#xiao_3{width:25px;height:25px;text-align:center;line-height:25px;font-size:14px; font-weight:bold;border-radius:3px;background:#32d692;color:#fff;float:left;margin-left:20px;}
+#xiao_4{width:98px;height:25px;text-align:center;line-height:25px;font-size:23px; font-weight:bold;color:#32d692;float:left;margin-left:20px;}
+#xiao_5{width:25px;height:25px;text-align:center;line-height:25px;font-size:14px; font-weight:bold;border-radius:3px;background:#6da4d5;color:#fff;float:left;}
+#xiao_6{width:98px;height:25px;text-align:center;line-height:25px;font-size:23px; font-weight:bold;color:#6da4d5;float:left;margin-left:20px;}
+#xiao_7{width:25px;height:25px;text-align:center;line-height:25px;font-size:14px; font-weight:bold;border-radius:3px;background:#f97775;color:#fff;float:left;margin-left:20px;}
+#xiao_8{width:208px;height:25px;text-align:center;line-height:25px;font-size:23px; font-weight:bold;color:#f97775;float:left;margin-left:20px;}
+#xiaopiaoji_2_2_3{width:477px;height:97px;font-size:18px;color:#666;}
+
+#xiaopiaoji_3_bg{width:100%;height:493px;background:url(../images/images/xiaopiao_3_bg_30.jpg);}
+#xiaopiaoji_3{width:1000px;height:493px;margin:0 auto;}
+#xiaopiaoji_3_1{position:relative;top:110px;width:450px;height:493px;}
+#xiaopiaoji_3_2{width:550px;height:493px;position:relative;}
+#xiaopiaoji_3_2_1 p{font-size:25px; font-weight:bold;color:#fff;width:126px;height:65px; position:absolute;left:140px;top:160px;line-height:50px;}
+#xiaopiaoji_3_2_1 span{font-size:50px;color:#fff; font-weight:bold;position:absolute;left:196px;top:200px;}
+#xiaopiaoji_3_2_2 p{text-align:center;font-size:14px;color:#fff;margin-top:10px;}
+#xiaopiaoji_3_2_2_1{width:88px;height:88px;background:#38db95;border-radius:5px;float:left;position:absolute;left:295px;top:145px;}
+#xiaopiaoji_3_2_2_2{width:88px;height:88px;background:#ff8f35;border-radius:5px;float:left;position:absolute;left:407px;top:145px;}
+#xiaopiaoji_3_2_2_3{width:88px;height:88px;background:#17aaff;border-radius:5px;float:left;position:absolute;left:520px;top:145px;}
+#xiaopiaoji_3_2_2_4{width:88px;height:88px;background:#b757cf;border-radius:5px;float:left;position:absolute;left:182px;top:290px;}
+#xiaopiaoji_3_2_2_5{width:88px;height:88px;background:#ffcc60;border-radius:5px;float:left;position:absolute;left:295px;top:290px;}
+#xiaopiaoji_3_2_2_6{width:88px;height:88px;background:#15e1ff;border-radius:5px;float:left;position:absolute;left:407px;top:290px;}
+#xiaopiaoji_3_2_2_7{width:88px;height:88px;background:#ff5a5a;border-radius:5px;float:left;position:absolute;left:520px;top:290px;}
+
+
+#xiaopiaoji_4_bg{width:100%;height:431px;background:#fff;}
+#xiaopiaoji_4{width:1000px;height:431px;margin:0 auto;}
+#xiaopiaoji_4_1{width:1000px;height:153px;margin:0 auto;}
+#xiaopiaoji_4_1 p{text-align:center;font-size:28px;color:#5c70bf;line-height:153px; font-weight:bold;}
+#xiaopiaoji_4_2_1{width:176px;height:257px;float:left;position:absolute;left:-80px;}
+#xiaopiaoji_4_2_2{width:176px;height:257px;float:left;position:absolute;left:210px;}
+#xiaopiaoji_4_2_3{width:176px;height:257px;float:left;position:absolute;left:490px;}
+#xiaopiaoji_4_2{width:600px;height:176px;margin:0 auto;position:relative;}
+#xiaopiaoji_4_2_1_2{font-size:20px;line-height:50px;color:#c4c4c4;text-align:center;}
+#xiaopiaoji_4_2_2_2{font-size:20px;line-height:50px;color:#c4c4c4;text-align:center;}
+#xiaopiaoji_4_2_3_2{font-size:20px;line-height:50px;color:#c4c4c4;text-align:center;}
+#xiaopiaoji_4_2 img{margin-left:20px;}
+#xiaopiaoji_4_2_1_3{font-size:16px;color:#777;text-align:center;}
+#xiaopiaoji_4_2_2_3{font-size:16px;color:#777;text-align:center;}
+#xiaopiaoji_4_2_3_3{font-size:16px;color:#777;text-align:center;}
+
+#xiaopiaoji_5_bg{width:100%;height:397px;background:#f7f7f7}
+#xiaopiaoji_5{width:1000px;height:397px;margin:0 auto;}
+#xiaopiaoji_5_1{width:1000px;height:137px;margin:0 auto;}
+#xiaopiaoji_5_1 p{color:#777; font-weight:bold;font-size:28px;text-align:center;line-height:137px;}
+#xiaopiaoji_5_2{width:1000px;height:260px;margin:0 auto;position:relative;}
+#xiaopiaoji_5_2_1{float:left;width:214px;height:186px;text-align:center;}
+#xiaopiaoji_5_2_2{float:left;width:214px;height:186px;margin-left:34px;text-align:center;}
+#xiaopiaoji_5_2_3{float:left;width:214px;height:186px;margin-left:34px;text-align:center;}
+#xiaopiaoji_5_2_4{float:left;width:214px;height:186px;margin-left:34px;text-align:center;}
+#xiaopiaoji_5_2_1 p{height:46px;font-size:18px;color:#a4a4a4;line-height:55px;}
+#xiaopiaoji_5_2_1 img{border:5px solid #f8dbcc;}
+#xiaopiaoji_5_2 img:hover{border:5px solid #bd5355;}
+#xiaopiaoji_5_2_2 p{height:46px;font-size:18px;color:#a4a4a4;line-height:55px;}
+#xiaopiaoji_5_2_2 img{border:5px solid #f8dbcc;}
+#xiaopiaoji_5_2_3 p{height:46px;font-size:18px;color:#a4a4a4;line-height:55px;}
+#xiaopiaoji_5_2_3 img{border:5px solid #f8dbcc;}
+#xiaopiaoji_5_2_4 p{height:46px;font-size:18px;color:#a4a4a4;line-height:55px;}
+#xiaopiaoji_5_2_4 img{border:5px solid #f8dbcc;}

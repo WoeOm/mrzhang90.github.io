@@ -1,0 +1,168 @@
+/*wifi*/
+#oldPwdTip{position: absolute;color : #ccc;margin-top : 6px;margin-left : 6px;}
+#wifi_1_bg{
+	width:100%;
+	height:496px;
+	background:url(../images/images/wifi_bg_02.jpg);
+}
+#wifi_1{
+	width:1000px;
+	height:496px;
+	background:url(../images/images/wifi_bg2_03_03.jpg);
+	margin:0 auto;
+}
+#wifi_1_1{
+	width:479px;
+	height:496px;
+	float:left;
+	position:relative;
+}
+#wifi_1_2{
+	width:520px;
+	height:496px;
+	float:left;
+}
+.wifi_1_img{
+	float:left;
+	border:1px solid #57a0de;
+	width:128px;
+	height:89px;
+	margin-left:28px;
+}
+.p1{
+	color:#fff;
+	font-size:34px;
+	font-weight:bold;
+}
+.p2{
+	color:#fff;
+	font-size:17px;
+}
+.p3{
+	font-size:14px;
+	color:#ffe361;
+	position:absolute;
+	left:10px;
+	top:200px;
+}
+#wifi_jiantou{
+	position:absolute;
+	left:52px;
+	top:204px;
+}
+#wifi_1_1_1{
+	position:absolute;
+	left:-18px;
+	top:240px;
+}
+#wifi_1_2{
+	position:relative;
+}
+#wifi_1_2_1{
+	width:253px;
+	height:54px;
+	background:#fff;
+	border:2px solid #eee;
+	border-bottom:0px;
+	border-radius:3px;
+	position:absolute;
+	left:243px;
+	top:309px;
+}
+#wifi_1_2_1 p{
+	font-size:14px;
+	color:#a7a7a7;
+	text-align:center;
+	line-height:51px;
+}
+#wifi_1_2_2{
+	width:253px;
+	height:30px;
+	position:absolute;
+	border:2px solid #eee;
+	border-bottom:0;
+	border-top:0;
+	text-align:center;
+	left:243px;
+	top:364px;
+	color:#ff6363;
+	font-size:18px;
+	line-height:30px;
+}
+#wifi_1_2_3{
+	width:253px;
+	height:105px;
+	position:absolute;
+	border:2px solid #eee;
+	border-bottom:0;
+	border-top:0;
+	text-align:center;
+	color:#00a1ab;
+	left:243px;
+	top:391px;
+	background:#fff;
+	position:relative}
+#wifi_1_2_3_1 p{
+	font-size:12px;
+	line-height:23px;
+}
+#wifi_1_2_3_2{
+	position:absolute;
+	left:17px;
+	top:30px;
+	width:220px;
+	height:38px;
+	background:#ffab61;
+	border-radius:3px;
+	color:#fff;
+}
+#wifi_1_2_3_2 p{
+	line-height:38px;
+}
+
+
+#wifi_2_bg{
+	width:100%;
+	height:500px;
+	background:url(../images/images/wifi_2_bg_40.jpg);
+}
+#wifi_2{
+	width:1000px;
+	height:500px;
+	background:url(../images/images/wifi_2_41.jpg);
+	margin:0 auto;
+	position:relative;
+}
+#wifi_2_2_1{width:187px;height:135px;border:1px solid #fff;border-radius:3px;position:absolute;left:428px;top:257px;position:relative;}
+#wifi_2_2_1 p{position:absolute;left:18px;top:18px;font-size:12px;width:54px;height:135px;color:#fff;}
+#wifi_2_2_1 img{position:absolute;left:88px;top:27px;}
+#wifi_2_2_2{position:absolute;width:140px;height:93px;border:1px solid #fff;border-radius:3px;left:645px;top:257px;}
+#wifi_2_2_2 p{position:absolute;left:18px;top:18px;font-size:12px;width:109px;height:54px;color:#fff;}
+#wifi_2_2_3{position:absolute;width:203px;height:176px;border:1px solid #fff;border-radius:3px;left:800px;top:257px;}
+#wifi_2_2_3 p{position:absolute;left:18px;top:18px;font-size:12px;width:109px;height:54px;color:#fff;}
+#wifi_2_2_3_1{position:absolute;width:166px;height:34px;}
+#wifi_2_2_3_1 p{position:absolute;font-size:12px;color:#fff;left:29px;top:18px;width:166px;height:34px;}
+#wifi_2_2_3_2{width:152px;height:30px;position:absolute;left:25px;top:80px;float:left}
+#wifi_2_2_3_2 input{height:30px;text-align:center;font-size:12px;color:#999;position:absolute;border-radius:4px;width:149px;}
+#wifi_2_2_3_3{width:152px;height:30px;background:#ff797a;border-radius:3px;position:absolute;left:25px;top:120px;}
+#wifi_2_2_3_3 p{height:30px;text-align:center;font-size:12px;color:#fff;position:absolute;left:19px;top:6px;}
+#wifi_1_1_2 p{font-size:17px;height:30px;float:left;color:#fff;position:absolute;top:350px;}
+
+#wifi_3_bg{width:100%;height:500px;background:url(../images/images/wifi_3_bg_60.jpg);}
+#wifi_3{width:1092px;height:500px;background:url(../images/images/wifi_3_61.jpg);margin:0 auto;position:relative;}
+#wifi_3_1{width:150px;height:86px;position:absolute;left:45px;top:130px;}
+#wifi_3_2{position:absolute;left:45px;top:245px;}
+#wifi_3_3 {font-size:24px;border:1px solid #fff;width:124px;height:56px;text-align:center;color:#fff;line-height:56px;position:absolute;left:46px;top:300px;}
+
+#wifi_4_bg{width:100%;height:500px;background:url(../images/images/wifi_4_bg_72.jpg);}
+#wifi_4{width:1044px;height:500px;margin:0 auto;position:relative;}
+#wifi_4_1{width:522px;height:500px;float:left;}
+#wifi_4_1 img{position:absolute;top:88px;}
+#wifi_4_2{width:522px;height:500px;float:left;position:relative;}
+#wifi_4_2_1{position:absolute;left:95px;top:100px;}
+#wifi_4_2_2{position:absolute;left:127px;top:167px;}
+#wifi_4_2_3_1{width:202px;height:56px;border:1px solid #abdfa5;position:absolute;left:60px;top:235px;}
+#wifi_4_2_3_2{width:202px;height:56px;border:1px solid #abdfa5;position:absolute;left:285px;top:235px;}
+#wifi_4_2_3_3{width:179px;height:56px;border:1px solid #abdfa5;position:absolute;left:83px;top:315px;}
+#wifi_4_2_3_4{width:145px;height:56px;border:1px solid #abdfa5;position:absolute;left:285px;top:315px;}
+#wifi_4_2_3 p{font-size:18px;color:#fff;text-align:center;line-height:56px;}
