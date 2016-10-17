@@ -616,6 +616,34 @@ function startMove(obj,attr,time,target,type,callback,conback)
     },20);
 }
 /**
+ * 碰撞
+ */
+function getPos(obj){
+    var pos = {"left":0,"top":0};
+    while(obj){
+        pos.left += obj.offsetLeft;
+        pos.top += obj.offsetTop;
+        obj = obj.offsetParent;
+    }
+    return pos;
+};
+function collision(obj1,obj2){
+    var obj1L = getPos(obj1).left;
+    var obj1LW = obj1L + obj1.offsetWidth;
+    var obj1T = getPos(obj1).top;
+    var obj1TH = obj1T + obj1.offsetHeight;
+
+    var obj2L = getPos(obj2).left;
+    var obj2LW = obj2L + obj2.offsetWidth;
+    var obj2T = getPos(obj2).top;
+    var obj2TH = obj2T + obj2.offsetHeight;
+
+    if( obj1LW < obj2L || obj1L > obj2LW || obj1TH < obj2T || obj1T > obj2TH ){
+        return false
+    }
+    return true;
+};
+/**
  * 元素拖动,如果只传一个参数,那么就是拖拽这个元素,如果给obj2传值,那么就默认开始了碰撞,当obj和obj2碰撞后,obj2变色
  * @param {Element} [obj]
  * @param {Element} [obj2]

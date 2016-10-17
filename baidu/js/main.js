@@ -88,7 +88,8 @@ function header(){
     var module_list_view=$('.module-list-view')[0];//获取右侧内容的高度
     var module_list=$('.module-list')[0];//获取右侧内容以及上边的横向条 的高度
     changeSize();
-    window.onresize=changeSize;
+    addEvent(window,'resize',changeSize);
+    //window.onresize=changeSize;
     function changeSize(){
         var oHeight=window.innerHeight-173;
         module_list_view.style.height=oHeight+'px';//配置内容的高度
@@ -126,10 +127,53 @@ function header(){
     }
     var list_grid_js=$('#list_grid_js');
     var list_grid=$('a',list_grid_js);
+    var main_body=$('#main_body');
+    var list_cols=$('.list-cols',main_body)[0];
+    var grid_cols=$('.grid-cols',main_body)[0];
+    var list_view_container=$('.list-view-container')[0];
+    var grid_view_container=$('.grid-view-container')[0];
+    var grid_view_item=$('.grid-view-item');
+    var grid_view=$('#grid-view');
+    var data=[[true,0,'软件'],[true,0,'音乐'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据'],[true,1,'我的应用数据']];
+    //var grid_length=grid_view_item.length;//总记录数
+    var grid_length=data.length;//总记录数
+    var grid_width=0,grid_view_width= 0;//大div的宽度,小div的宽度
     list_grid[0].onclick=function(){
         list_grid_js.className='list-grid-switch list-switched-on';
+        list_cols.style.display='block';
+        grid_cols.style.display='none';
+        list_view_container.style.display='block';
+        grid_view_container.style.display='none';
     }
     list_grid[1].onclick=function(){
         list_grid_js.className='list-grid-switch grid-switched-on';
+        list_cols.style.display='none';
+        grid_cols.style.display='block';
+        list_view_container.style.display='none';
+        grid_view_container.style.display='block';
+        //gridViewChange();
+    }
+    //addEvent(window,'load',gridViewChange);
+    //addEvent(window,'resize',gridViewChange);
+    function gridViewChange(){
+        grid_width=grid_view.offsetWidth;
+        //grid_view_width=grid_view_item[0].offsetWidth;
+        grid_view_width=142;
+        var width=grid_width<=883?883:grid_width;
+        var num=Math.floor(width/grid_view_width);
+        var grid_num=Math.ceil(grid_length/num);//计算总页数
+        var html='';
+        for(var i=0;i<num;i++){
+            html+='<dd>';
+            for(var j=i*grid_num;j<grid_num*(i+1);j++){
+                if(data[j]) {
+                    //html += '<dd>' + data[j] + '</dd>';
+                    html+='<div class="grid-view-item open-enable"><div class="fileicon dir-large"><span class="checkbox"></span></div><div class="file-name"><a href="javascript:void(0)" class="filename">软件</a></div></div>';
+                }
+            }
+            html+='</dd>';
+        }
+        //grid_view.innerHTML=html;
+        console.log(html);
     }
 }

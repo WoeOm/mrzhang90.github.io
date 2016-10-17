@@ -317,7 +317,7 @@
             <div class="module-list" style="height:396px;">
                 <div class="module-history-list">
                     <span class="history-list-dir">全部文件</span>
-                    <span class="history-list-tips">已全部加载,共22个</span>
+                    <span class="history-list-tips">已全部加载,共12个</span>
                     <ul class="historylistmanager-history" style="display:block;">
                         <li>
                             <a href="javascript:void(0)" data-deep="-1">返回上一级</a>
@@ -358,11 +358,87 @@
                                 </div>
                             </li>
                         </ul>
+                        <div class="list-header-operatearea clearfix" style="display:none;">
+                            <span class="count-tips">已选中1个文件/文件夹</span>
+                            <div class="list-header-operate-div">
+                                <div>
+                                    <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                    <span class="g-button-right">
+                                        <em class="icon icon-play-music" title="音乐播放"></em>
+                                        <span class="text" style="width:auto;">音乐播放</span>
+                                    </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button">
+                                    <span class="g-button-right">
+                                        <em class="icon icon-share-gray" title="分享"></em>
+                                        <span class="text" style="width:auto;">分享</span>
+                                    </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button">
+                                    <span class="g-button-right">
+                                        <em class="icon icon-download-gray" title="下载"></em>
+                                        <span class="text" style="width:auto;">下载</span>
+                                    </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                    <span class="g-button-right">
+                                        <em class="icon icon-edit" title="编辑"></em>
+                                        <span class="text" style="width:auto;">编辑</span>
+                                    </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button">
+                                    <span class="g-button-right">
+                                        <em class="icon icon-delete" title="删除"></em>
+                                        <span class="text" style="width:auto;">删除</span>
+                                    </span>
+                                    </a>
+                                    <span class="g-dropdown-button">
+                                        <a href="javascript:void(0)" class="g-button">
+                                        <span class="g-button-right">
+                                            <em class="icon icon-device-listtool" title="推送到云设备"></em>
+                                            <span class="text" style="width:auto;">推送到云设备</span>
+                                        </span>
+                                        </a>
+                                        <span class="menu">
+                                            <a href="javascript:void(0);" class="g-button-menu g-disabled">无在线设备</a>
+                                            <a href="javascript:void(0);" class="g-button-menu">添加设备</a>
+                                        </span>
+                                    </span>
+                                    <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                    <span class="g-button-right">
+                                        <em class="icon icon-print-gray" title="云冲印"></em>
+                                        <span class="text" style="width:auto;">云冲印</span>
+                                    </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button" style="display:none;">
+                                    <span class="g-button-right">
+                                        <em class="icon icon-history-gray" title="历史版本"></em>
+                                        <span class="text" style="width:auto;">历史版本</span>
+                                    </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button g-disabled" id="rename">
+                                    <span class="g-button-right">
+                                        <span class="text" style="width:auto;">重命名</span>
+                                    </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button">
+                                    <span class="g-button-right">
+                                        <span class="text" style="width:auto;">复制到</span>
+                                    </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="g-button">
+                                    <span class="g-button-right">
+                                        <span class="text" style="width:auto;">移动到</span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="list-view-container" style="display:block;">
                     <div class="module-list-view" style="height:314px;">
-                        <div class="list-view" style="margin:0;">
+                        <div id="list_view" class="list-view" style="margin:0;">
                             <dd class="g-clearfix list-view-item open-enable">
                                 <span class="checkbox"></span>
                                 <div class="fileicon dir-small"></div>
@@ -1156,12 +1232,117 @@
                                 <div class="ctime" style="width:23%;">2014-08-20 23:17</div>
                             </dd>
                         </div>
-                        <div class="scrollbar" style="display:block;">
+                        <!--滚动条-->
+                        <div class="scrollbar" style="display:none;">
                             <div id="scrollbarArrowUp" class="scrollbar-arrow scrollbar-arrow-up sprite"></div>
                             <div class="scrollbar-tracker" style="height: 91px;">
                                 <div class="scrollbar-thumb" style="height: 18px; top: 0px;"></div>
                             </div>
                             <div id="scrollbarArrowDown" class="scrollbar-arrow scrollbar-arrow-down sprite"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-view-container" style="display:none;">
+                    <div class="module-grid-view">
+                        <div class="grid-view" id="grid-view">
+                            <dd>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon dir-large">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">软件</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon dir-large">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">音乐</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon dir-app-large">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">我的应用数据</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item">
+                                    <div class="fileicon default-large">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">提交报告.html</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon fileicon-large-txt">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">问题.txt</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon fileicon-large-rar">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">linux.rar</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon fileicon-large-zip">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">linux.zip</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon fileicon-sys-l-dmg">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">Fuel_for_Word.dmg</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon fileicon-large-mp3">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">Precison.mp3</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon fileicon-large-mp3">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">Precison.mp3</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon fileicon-large-mp3">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">Precison.mp3</a>
+                                    </div>
+                                </div>
+                                <div class="grid-view-item open-enable">
+                                    <div class="fileicon fileicon-large-mp3">
+                                        <span class="checkbox"></span>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="javascript:void(0)" class="filename">Precison.mp3</a>
+                                    </div>
+                                </div>
+                            </dd>
                         </div>
                     </div>
                 </div>
