@@ -9,7 +9,6 @@
 <body>
 <div id="main">
     <div id="audio_btn" class="off none rotate" style="display:block;">
-        <audio loop src="audio/yewen.mp3" id="media" autoplay preload></audio>
     </div>
     <section class="main-page" style="z-index:2;">
         <div class="m-img" id="page1">
@@ -481,8 +480,12 @@
     function load(){
         //音乐点击暂停或播放
         var audio_btn=$('#audio_btn');
-        var media=$('#media');
-        media.play();//解决音乐不自动播放的问题
+        var media=document.createElement('audio');
+        media.loop='loop';
+        media.src='audio/yewen.mp3';
+        media.autoplay='autoplay';
+        media.preload='preload';//规定页面加载完成后载入音频
+        audio_btn.appendChild(media);
         addEvent(audio_btn,'click',function(){
             if(media.paused){
                 media.play();
