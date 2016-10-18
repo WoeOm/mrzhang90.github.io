@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    html,body{height:100%;}
+</style>
 <body>
 <div id="audio_btn" class="off none rotate" style="display:block;">
 </div>
@@ -14,10 +17,11 @@
     media.id='media';
     media.loop='loop';
     media.src='audio/yewen.mp3';
-//    media.autoplay='autoplay';
+    media.autoplay='autoplay';
     media.preload='preload';//规定页面加载完成后载入音频
     audio_btn.appendChild(media);
-    addEvent(window,'touchstart',function(){
+    alert('5020');
+    addEvent(document,'touchstart',function(){
         $("#media").play();
     })
 </script>
