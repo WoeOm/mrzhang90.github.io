@@ -479,6 +479,7 @@
     });
     function load(){
         //音乐点击暂停或播放
+        var audioAuto=true;//默认音乐是播放的,当用户点击了就为false,这样可以区别用户点击和系统进制
         var audio_btn=$('#audio_btn');
         var media=document.createElement('audio');
         media.id='media';
@@ -487,10 +488,17 @@
         media.autoplay='autoplay';
         media.preload='preload';//规定页面加载完成后载入音频
         audio_btn.appendChild(media);
+        if($("#media").paused){//如果系统进制播放音乐,那么就删除正在播放动作
+            removeClass(audio_btn,'rotate');
+        }
         addEvent(document,'touchstart',function(){
-            $("#media").play();
+            if(media.paused && audioAuto){
+                media.play();
+                addClass(this,'rotate');
+            }
         })
         addEvent(audio_btn,'click',function(){
+            audioAuto=false;
             if(media.paused){
                 media.play();
                 addClass(this,'rotate');
