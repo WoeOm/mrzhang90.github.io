@@ -469,36 +469,20 @@
 <script src="js/js.js"></script>
 <script src="js/m.touch.js"></script>
 <script>
+    //验证是手机,那么就设置meta viewport
+    if (isMobile()) {
+        setScale();
+    }
+
     var orient=verif_screen();
-//    console.log(height+'1');
     addEvent(window,'load',function(){
         load();
-
-        //横屏或竖屏,切换状态时触发,考虑兼容
-        var supportOrientation = (typeof window.orientation === 'number' &&
-        typeof window.onorientationchange === 'object');
-
-        if(supportOrientation){
-//            console.log(true);
-            addEvent(window,'orientationchange',function(){
-                location.reload();
-            });
-        }else{
-//            console.log(false);
-            addEvent(window,'resize',function(){
-                //考虑切屏事件兼容问题,用resize解决兼容,
-                //首先加载保存变量orient为横屏还是竖屏的状态,然后resize的时候重新检测状态是不是改变
-                if(verif_screen() !== orient){
-                    location.reload();
-                }
-            });
-        }
-
-
-
+    });
+    function load(){
         //音乐点击暂停或播放
         var audio_btn=$('#audio_btn');
         var media=$('#media');
+        media.play();//解决音乐不自动播放的问题
         addEvent(audio_btn,'click',function(){
             if(media.paused){
                 media.play();
@@ -507,13 +491,7 @@
                 media.pause();
                 removeClass(this,'rotate');
             }
-        })
-    });
-    function load(){
-        //验证是手机,那么就设置meta viewport
-        if (isMobile()) {
-            setScale();
-        }
+        });
 
         var ul_area=$('.ul_area');
         //如果是竖屏
@@ -533,7 +511,7 @@
                 height=window.innerHeight,width=window.innerWidth,average=width/pageCount,
                 progress_span=$('#progress_span'),progress_em=$('#progress_em'),zIndex= 1,oZIndex=1;
         progressChange(0);
-        //这个是第一页的中心文字,每次翻页都要重新执行动画
+        //这里是每次翻页都要重新执行动画
         var li_font1=$('#li_font1');
         var li_font2=$('#li_font2');
         var li_none=$('.li_none');
@@ -703,6 +681,24 @@
                         break;
                 }
             },30)
+        }
+
+        //横屏或竖屏,切换状态时触发,考虑兼容
+        var supportOrientation = (typeof window.orientation === 'number' &&
+        typeof window.onorientationchange === 'object');
+
+        if(supportOrientation){
+            addEvent(window,'orientationchange',function(){
+                location.reload();
+            });
+        }else{
+            addEvent(window,'resize',function(){
+                //考虑切屏事件兼容问题,用resize解决兼容,
+                //首先加载保存变量orient为横屏还是竖屏的状态,然后resize的时候重新检测状态是不是改变
+                if(verif_screen() !== orient){
+                    location.reload();
+                }
+            });
         }
     }
 </script>
