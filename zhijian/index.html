@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script src="js/public.js?t=201681915819"></script>
+<link type="text/css" rel="stylesheet" href="css/animate.css?t=20151214135734">
+<link rel="stylesheet" href="css/style.css?t=201681915819">
+<link rel="stylesheet" href="css/index.css?t=201681915821">
+</head>
+<body>
+<!--<div class="loading-wrap" style="background-color: #f5f5f5;" id="loading" data-loading='{"barBgColor":"#ddd","barColor":"#e2394e","bgColor":"#f5f5f5","descColor":"#000000","description":"dodoh5.com技术支持","effect":"0","isShowLogo":true,"logo":" http://pitaya.oss-cn-beijing.aliyuncs.com/system/dodoh5_logo.png","mode":"default"}'>-->
+    <!--<div class="loading-effect loading-effect1">-->
+        <!--<div class="logo" >-->
+            <!--<img src="images/dodoh5_logo.png">-->
+        <!--</div>-->
+        <!--<div class="progress-box">-->
+            <!--<div class="progress_bar" style="background-color: #ddd;"><span style="background-color: #e2394e;width: 0%"></span></div>-->
+            <!--<div class="progress_text" style="color: #e2394e;"><span>0%</span></div>-->
+        <!--</div>-->
+        <!--<div class="description" style="color: #000000;">dodoh5.com技术支持</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="page-box">
+    <div id="page1" style="transform:translate(0,0%)" class="page-item active">
+        <div class="page-bg-box"></div>
+        <div class="page-item-content">
+            <div class="show-image-wrap show1">
+                <div class="show-image">
+                    <img src="images/img2.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show2">
+                <div class="show-image">
+                    <img src="images/img3.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show3">
+                <div class="show-image">
+                    <img src="images/img4.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show4">
+                <div class="show-image">
+                    <img src="images/img6.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show5">
+                <div class="show-image">
+                    <img src="images/img7.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show6">
+                <div class="show-image">
+                    <img src="images/img5.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show7">
+                <div class="show-image">
+                    <img src="images/img12.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show8">
+                <div class="show-image">
+                    <img src="images/img11.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show9">
+                <div class="show-image">
+                    <img src="images/img9.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show10">
+                <div class="show-image">
+                    <img src="images/img8.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show11">
+                <div class="show-image">
+                    <img src="images/img10.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show12">
+                <div class="show-image">
+                    <img src="images/img13.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show13">
+                <div class="show-image">
+                    <img src="images/img14.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show14">
+                <div class="show-image">
+                    <img src="images/img15.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="tabTipIcon fa fa-chevron-up vertical"></div>
+    </div>
+    <div id="page2" style="transform:translate(0,100%)" class="page-item">
+        <div class="page-bg-box"></div>
+        <div class="page-item-content">
+            <div class="show-image-wrap show21">
+                <div class="show-image">
+                    <img src="images/123210485_45.png" alt="">
+                </div>
+            </div>
+            <div class="show-image-wrap show22">
+                <div class="show-image">
+                    <img src="images/173215555_48.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="tabTipIcon fa fa-chevron-up vertical"></div>
+    </div>
+
+</div>
+<div class="audio_icon" id="audio1"></div>
+<script>
+    window.addEventListener('load',load);
+    function load(){
+        var audio=document.createElement('audio');
+        audio.src="music/203025404_61.mp3";
+        audio.loop="loop";
+        audio.id="audio2";
+        audio.autoplay="autoplay";
+        document.body.appendChild(audio);
+
+        var myAudio = document.getElementById('audio1');
+        var audio2 = document.getElementById('audio2');
+        myAudio.onclick=function(){
+            if(audio2.paused){
+                myAudio.className='audio_icon';
+                audio2.play();
+            }else{
+                myAudio.className='audio_icon audio_icon_close';
+                audio2.pause();
+            }
+        }
+    }
+    var page1=document.getElementById('page1');
+    var page2=document.getElementById('page2');
+    page1.addEventListener('click',clickEv);
+    page2.addEventListener('click',clickEv);
+    function clickEv(){
+
+        var i=0;
+        var timer=setInterval(function(){
+            i+=2;
+            page1.style.transform="translate(0,"+-i+"%)";
+            page2.style.transform="translate(0,"+(100-i)+"%)";
+            if(i==100){
+                clearInterval(timer);
+            }
+        },30)
+    }
+</script>
+</body>
+</html>
