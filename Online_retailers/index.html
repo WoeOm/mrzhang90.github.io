@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""/>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<section class="head">
+    <div class="sort left">
+        <a href="javascript:void(0)" class="on" id="a-sort"><span>默认排序</span><i></i></a>
+        <ul style="display:none;">
+            <li><a href="javascript:void(0)" data-name="sort" data-value="" class="on">默认排序<i></i></a></li>
+            <li><a href="javascript:void(0)" data-name="sort" data-value="new">最新上架<i></i></a></li>
+            <li><a href="javascript:void(0)" data-name="sort" data-value="pasc">价格最低<i></i></a></li>
+            <li><a href="javascript:void(0)" data-name="sort" data-value="pdesc">价格最高<i></i></a></li>
+        </ul>
+    </div>
+    <div class="type left">
+        <a href="javascript:void(0)" id="a-type"><span>分类</span><i></i></a>
+        <div class="type_info">
+            <ul class="clearfix" id="list_type">
+                <!--这里是放列表的-->
+            </ul>
+            <div class="icon_type"></div>
+        </div>
+    </div>
+    <a href="javascript:void(0)" data-name="recommend" data-value="yes" class="promote">精品推荐</a>
+    <div class="sort_div bg_opacity"></div>
+</section>
+<section class="cont">
+    <ul class="clearfix" id="ul-load">
+        <!--这里是放内容列表的-->
+    </ul>
+</section>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    var config_head = {
+        'url': '/pt/goods/data.json',
+        'method': 'post',
+        'field': {
+            sort:'',
+            siteId: '${siteId}',
+            pageNo: 1
+        }
+    };
+//    var arr_list='${classifications}';
+    var arr_list='[{"name":"箱包","id":"ABq2"},{"name":"手机","id":"DKD2"},{"name":"电脑","id":"fkd2"},{"name":"饮料","id":"8899"}]';
+    arr_list=JSON.parse(arr_list);
+    $(function () {
+        load();
+    })
+</script>
+</body>
+</html>

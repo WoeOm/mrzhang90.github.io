@@ -1,0 +1,256 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1,target-densitydpi=device-dpi">
+    <title>美国加州篮球游学之行</title>
+    <meta name="Description" content="运动汇携手美国Open Gym训练营创办2017年加州篮球游学之行，致力于创办高品质、高性价比的篮球营地。" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<section style="width:100%;height:100%;">
+    <div class="signUp">
+        <div class="form">
+            <form action="" method="post">
+                <div class="div_input name">
+                    <span></span>
+                    <input type="text" id="name_input" placeholder="孩子姓名">
+                </div>
+                <div class="div_input age">
+                    <span ></span>
+                    <div class="select_head">
+                        <span id="span_age_input" >9岁</span>
+                        <i class="i1"></i>
+                    </div>
+                    <div class="select_cont" id="age_input">
+                        <span>9岁</span>
+                        <span>10岁</span>
+                        <span>11岁</span>
+                        <span>12岁</span>
+                        <span>13岁</span>
+                        <span>14岁</span>
+                        <span>15岁</span>
+                    </div>
+
+                </div>
+                <div class="div_input sex">
+                    <span></span>
+                    <!--<input type="text" placeholder="孩子性别">-->
+                    <label for="man" class="on"><input value="男" id="man" name="sex_input" class="sex_input" checked="" type="radio"><span>男</span></label>
+                    <label for="woman"><input value="女" id="woman" name="sex_input" class="sex_input" checked="" type="radio"><span>女</span></label>
+
+
+                </div>
+                <div class="div_input phone">
+                    <span></span>
+                    <input type="tel" placeholder="请输入您的手机号" id="phone_input" >
+                </div>
+                <div class="div_code">
+                    <div id="div_checkCode"><input type="text" id="code_input"></div>
+                    <input type="button" id="get_code" value="获取验证码">
+                </div>
+                <input type="button" value="确认报名"  id="user_form">
+            </form>
+        </div>
+    </div>
+    <div id="checkCode" style="text-align: center;line-height: 330px;font-size: 22px;color: #333;display:none;">
+        <p>[报名成功]</p>
+        <img src="/images/erweima.jpg" alt="" style="width: 50%;">
+    </div>
+    <input type="hidden"   id="code1">
+</section>
+
+<script src="js/js.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+
+<script>
+    var jq = $.noConflict();
+    addEvent(window,'load',function(){
+
+        load();
+        /*获取验证码*/
+        var get_code=$('#get_code');
+        var code_input=$('#code_input');
+        var phone_input=$('#phone_input');
+        var name_input=$('#name_input');
+        var sex_input=$('.sex_input');
+
+
+        var age_input=$('#age_input');
+        var phoneDiv=$('.phone')[0];
+
+        addEvent(get_code,'click',function(){
+            var cur_time=60;
+            if(!regPhone(phone_input.value)){
+                phoneDiv.style.borderColor='red';
+                return false;
+            }else{
+                phoneDiv.style.borderColor='';
+                get_code.disabled="disabled";
+                addClass(get_code,'disabled');
+                var timer=setInterval(function(){
+                    cur_time--;
+                    if(cur_time>0){
+                        get_code.value=cur_time+'秒后重新获取';
+                    }else{
+                        clearInterval(timer);
+                        get_code.disabled="";
+                        get_code.value='获取验证码';
+                        removeClass(get_code,'disabled');
+                    }
+                },1000);
+                ajax({
+                    url: "/front/user/code.do",              //请求地址
+                    type: "POST",                       //请求方式
+                    data: { phone: phone_input.value},        //请求参数
+                    dataType: "json",
+                    success: function (response) {
+                        var result = JSON.parse(response);
+                        // 此处放成功后执行的代码
+                        if (result.message == 1) {
+                            $("#code1").value = result.code;
+
+                        } else {
+                            alert("该手机号已经注册!");
+                            clearInterval(timer);
+                            get_code.disabled="";
+                            get_code.value='获取验证码';
+                            removeClass(get_code,'disabled');
+                        }
+
+                    },
+                    fail: function (status) {
+                        // 此处放失败后执行的代码
+                        clearInterval(timer);
+                        get_code.disabled="";
+                        get_code.value='获取验证码';
+                        removeClass(get_code,'disabled');
+                    }
+                });
+            }
+        });
+        var name=$('.name')[0];
+        var age=$('.age')[0];
+        var sex=$('.sex')[0];
+        var phone=$('.phone')[0];
+        var div_checkCode=$('#div_checkCode');
+        var user_form=$('#user_form');
+        user_form.onclick=function(){
+            console.log("onclick");
+            if (name_input.value == null || name_input.value == ""){
+                name.style.borderColor='red';
+                return false;
+            }else{
+                name.style.borderColor='';
+            }
+
+
+            var sex_check = "";
+            /*for(var i=0; i<sex_input.length;i++) {
+             console.log(sex_input[i].checked);
+             if (sex_input[i].checked==true) {
+             sex_check = sex_input[i].value;
+             }
+
+             }*/
+            var sex_check=$(".on",sex)[0];
+            sex_check=$('input',sex_check)[0].value;
+
+
+            if (phone_input.value == null || phone_input.value =="") {
+                phone.style.borderColor='red';
+                return false;
+            }else{
+                phone.style.borderColor='';
+            }
+            if ($('#code_input').value == null || $('#code_input').value == "") {
+                div_checkCode.style.borderColor='red';
+                return false;
+            }else{
+                div_checkCode.style.borderColor='';
+            }
+
+
+
+
+
+            if ($('#code1').value != $('#code_input').value) {
+                div_checkCode.style.borderColor='red';
+                return false;
+            }else{
+                div_checkCode.style.borderColor='';
+            }
+
+            var age = $("#span_age_input").innerHTML;
+
+            ajax({
+                url: "/front/user/createUser.do",              //请求地址
+                type: "post",                       //请求方式
+                data: {
+                    age: age.substring(0, age.length-1),
+                    name:name_input.value,
+                    sex: sex_check,
+                    phone: phone_input.value
+                },        //请求参数
+                dataType: "json",
+                success: function (result) {
+                    console.log($('#checkCode'));
+                    // 此处放成功后执行的代码
+                    $('.signUp')[0].style.display='none';
+                    $('#checkCode').style.display="block";
+
+                },
+                fail: function (status) {
+                    // 此处放失败后执行的代码
+                    clearInterval(timer);
+                    get_code.disabled="";
+                    get_code.value='获取验证码';
+                    removeClass(get_code,'disabled');
+                }
+            });
+
+        }
+    });
+
+
+    //---end ------
+
+    function load(){
+
+        jq(document).ready(function(){
+
+            jq('.sex label').click(function(){
+                jq(this).addClass('on').siblings("label").removeClass('on');
+            })
+
+            var span_head='';
+            var select_cont=jq('.select_cont');
+            jq('.select_head').click(function(){
+                span_head=jq(this).find("span");
+                if(select_cont.is(":hidden")){
+                    select_cont.show();
+                }else{
+                    select_cont.hide();
+                }
+            })
+            jq('.select_cont span').click(function(){
+                var text=jq(this).html();
+                span_head.html(text);
+                select_cont.hide();
+            });
+
+        });
+    }
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

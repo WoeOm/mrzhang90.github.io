@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""/>
+    <title>【签到】第四届北京MBA篮球联赛总决赛·闭幕式</title>
+    <meta name="Description" content="北京航空航天大学MBA VS 中国农业大学MBA"/>
+    <link rel="stylesheet" href="css/vote_reset.css">
+    <link rel="stylesheet" href="css/vote.css">
+</head>
+<body>
+<section class="page">
+    <h2>第四届北京MBA篮球联赛<br/>总决赛•闭幕式</h2>
+    <div class="form">
+        <div class="phone_div">
+            <input type="text" placeholder="请输入手机号" id="phone" value="">
+            <label>请输入手机号</label>
+        </div>
+        <div class="code_div">
+            <input type="text" placeholder="请输入验证码" id="code">
+            <input type="button" id="a_code" value="获取验证码">
+            <label>请输入验证码</label>
+        </div>
+        <div class="submit_div">
+            <input type="button" value="确认签到" id="btn_submit">
+            <label>请输入验证码</label>
+        </div>
+    </div>
+    <div class="logo"></div>
+</section>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/vote.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var config={
+        'url':'sign/code',
+        'method':'get',
+        'field':{
+            'phone':''
+        }
+    };
+    $(function(){
+        form();
+    })
+    var obj = {
+        title: '【签到】第四届北京MBA篮球联赛总决赛·闭幕式', // 分享标题
+        desc: '北京航空航天大学MBA VS 中国农业大学MBA',
+        link: 'http://mba.ydh123.com/sign',
+        imgUrl: 'http://mba.ydh123.com/images/icon.jpg' // 分享图标
+    }
+    wx.config({
+        debug: false,
+        appId: '${appId}',
+        timestamp: '${timestamp}',
+        nonceStr: '${nonceStr}',
+        signature: '${signature}',
+        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone'] // 功能列表，我们要使用JS-SDK的什么功能
+    });
+    wx.ready(function () {
+        share_fn(obj);
+    });
+    function share_fn(obj) {
+// 获取"分享到朋友圈"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareTimeline(obj);
+
+// 获取"分享给朋友"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareAppMessage(obj);
+
+//获取"分享到QQ"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareQQ(obj);
+
+//获取"分享到腾讯微博"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareWeibo(obj);
+
+//获取"分享到QQ空间"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareQZone(obj);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>第四届北京MBA篮球联赛总决赛•闭幕式</title>
+    <meta name="Description" content="《运动汇》互联网+体育平台为您呈现精彩赛事！"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<section class="head">
+    <div class="bg_head"></div>
+    <h3>2016年12月11日18:00</h3>
+    <p>五棵松HI-PARK篮球公园多功能厅</p>
+    <div class="form">
+        <input type="text" name="name" class="username" placeholder="邀请嘉宾姓名">
+        <label class="name_message message"></label>
+        <div class="sex_div clearfix">
+            <label for="man" class="on">
+                <input type="radio" value="1" name="sex" id="man" checked>
+                <span>先生</span>
+            </label>
+            <label for="woman">
+                <input type="radio" value="2" name="sex" id="woman">
+                <span>女士</span>
+            </label>
+        </div>
+        <input type="button" value="确认" class="btn_submit">
+        <label class="btn_message message"></label>
+    </div>
+    <div class="bg_foot"></div>
+</section>
+<section class="cont" style="display:none;">
+    <div class="head_cont clearfix">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div1 div3"></div>
+    </div>
+    <div class="cont_text">
+        <h2 id="username">尊敬的 <b>张广森</b> 先生，</h2>
+        <p class="p_height">您好！</p>
+        <p>我们诚挚地邀请您参加“第四届北京MBA篮球联赛”总决赛及闭幕式。</p>
+        <p>届时，望您莅临指导，拨冗出席！</p>
+        <p>活动时间：2016年12月11日18:00</p>
+        <p>活动地点：北京五棵松Hi-Park篮球公园多功能厅</p>
+        <p class="p1">此致</p>
+        <p class="p2">敬礼</p>
+        <p class="text_left">第四届北京商学院篮球联赛<br/>赛事组委会</p>
+        <p class="text_left">2016年12月</p>
+        <div class="div2"></div>
+    </div>
+    <div class="foot_div">
+        <a id="share">我要分享</a>
+    </div>
+</section>
+<div id="share_msg">
+    <div></div>
+    <p>点此分享，发送您的邀请！</p>
+</div>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/index.js"></script>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var link_id='',name_msg='',sex_msg='';
+    var obj={
+                title: '', // 分享标题
+                desc: '《运动汇》互联网+体育平台为您呈现精彩赛事！',
+                link: '',
+                imgUrl: 'http://mba.ydh123.com/images/icon.jpg' // 分享图标
+            }
+    $(function(){
+        form();
+        var share=$('#share');
+        var share_msg=$('#share_msg');
+        share.click(function(){
+            share_msg.show();
+        });
+        share_msg.click(function(){
+            $(this).hide();
+        })
+    })
+    function state_set(data){
+        var btn_message=$('.btn_message');
+        if(data.status==1){
+            link_id=data.data.id;
+            sex_msg=data.data.sex.value==1?'先生':'女士';
+            name_msg=data.data.name;
+            $('#username').html('尊敬的 <b>'+name_msg+'</b> '+sex_msg);
+            $('.head').hide();
+            $('body').css('background','#efebe4');
+            $('.cont').show();
+
+            obj.title= '尊敬的'+name_msg+sex_msg+'，诚邀您参加MBA篮球总决赛•闭幕式'; // 分享标题
+            obj.link='http://mba.ydh123.com/'+link_id;
+            share_fn(obj);
+        }else{
+            btn_message.text(data.msg);
+            return;
+        }
+    }
+    wx.config({
+        debug: false,
+        appId: '${appId}',
+        timestamp: '${timestamp}',
+        nonceStr: '${nonceStr}',
+        signature: '${signature}',
+        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone'] // 功能列表，我们要使用JS-SDK的什么功能
+    });
+
+    wx.ready(function(){
+        share_fn(obj);
+    });
+    function share_fn(obj) {
+        // 获取"分享到朋友圈"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareTimeline(obj);
+
+        // 获取"分享给朋友"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareAppMessage(obj);
+
+        //获取"分享到QQ"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareQQ(obj);
+
+        //获取"分享到腾讯微博"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareWeibo(obj);
+
+        //获取"分享到QQ空间"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareQZone(obj);
+    }
+</script>
+
+</body>
+</html>

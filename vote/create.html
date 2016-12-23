@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""/>
+    <title>【MBA篮球联赛】我心中的总冠军</title>
+    <meta name="Description" content="北京航空航天大学MBA VS 中国农业大学MBA"/>
+    <link rel="stylesheet" href="css/vote_reset.css">
+    <link rel="stylesheet" href="css/vote.css">
+</head>
+<body>
+<section class="page">
+    <div class="voteDiv">
+        <div class="div_voteDiv">
+            <div class="head clearfix">
+                <div class="div1"></div>
+                <div class="div2">
+                    总决赛
+                </div>
+                <div class="div3"></div>
+            </div>
+            <div class="vote_vote">
+                <div class="top_vote">
+                    <div class="span_vote">
+                        <span class="span1">北京航空航天大学</span>
+                        <span class="span2">中国农业大学</span>
+                    </div>
+                    <div class="speed_vote clearfix">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="bottom_vote">
+                    <div class="left addVote">
+                        <i>+1</i>
+                        <span>569</span>
+                    </div>
+                    <div class="right addVote">
+                        <i>+1</i>
+                        <span>560</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <dl class="cont_vote">
+            <dt>活动须知：</dt>
+            <dd>1、每个微信号只允许投票一次，选择一支球队；</dd>
+            <dd>2、投票截止时间为总决赛中场结束之前（投票时间近活动截止时间时中奖概率相对降低）；</dd>
+            <dd>3、比赛结束后将会从获胜球队支持方中抽取幸运用户发放奖品；</dd>
+            <dd>4、主持人将会在颁奖前公布获奖用户（奖品只发放给仍在现场的用户）；</dd>
+            <dd>5、奖品不支持更换或兑换现金;</dd>
+        </dl>
+    </div>
+    <div class="logo"></div>
+</section>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/vote.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var openId=Math.random()*9999;
+//    var openId='${openId}';
+    var isVote='';
+//    var isVote='${isVote}';
+    var team1=10;
+//    var team2='${team1}';
+    var team2=12;
+//    var team2='${team2}';
+    var config={
+        'url':'http://mba.ydh123.com/code',
+        'method':'get',
+        'field':{
+            'phone':''
+        }
+    };
+    $(function(){
+        vote_change(team1,team2);
+        addVote();
+    });
+    var obj = {
+        title: '【MBA篮球联赛】我心中的总冠军', // 分享标题
+        desc: '北京航空航天大学MBA VS 中国农业大学MBA',
+        link: 'http://mba.ydh123.com/vote',
+        imgUrl: 'http://mba.ydh123.com/images/icon.jpg' // 分享图标
+    }
+    wx.config({
+        debug: false,
+        appId: '${appId}',
+        timestamp: '${timestamp}',
+        nonceStr: '${nonceStr}',
+        signature: '${signature}',
+        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone'] // 功能列表，我们要使用JS-SDK的什么功能
+    });
+    wx.ready(function () {
+        share_fn(obj);
+    });
+    function share_fn(obj) {
+        // 获取"分享到朋友圈"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareTimeline(obj);
+
+        // 获取"分享给朋友"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareAppMessage(obj);
+
+        //获取"分享到QQ"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareQQ(obj);
+
+        //获取"分享到腾讯微博"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareWeibo(obj);
+
+        //获取"分享到QQ空间"按钮点击状态及自定义分享内容接口
+        wx.onMenuShareQZone(obj);
+    }
+</script>
+</body>
+</html>

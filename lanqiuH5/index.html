@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1,target-densitydpi=device-dpi">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="jindu" id="jindu">
+    <div class="jindu_center">
+        <div class="buling">
+            <b class="gradient_blue"></b>
+            <i class="gradient_blue"></i>
+        </div>
+        <div class="buling_fff" id="buling_fff">
+            <div class="buling">
+                <b></b>
+                <i></i>
+            </div>
+        </div>
+        <div class="tiao">
+            <i id="tiao_width" class="gradient_blue"></i>
+        </div>
+    </div>
+</div>
+<section style="z-index:1">
+    <div class="upIcon"></div>
+</section>
+<section>
+    <div class="upIcon upIcon2"></div>
+</section>
+<section>
+    <div class="upIcon upIcon2"></div>
+</section>
+<section>
+    <div class="upIcon upIcon2"></div>
+</section>
+<section>
+    <div class="upIcon upIcon2"></div>
+</section>
+<section>
+    <div class="upIcon"></div>
+</section>
+<section>
+    <div class="upIcon"></div>
+</section>
+<section>
+    <div class="upIcon"></div>
+</section>
+<section>
+    <div class="upIcon upIcon2"></div>
+</section>
+<section>
+    <div class="upIcon upIcon2"></div>
+</section>
+<section>
+    <div class="upIcon upIcon2"></div>
+</section>
+<section>
+    <div class="upIcon upIcon2"></div>
+</section>
+<section>
+    <div style="display: block;" class="signUp">
+        <div class="form">
+        <form action="" method="post">
+            <div class="div_input name">
+                <span></span>
+                <input type="text" placeholder="孩子姓名">
+            </div>
+            <div class="div_input age">
+                <span></span>
+                <!--<input type="text" placeholder="孩子年龄">-->
+                <div class="select_head">
+                    <span>9岁</span>
+                    <i class="i1"></i>
+                </div>
+                <div class="select_cont">
+                    <span>9岁</span>
+                    <span>10岁</span>
+                    <span>11岁</span>
+                    <span>12岁</span>
+                    <span>13岁</span>
+                    <span>14岁</span>
+                    <span>15岁</span>
+                </div>
+            </div>
+            <div class="div_input sex">
+                <span></span>
+                <!--<input type="text" placeholder="孩子性别">-->
+                <label for="man"><input value="" id="man" name="check" checked="" type="radio"><span>男</span></label>
+                <label for="woman" class="on"><input value="" id="woman" name="check" checked="" type="radio"><span>女</span></label>
+            </div>
+            <div class="div_input phone">
+                <span></span>
+                <input type="tel" placeholder="请输入您的手机号" id="phone_input" value="15810890557">
+            </div>
+            <div class="div_code">
+                <div><input type="text" id="code_input"></div>
+                <input type="button" id="get_code" value="获取验证码">
+            </div>
+            <input type="button" value="确认报名" id="user_form">
+        </form>
+        </div>
+    </div>
+    <div style="text-align: center;line-height: 330px;font-size: 22px;color: #333;display:none;">
+        <p>[报名成功]</p>
+        <img src="images/erweima.jpg" alt="" style="width: 50%;">
+    </div>
+</section>
+<script src="js/js.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script>
+var jq = $.noConflict();
+addEvent(window,'load',function(){
+    progressBar();
+    /*获取验证码*/
+    var get_code=$('#get_code');
+    var code_input=$('#code_input');
+    var phone_input=$('#phone_input');
+    var phoneDiv=$('.phone')[0];
+    addEvent(get_code,'click',function(){
+        var cur_time=60;
+        if(!regPhone(phone_input.value)){
+            phoneDiv.style.borderColor='red';
+            return false;
+        }else{
+            phoneDiv.style.borderColor='';
+            get_code.disabled="disabled";
+            addClass(get_code,'disabled');
+            var timer=setInterval(function(){
+                cur_time--;
+                if(cur_time>0){
+                    get_code.value=cur_time+'秒后重新获取';
+                }else{
+                    clearInterval(timer);
+                    get_code.disabled="";
+                    get_code.value='获取验证码';
+                    removeClass(get_code,'disabled');
+                }
+            },1000);
+            ajax({
+                url: "###",              //请求地址
+                type: "GET",                       //请求方式
+                data: { name: "super", age: 20 },        //请求参数
+                dataType: "json",
+                success: function (response, xml) {
+                    // 此处放成功后执行的代码
+                },
+                fail: function (status) {
+                    // 此处放失败后执行的代码
+                    clearInterval(timer);
+                    get_code.disabled="";
+                    get_code.value='获取验证码';
+                    removeClass(get_code,'disabled');
+                }
+            });
+        }
+    });
+    var submit=$('#submit');
+    submit.onclick=function(){
+
+    }
+    return false;
+});
+//进度条
+var jindu=$('#jindu');
+function progressBar(){
+    var num=0,buling_fff=$('#buling_fff'),tiao_width=$('#tiao_width');
+    var arr=[
+        'images/1.jpg',
+        'images/2.jpg',
+        'images/3.jpg',
+        'images/4.jpg',
+        'images/5.jpg',
+        'images/6.jpg',
+        'images/7.jpg',
+        'images/8.jpg',
+        'images/9.jpg',
+        'images/10.jpg',
+        'images/11.jpg',
+        'images/12.jpg',
+        'images/13_0.jpg',
+        'images/13_03.jpg',
+        'images/13_07.jpg',
+        'images/13_11.jpg',
+        'images/13_15.jpg',
+        'images/up.png',
+        'images/up_blue.png'
+    ];
+    for(var i=0,len=arr.length;i<len;i++){
+        var img=new Image();
+        img.src=arr[i];
+        img.onload=function(){
+            num++;
+            var scale=Math.floor((num/arr.length)*100);
+            tiao_width.style.width=scale*3.45+'px';
+            if(scale==100){
+                addClass(buling_fff, 'move');
+                setTimeout(function(){
+                    addClass(jindu,'opacity');
+                    load();
+//                    addEvent(window,'resize',function(){
+//                        load();
+//                    });
+                },2000)
+            }
+        }
+    }
+}
+function load(){
+    //翻页
+    var bodyH = document.body.clientHeight;
+    var bodyW = document.body.clientWidth;
+    var section = $("section");
+    var now = 0;
+    var liNow = 0;
+    section[now].className = "page pageActive";
+    jindu.style.display='none';
+    for(var i = now+1 ; i < section.length; i++){
+        section[i].className = "page pageNext";
+    }
+    var zIndex=1;
+    jq(document).ready(function(){
+        jq('.sex label').click(function(){
+            jq(this).addClass('on').siblings("label").removeClass('on');
+        })
+        var span_head='';
+        var select_cont=jq('.select_cont');
+        jq('.select_head').click(function(){
+            span_head=jq(this).find("span");
+            if(select_cont.is(":hidden")){
+                select_cont.show();
+            }else{
+                select_cont.hide();
+            }
+        })
+        jq('.select_cont span').click(function(){
+            var text=jq(this).html();
+            span_head.html(text);
+            select_cont.hide();
+        });
+        var nowpage = 0;
+        //给最大的盒子增加事件监听
+        jq("section").swipe(
+                {
+                    swipe:function(event, direction, distance, duration, fingerCount) {
+                        if(direction == "up"){
+                            zIndex++;
+                            var next = now + 1;
+                            if(next > section.length -1) {
+                                next = 0;
+                            }
+                            section[next].style.transition = "0s";
+                            section[next].className = "page pageNext";
+                            setTimeout(
+                                    function(){
+                                        section[next].style.transition = ".4s";
+                                        section[next].className = "page pageActive";
+                                        section[now].style.transition = ".4s";
+                                        section[now].className = "page";
+                                        section[now].style.zIndex = zIndex;
+                                        now = next;
+                                    },30
+                            );
+                        }else if(direction == "down"){
+                            zIndex++;
+                            var next = now - 1;
+                            if(next < 0) {
+                                next = section.length-1;
+                            }
+                            section[next].style.transition = "0s";
+                            section[next].className = "page";
+                            setTimeout(
+                                    function(){
+                                        section[next].style.transition = ".4s";
+                                        section[next].className = "page pageActive";
+                                        section[now].style.transition = ".4s";
+                                        section[now].className = "page pageNext";
+                                        section[next].style.zIndex = zIndex;
+                                        now = next;
+                                    },30
+                            );
+                            return false;
+                        }
+                    }
+                }
+        );
+    });
+}
+</script>
+</body>
+</html>
