@@ -251,9 +251,21 @@ JSON:类似JS中对象格式的字符串,低版本浏览器兼容问题,需要�
 String
 1.str.length //字符串的length只能获取 不能设置
 2.string string.charAt(index) 方法返回字符串中指定位置的字符.如果index小于0或者大于等于字符串长度，返回空字符串
-3.number str.charCodeAt(index) 返回指定索引处字符的 Unicode 数值
+    PS:该方法不能识别码点大于0xFFFF的字符。
+3.number str.charCodeAt(index) (JavaScript内部，字符以UTF-16的格式储存，每个字符固定为2个字节)
+    PS:处理2个字符，返回指定索引处字符的 Unicode 数值
+  str.codePointAt(index) 返回的是码点的十进制值,如果想要十六进制的值，可以使用toString(16)方法转换。ES6提供了codePointAt方法，能够正确处理4个字节储存的字符，返回一个字符的码点。
+    PS:codePointAt方法会正确返回32位的UTF-16字符的码点。对于那些两个字节储存的常规字符，它的返回结果与charCodeAt方法相同。
 4.string String.fromCharCode(value) 将unicode编码值转成文字,对象"String."是固定写法,参数"value"是要转的unicode编码,返回一个string字符
+    PS:不能识别32位的UTF-16字符（Unicode编号大于0xFFFF）
+   String.fromCodePoint：可以识别0xFFFF的字符，弥补了String.fromCharCode方法的不足。
+    PS:如果String.fromCodePoint方法有多个参数，则它们会被合并成一个字符串返回
 5.number string.indexOf(searchValue [, fromIndex]) 返回指定值在调用该方法的字符串中首次出现的位置,参数:searchValue 一个字符串表示被查找的值 fromIndex 开始查找的位置，默认值为0
+    includes('world', 6)//true：返回布尔值，表示是否找到了参数字符串。
+    startsWith('Hello', 5)//true：返回布尔值，表示参数字符串是否在源字符串的头部。
+    endsWith('Hello', 6)//6：返回布尔值，表示参数字符串是否在源字符串的尾部。
+    上面代码表示，使用第二个参数n时，endsWith的行为与其他两个方法有所不同。它针对前n个字符，而其他两个方法针对从第n个位置直到字符串结束。
+    PS:这三个方法都支持第二个参数，表示开始搜索的位置。
 6.number string.lastIndexOf(searchValue [, fromIndex]) 返回指定值在调用该方法的字符串中最后出现的位置
 7.string string.substring(indexStart [, indexEnd]) 截取指定位置之间的 字符串,返回截取后的字符串
 8.string string.substr(start [, length]) 截取指定起始位置和长度的子字符串
@@ -359,6 +371,7 @@ application/json:
 
 break和coninute的区别:他们一般在for while循环中使用,break-退出循环,coninute-跳过循环
 toString:每一种数据类型都有自身的toString,当去使用alert的时候，系统默认会调用这个数据类型的toString；默认将输出的内容传成字符串类型。
+toString(16):可讲码点的进值转为16进值
 innerHTML:读写某个元素从开始标签到结束标签的所有内容。写操作：会覆盖之前的内容。可以加标签（直接写标签对即可）
 ***如果拿a标签当按钮的时候在href中写上javascript:; | 当读取a或a的href属性的时候，输出的结果都是href值。
 在判断的时候，不要用背景色去判断，因为每个浏览器解析背景色是不一样的。建议用class来做判断。
