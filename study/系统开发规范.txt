@@ -31,21 +31,30 @@ html书写规范
 	8.给区块代码及重要功能(比如循环)加上注释, 方便后台添加功能;
 	9.特殊符号使用: 尽可能使用代码替代: 比如 <(<) & >(&gt;) & 空格( ) & »(») 等等;
 	10.非特殊情况下css样式文件必须外链至<head>…</head>之间;非特殊情况下Js文件必须外链至页面</body>之上;
-css书写规范：
+css书写规范：(class默认小驼峰的写法,id默认大驼峰的写法)
 	1. 编码统一为utf-8;
 	2. 协作开发及分工: 根据各个模块, 同时根据页面相似程序, 事先写好大体框架文件, 分配给前端人员实现内部结构&表现&行为; 共用css文件base.css, 协作开发过程中, 每个页面请务必都要引入
 		此文件包含reset及头部底部样式, 此文件不可随意修改;
 	3. class与id的使用: id是唯一的并是父级的, class是可以重复的并是子级的, 所以id仅使用在大的模块上, class可用在重复使用率高及子级中; id原则上都是由分发框架文件时命名的（如#header #footer #content #nav 等）, 为JavaScript预留钩子的除外;
-	4. 为JavaScript预留钩子的命名, 请以 js_ 起始, 比如: js_hide, js_show(淘宝是用的J_开头);
-	5. class与id命名: 大的框架命名比如header/footer/wrapper/left/right之类的统一自定义命名.其他样式名称由 小写英文 & 数字 & _ 来组合命名, 如i_comment, fontred, width200; 避免使用中文拼音, 尽量使用简易的单词组合; 总之, 命名要语义化, 简明化.
-	6. 规避class与id命名
-		a） 通过从属写法规避
+	4. 为JavaScript预留钩子的命名, 请以 j_ 起始，比如: .j_hidePic #j_HidePic;
+	5.使用单个字母+“-”为前缀。比如：对于header部分，我们可以这样写:
+		<div class="g-header"></div> //g代表css内部分类方法中的布局（grid）的第一个字母
+		<div class="m-log"></div>。此div即为登陆框这个模块
+		<img class="u-img" src="../images/iam.png" alt="pic">对于元件部分，即不可再分的个体
+		<div class="f-clearFloat"></div>对于功能（function）部分
+		<div class="s-changeSkin">对于皮肤（skin）部分
+		PS:
+			1.在css中，样式的选择器总是要以上面的 .g-  .m- .u- .f- .s-这五类开头，然后再里面使用后代选择器。
+			2.这并不是说所有的className都需要加这些前缀，对于一些不属于这几种的元素，我们完全可以不加前缀，作为后代选择器使用
+			后代选择器，约定不以单个字母+“-”为前缀且长度大于等于2的类选择器为后代选择器
+				如：.g-date .u-rightArrow{  float: right;} 这个就是不合适的，我们直接写成 .u-rightArrow{  float: right;}即可
+	6. 子级命名
+		a） 通过从属写法
 			例如：<div id=”mainnav”><div>…</div></div>,
 			样式写法: #mainnav .firstnav{…….}
 		b）取父级元素id/class命名部分命名
 			例如：<div id=”mainnav”><div>…</div></div>,
 			样式写法: .main_firstnav{…….}
-		c）重复使用率高的命名, 请以自己代号加下划线起始, 比如i_clear;
 	7. css属性书写顺序, 建议遵循: 
 		布局定位属性–>自身属性–>文本属性–>其他属性. 此条可根据自身习惯书写, 但尽量保证同类属性写在一起. 
 		属性列举: 
@@ -53,10 +62,9 @@ css书写规范：
 			自身属性主要包括: width & height & margin & padding & border & background; 
 			文本属性主要包括：color & font & text-decoration & text-align & vertical-align & white- space & 其他 & content;
 		如：.m-box{position:relative;padding:5px;line-height:20px;height:20px; color:#000;}
-	8. 充分利用html自身属性及样式继承原理减少代码量, 比如:
-		<ul><li>这儿是标题列表<span>2010-09- 15</span></ul>
-		定义
-		ul.list li{position:relative} ul.list li span{position:absolute; right:0}
+	8. 充分利用html自身属性及样式继承原理减少代码量, 
+		比如:<ul><li>这儿是标题列表<span>2010-09- 15</span></ul>
+		定义:ul.list li span{position:absolute; right:0}
 	9.样式表中中文字体名, 请务必转码成unicode码, 以避免编码错误时乱码;
 	10.背景图片请尽可能使用sprite技术, 减小http请求, 考虑到多人协作开发, sprite按模块制作;
 	11.使用table标签时(尽量避免使用table标签), 请不要用width/ height/cellspacing/cellpadding等table属性直接定义表现, 应尽可能的利用table自身私有属性分离结构与表现
@@ -72,19 +80,7 @@ css书写规范：
 	19.省略值为0的单位
 	20.使用16进制表示颜色值，其中的字母使用大写形式，并尽量缩写。
 	21.私有在前，标准在后。
-		.m-box{-webkit-box-shadow:0 0 0 #000;-moz-box-shadow:0 0 0 #000;box-shadow:0 0 0 #000;}
-css命名规则：
-	1.使用单个字母+“-”为前缀。比如：对于header部分，我们可以这样写:
-		<div class="g-header"></div> //g代表css内部分类方法中的布局（grid）的第一个字母
-		<div class="m-log"></div>。此div即为登陆框这个模块
-		<img class="u-img" src="../images/iam.png" alt="pic">对于元件部分，即不可再分的个体
-		<div class="f-clearFloat"></div>对于功能（function）部分
-		<div class="s-changeSkin">对于皮肤（skin）部分
-		PS:
-			1.在css中，样式的选择器总是要以上面的 .g-  .m- .u- .f- .s-这五类开头，然后再里面使用后代选择器。
-			2.这并不是说所有的className都需要加这些前缀，对于一些不属于这几种的元素，我们完全可以不加前缀，作为后代选择器使用
-	2.后代选择器，约定不以单个字母+“-”为前缀且长度大于等于2的类选择器为后代选择器
-		如：.g-date .u-rightArrow{  float: right;} 这个就是不合适的，我们直接写成 .u-rightArrow{  float: right;}即可
+		.m-box{-webkit-box-shadow:0 0 0 #000;-moz-box-shadow:0 0 0 #000;box-shadow:0 0 0 #000;}	
 css类命名建议：
 	1、对于布局，即用.g-作为前缀，通常有以下推荐的写法。 
 		头部： header或head 
@@ -146,18 +142,37 @@ css类命名建议：
     	.m-xxx .main .mainc .nav li{} 不要将选择器写的过于冗长，因为选择器的结构越复杂，浏览器的消耗就越大，建议在3个长度之内写完。
 JavaScript书写规范
 	1. 文件编码统一为utf-8, 每行代码结束必须有分号; 原则上所有功能均根据项目需求原生开发, 以避免网上down下来的代码造成的代码污染(沉冗代码 || 与现有代码冲突 || …);
+		为避免外链引入库命名冲突，项目可采用命名空间方式对JS代码进行规范：即将代码按照功能进行分组，以组的形式附加到单全局对象上。
 	2. 库引入: 原则上仅引入jQuery库, 若需引入第三方库, 须与团队其他人员讨论决定;
-	3. 变量命名: 驼峰式命名.
-		a.原生JavaScript变量要求是纯英文字母, 首字母须小写, 如iTaoLun;
-		b.jQuery变量要求首字符为’_’, 其他与原生JavaScript 规则相同, 如: _iTaoLun;
-		c.要求变量集中声明, 避免全局变量.
-	4. 类命名: 首字母大写, 驼峰式命名. 如 ITaoLun;
-	5. 函数命名: 首字母小写驼峰式命名. 如iTaoLun();
-	6. 命名语义化, 尽可能利用英文单词或其缩写;
-	7. 尽量避免使用存在兼容性及消耗资源的方法或属性, 比如eval_r() & innerText;
-	8. 后期优化中, JavaScript非注释类中文字符须转换成unicode编码使用, 以避免编码错误时乱码显示;
-	9. 代码结构明了, 加适量注释. 提高函数重用率;
-	10. 注重与html分离, 减小reflow, 注重性能.
+	3. 变量命名: 驼峰式命名,前缀应当是名词
+		a.要求变量集中声明, 避免全局变量.
+		b.尽量在变量名字中体现所属类型，如:length、count等表示数字类型；而包含name、title表示为字符串类型。
+		例：maxCount = 10  tableTitle = 'LoginTable'
+	4. 函数命名: 首字母小写驼峰式命名，前缀应当为动词（以此区分函数和变量）
+		可使用常见动词约定：
+			can,判断是否执行某个动作，返回bool，true：可执行
+			has，判断是否含有某个值，返回bool，true：含有此值
+			is，判断是否为某个值，返回bool，true：为某个值
+			get，获取某个值，返回结果
+			set，设置某个值，无返回值、返回状态或是返回链式对象
+			load，加载某些数据，无返回值或者返回是否加载完成的结果
+	5.构造函数.大驼峰命名，前缀为名称
+		例：Student(name)
+	6. 类命名: 
+		a.公共属性和方法：跟变量和函数的命名一样。例：function getName()
+		b.私有属性和方法：前缀为_(下划线)，后面跟公共属性和方法一样的命名方式。var _name
+	7.常亮.名称全部大写，使用大写字母和下划线来组合命名
+	8. 命名语义化, 尽可能利用英文单词或其缩写;
+	9. 尽量避免使用存在兼容性及消耗资源的方法或属性, 比如eval_r() & innerText;
+	10. 后期优化中, JavaScript非注释类中文字符须转换成unicode编码使用, 以避免编码错误时乱码显示;
+	11. 代码结构明了, 加适量注释. 提高函数重用率;
+	12. 注重与html分离, 减小reflow, 注重性能.
+	13.注释
+		函数(方法)注释：
+			/** 
+			* 函数说明 
+			* @关键字 
+			*/
 图片规范
 	1. 所有页面元素类图片均放入img文件夹, 测试用图片放于demoimg文件夹;
 	2. 图片格式仅限于gif || png || jpg;
