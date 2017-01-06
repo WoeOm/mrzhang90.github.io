@@ -1,0 +1,23 @@
+.g-box-tests{padding-bottom:0.4rem;}
+.g-box-tests .m-title{padding:0.38rem 0.74rem 0 0.86rem;line-height:0.96rem;font-size:0.52rem;}
+.g-box-tests .m-list li{padding:0.6rem 0.74rem 0.14rem 0.86rem;border-bottom:solid 1px #a4a4a4;line-height:1.64rem;background:url("../img/bg_vs.png") center 0.6rem no-repeat;background-size:1.64rem 1.64rem;}
+.g-box-tests .m-list li:last-child{border-bottom:none;}
+.g-box-tests .u-corpsList{width:5.82rem;height:1.64rem;font-size: 0;}
+.g-box-tests .f-floatright.u-corpsList{text-align:right;}
+.g-box-tests .u-corpsList span{display:inline-block;vertical-align:middle;}
+.g-box-tests .u-corpsList .span1{width:4.18rem;height:1.64rem;font-size:0.48rem;overflow:hidden;}
+.g-box-tests .u-corpsList .span2{width:1.64rem;font-size:0.6rem;}
+.g-box-tests .u-dataList{line-height:1.32rem;height:1.32rem;width:100%;font-size:0.48rem;text-align:center;}
+
+.m-list-person{}
+.m-list-person li{padding:0.52rem 0 0.48rem 0.48rem;border-bottom:solid 2px #c9c7c8;}
+.m-list-person .u-picPerson{border-radius: 50%;overflow: hidden;}
+.m-list-person .u-picPerson img{width:2.42rem;height:2.42rem;}
+.m-list-person dl{padding-left:0.5rem;}
+.m-list-person dt{padding-bottom:0.08rem;line-height:0.76rem;font-size:0.6rem;color:#313131;}
+.m-list-person dd{line-height:0.8rem;font-size:0.48rem;}
+
+.m-list-media{padding:0 0.46rem 0 0.14rem;}
+.m-list-media li{position:relative;float:left;padding-left:0.34rem;padding-top:0.38rem;}
+.m-list-media img{width:3.26rem;height:3.26rem;border-radius:0.44rem;}
+.m-list-media .u-video:before{content:"";position:absolute;width:3.26rem;height:3.26rem;background:url("../img/icon_btn_video.png") center center no-repeat;background-size:1.96rem 1.96rem;}

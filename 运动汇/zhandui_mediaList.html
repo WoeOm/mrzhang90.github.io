@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""/>
+    <title>球队媒体库列表</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/zhandui.css">
+    <style>
+        #j_ShowPic li{float:left;}
+    </style>
+</head>
+<body>
+<ul class="m-list-media f-cleatboth">
+    <li>
+        <img src="img/pic_a1.jpg"/>
+    </li>
+    <li class="u-video">
+        <img src="img/pic_audio.jpg"/>
+    </li>
+    <li>
+        <img src="img/pic_a2.jpg"/>
+    </li>
+    <li class="u-video">
+        <img src="img/pic_a3.jpg"/>
+    </li>
+    <li>
+        <img src="img/pic_a4.jpg"/>
+    </li>
+</ul>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    var objPic={
+        index:0,
+        length:0,
+        arrList:[]
+    };
+    $(function(){
+        $('.m-list-media li:not(".u-video")').each(function(){
+            $(this).click(function(){
+                objPic.index=$(this).index('li:not(".u-video")');
+            })
+            objPic.arrList.push($(this).children('img').attr('src'));
+            objPic.length++;
+        })
+        loadPic()
+        setPicSwitch();
+    })
+    function loadPic(){
+        var objScreen={
+            'width':$(window).width(),
+            'height':$(window).height()
+        }
+        var list=objPic.arrList;
+        var index=objPic.index;
+        var len=objPic.length;
+        var objStyle={};
+        if(document.getElementById('j_ShowPic')){
+            $('#j_ShowPic').show();
+        }else{
+            var _picShow=$('<ul id="j_ShowPic" style="position:absolute;left:'+-(index*objScreen.width)+'px;top:0;width:'+(len+2)*100+'%;height:100%;background:#000;"> </ul>');
+            $('body').append(_picShow);
+            for(var i=0;i<len;i++){
+                getPicShape(list[i],function(data,attr){
+                    objStyle.width='auto';
+                    objStyle.height='auto';
+                    if(data=='Z' || data=='H'){
+                        //如果图片比屏幕宽，屏幕赋值图片；否，图片等原高
+                        if(attr.width > objScreen.width){
+                            objStyle.width=objScreen.width+'px';
+                        }
+                    }else if(data=='S'){
+                        //如果图片比屏幕高，屏幕赋值图片；否，图片等原高
+                        if(attr.height > objScreen.height){
+                            objStyle.height=objScreen.height+'px';
+                        }
+                    }else{
+                        objStyle.width=objScreen.width+'px';
+                    }
+                    $('#j_ShowPic').append('<li style="width:'+objScreen.width+'px;height:'+objScreen.height+'px;background:url('+attr.src+') center center no-repeat;background-size:'+objStyle.width+' '+objStyle.height+';"></li>')
+                })
+            }
+        }
+    }
+    /**
+     * 左右切换图片
+     * @return
+     */
+    function setPicSwitch(){
+        var objScreen={
+            'width':$(window).width(),
+            'height':$(window).height()
+        }
+        var index=objPic.index;
+        var len=objPic.length+0;
+        var list=objPic.arrList;
+        $('#j_ShowPic').swipe({
+            swipe:function(event, direction, distance, duration, fingerCount){
+                if(direction == "left"){
+                    var oldIndex=index;
+                    index++;
+                    if(index==len){
+                        index=0;
+                        $(this).css('transition','none').css('left',0);
+                        var That=$(this)
+                        setTimeout(function(){
+                            That.css('left',-index*objScreen.width+'px').css('transition','1s');
+                        },20)
+                    }else{
+                        $(this).css('left',-index*objScreen.width+'px').css('transition','1s');
+                    }
+                }else if(direction == "right"){
+                    index--;
+                    if(index<0){
+                        index=len-1;
+                    }
+                    $(this).css('left',-index*objScreen.width+'px').css('transition','1s');
+                }
+            }
+        })
+    }
+    /**
+     * 根据图片获取形状，是正方形、横长方形或者竖长方形
+     * @return Z H S
+     */
+    function getPicShape(img,callBack){
+        var _img=new Image();
+        _img.src=img;
+        _img.onload=function(){
+            var _obj={
+                'src':img,
+                'width':this.width,
+                'height':this.height
+            }
+            if(_obj.width>0 && _obj.height>0){
+                if(_obj.width==_obj.height){//正方形
+                    callBack('Z',_obj);
+                }else if(_obj.width>_obj.height){//横矩形
+                    callBack('H',_obj);
+                }else{//竖矩形
+                    callBack('S',_obj);
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
