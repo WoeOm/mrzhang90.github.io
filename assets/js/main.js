@@ -255,37 +255,7 @@
 				});
 
 			// Poptrox.
-				$main.poptrox({
-					baseZIndex: 20000,
-					caption: function($a) {
 
-						var s = '';
-
-						$a.nextAll().each(function() {
-							s += this.outerHTML;
-						});
-
-						return s;
-
-					},
-					fadeSpeed: 300,
-					onPopupClose: function() { $body.removeClass('modal-active'); },
-					onPopupOpen: function() { $body.addClass('modal-active'); },
-					overlayOpacity: 0,
-					popupCloserText: '',
-					popupHeight: 150,
-					popupLoaderText: '',
-					popupSpeed: 300,
-					popupWidth: 150,
-					selector: '.thumb > a.image',
-					usePopupCaption: true,
-					usePopupCloser: true,
-					usePopupDefaultStyling: false,
-					usePopupForceClose: true,
-					usePopupLoader: true,
-					usePopupNav: true,
-					windowMargin: 50
-				});
 
 				// Hack: Set margins to 0 when 'xsmall' activates.
 					skel
@@ -297,5 +267,11 @@
 						});
 
 	});
-
+	$('.thumb').hover(function(){
+		$(this).children('h2').addClass('topAction');
+		$(this).children('p').addClass('active');
+	},function(){
+        $(this).children('h2').removeClass('topAction');
+        $(this).children('p').removeClass('active');
+	})
 })(jQuery);

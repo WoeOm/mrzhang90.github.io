@@ -211,7 +211,7 @@
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5, h6,p {
 		color: #ffffff;
 		font-weight: 300;
 		letter-spacing: 0.1em;
@@ -248,7 +248,7 @@
 	h6 {
 		font-size: 0.7em;
 	}
-
+	.topAction{bottom: 19.875em !important;transition:0.5s;}
 	@media screen and (max-width: 736px) {
 
 		h2 {
@@ -1576,9 +1576,10 @@
 				position: absolute;
 				top: 0;
 				width: 100%;
+				opacity: 0.1;
 			}
-
-			#main .thumb > h2 {
+			/*#main .thumb > .image:hover{opacity:1;transition:0.5s;}*/
+			#main .thumb > h2,#main .thumb > p {
 				-moz-pointer-events: none;
 				-webkit-pointer-events: none;
 				-ms-pointer-events: none;
@@ -1592,9 +1593,9 @@
 			}
 
 			#main .thumb > p {
-				display: none;
+				top: -20em;
 			}
-
+			#main .thumb > p.active{top:5.875em;transition:1.2s;}
 		#main:after {
 			-moz-pointer-events: none;
 			-webkit-pointer-events: none;
